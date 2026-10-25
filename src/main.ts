@@ -47,6 +47,19 @@ function update(patch: Partial<State>, push = true) {
   address(push);
   render();
 }
+function positionSource() {
+  const frame = el("source-frame"),
+    img = frame.querySelector("img");
+  if (frame.classList.contains("enlarged") && img) {
+    const rect = img.getBoundingClientRect();
+    // Begin over the upper text of the left leaf, rather than the photograph's
+    // outer background. The complete photograph remains available by panning.
+    frame.scrollTo(
+      Math.max(0, rect.width * 0.42 - frame.clientWidth / 2),
+      Math.max(0, rect.height * 0.33 - frame.clientHeight / 2),
+    );
+  } else frame.scrollTo(0, 0);
+}
 async function showSource(page: number) {
   sourceRequest?.abort();
   sourceRequest = new AbortController();
@@ -73,7 +86,7 @@ async function showSource(page: number) {
       return;
     }
     frame.replaceChildren(img);
-    frame.scrollTo(0, 0);
+    positionSource();
     el("source-status").textContent =
       `Opening ${page} · complete photograph · SHA-256 identity checked.`;
   } catch (error) {
@@ -182,7 +195,8 @@ el("source-page").addEventListener("change", () =>
 el("source-zoom").addEventListener("click", () => {
   const zoom = el("source-frame").classList.toggle("enlarged");
   el("source-zoom").setAttribute("aria-pressed", String(zoom));
-  el("source-zoom").textContent = zoom ? "Fit whole opening" : "Enlarge source";
+  el("source-zoom").textContent = zoom ? "Fit whole opening" : "Read at full resolution";
+  positionSource();
 });
 el("source-provenance").textContent =
   `${manifest.description} Complete PDF SHA-256: ${manifest.pdfSha256}.`;

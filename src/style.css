@@ -482,7 +482,7 @@ select {
   max-width: none;
 }
 .source-frame.enlarged img {
-  width: 240%;
+  width: 3600px;
 }
 #source-status {
   font-size: 0.8rem;
@@ -793,5 +793,11 @@ fieldset#divisors {
   .diagram-frame.enlarged svg {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .source-controls select {
+    flex-basis: 100%;
   }
 }

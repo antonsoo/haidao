@@ -104,10 +104,22 @@ for (const [engine, launcher] of [
       document.querySelector("#source-status").textContent.startsWith("Opening 11 · complete"),
     );
     await page.locator("#source-zoom").click();
+    const sourceImage = page.locator("#source-frame img");
+    const sourceScale = await sourceImage.evaluate((img) => ({
+      rendered: img.getBoundingClientRect().width,
+      natural: img.naturalWidth,
+    }));
+    assert.equal(sourceScale.rendered, sourceScale.natural);
+    await page
+      .locator("#source-frame")
+      .screenshot({ path: path.join(out, `${name}-source-full-resolution.png`) });
+    const sourceScrollBefore = await page.locator("#source-frame").evaluate((el) => el.scrollLeft);
     await page.locator("#source-frame").focus();
     await page.keyboard.press("ArrowRight");
     await page.waitForTimeout(300);
-    assert.ok((await page.locator("#source-frame").evaluate((el) => el.scrollLeft)) > 0);
+    assert.ok(
+      (await page.locator("#source-frame").evaluate((el) => el.scrollLeft)) > sourceScrollBefore,
+    );
     await page.locator("#source-zoom").click();
     await page.locator("#parallel-preset").click();
     for (let i = 0; i < 6; i++) await page.locator("#next-step").click();
@@ -208,6 +220,7 @@ for (const [engine, launcher] of [
       width,
       errors,
       sourcePages,
+      sourceScale,
       portable,
       files,
       offline,
