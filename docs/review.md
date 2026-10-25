@@ -92,3 +92,8 @@ transmission has not been established.
 The clean Node 24.21.0 clone of `ffa528d` passed `npm ci` and `npm run check`.
 All nineteen output files and all five retained native examples matched byte for
 byte. See [clean-build.json](evidence/clean-build.json).
+
+A final print review separated the verdict from its following explanation in
+`285cebe`; the local four-configuration operated review and all native artifact
+checks were repeated for that source. The retained HTML/PDF and browser receipts
+include the correction.

@@ -112,16 +112,16 @@
         },
         {
           "file": "chromium-1440-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         },
         {
           "file": "chromium-1440-offline-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         }
       ],
-      "offline": "Complete offline edition 0c5b3b245c9477ebc4dd: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "offline": "Complete offline edition 41c3c2a20e16c095c8f4: all 18 files checked, including all five source openings. Ready for an offline reload.",
       "axeViolations": 0
     },
     {
@@ -235,16 +235,16 @@
         },
         {
           "file": "chromium-375-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         },
         {
           "file": "chromium-375-offline-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         }
       ],
-      "offline": "Complete offline edition 0c5b3b245c9477ebc4dd: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "offline": "Complete offline edition 41c3c2a20e16c095c8f4: all 18 files checked, including all five source openings. Ready for an offline reload.",
       "axeViolations": 0
     },
     {
@@ -358,16 +358,16 @@
         },
         {
           "file": "firefox-1440-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         },
         {
           "file": "firefox-1440-offline-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         }
       ],
-      "offline": "Complete offline edition 0c5b3b245c9477ebc4dd: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "offline": "Complete offline edition 41c3c2a20e16c095c8f4: all 18 files checked, including all five source openings. Ready for an offline reload.",
       "axeViolations": 0
     },
     {
@@ -481,16 +481,16 @@
         },
         {
           "file": "firefox-375-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         },
         {
           "file": "firefox-375-offline-reading.html",
-          "bytes": 6591769,
-          "sha256": "493d9c19358b3995cc6839da1c0c8d356e1b0c6f970eeb59ed2d5a3413c5a7af"
+          "bytes": 6591770,
+          "sha256": "0e1d8b86c8bb7de096b7fee75ae9e0a14232f139000221a223cce212b2f0e1c2"
         }
       ],
-      "offline": "Complete offline edition 0c5b3b245c9477ebc4dd: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "offline": "Complete offline edition 41c3c2a20e16c095c8f4: all 18 files checked, including all five source openings. Ready for an offline reload.",
       "axeViolations": 0
     }
   ]
