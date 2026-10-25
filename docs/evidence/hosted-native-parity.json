@@ -1,0 +1,9 @@
+{
+  "native_files_identical_to_local": 40,
+  "extensions": [
+    "HTML",
+    "CSV",
+    "SVG"
+  ],
+  "pdf_compared_by_content_and_source_image_identity": true
+}

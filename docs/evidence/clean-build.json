@@ -1,5 +1,5 @@
 {
-  "source_commit": "ffa528dcac71fda8bfe9340db0b92372906a694f",
+  "source_commit": "f42a7c4681799710aa617a7bcc14e29a21335580",
   "node": "24.21.0",
   "commands": [
     "npm ci",
@@ -8,9 +8,9 @@
   "all_output_files_identical": 19,
   "native_examples_identical": 5,
   "sha256": {
-    "sw.js": "9a9b3d0468e604f4753dd1c6eae98bc4e2199dc1c4f65e7c4d8aad2ba8a7c060",
+    "sw.js": "a582e2576510b82089f84e51d0405cbd34a7abf9b86011c33d7d5cf9cce68c91",
     "favicon.svg": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058",
-    "index.html": "29852c7701986386aa6d54ce71cf015ee40c89710f4d7558b80a41103c121ab6",
+    "index.html": "e48f48a14446c505f903f6014de796df08466dddfa17bd8bd52580a6c064c412",
     "source-manifest.json": "1d03e1123b42bf82fc3e9f8fa762325ec682063e9c9f1e79dc704f6e6662931f",
     "fonts/provenance.json": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664",
     "fonts/Noto-NOTICE.txt": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec",
@@ -26,6 +26,6 @@
     "sources/waseda-10.jpg": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be",
     "sources/waseda-11.jpg": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0",
     "assets/index-Ds4OExWG.css": "cb9636fc62495272e73bb95e0885430d8a2044fb8bf7fdf3dc1522f67542f8c2",
-    "assets/index-8asohah2.js": "792c44cb019d71565e627e4f9cb7e96832d49d9ba2c4fe8fc547e9bee298d677"
+    "assets/index-6MzJSeck.js": "055215388dadea92c67c50a0f07af09b26d0378a108f980120b06a8358e01940"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "html_files": 8,
+  "csv_files": 20,
+  "svg_files": 12,
+  "readings_per_html": 10,
+  "language_fields_per_html": 120,
+  "whole_source_images_per_html": 5,
+  "source_jpegs_byte_identical_in_pdf": 5,
+  "pdf_pages": 25,
+  "pdf_words_within_page_bounds": 3667,
+  "tagged_pdf": true,
+  "script_free_pdf": true
+}

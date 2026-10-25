@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 60000,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/haidao/",
+  "state": "verified",
+  "attempts": 1,
+  "startedAtUtc": "2026-10-25T14:09:37.694Z",
+  "checkedAtUtc": "2026-10-25T14:09:39.713Z",
+  "buildManifestSha256": "4b7088f6115f5091e6441588cdbfff45ae05bb6e641a6ebda1d8db1bfab96f6a",
+  "expectedFileCount": 19,
+  "checkedFileCount": 19,
+  "verifiedFileCount": 19,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 15619,
+    "sha256": "e48f48a14446c505f903f6014de796df08466dddfa17bd8bd52580a6c064c412",
+    "url": "https://antonsoo.github.io/haidao/",
+    "httpStatus": 200,
+    "observedBytes": 15619,
+    "observedSha256": "e48f48a14446c505f903f6014de796df08466dddfa17bd8bd52580a6c064c412",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 15619,
+    "sha256": "e48f48a14446c505f903f6014de796df08466dddfa17bd8bd52580a6c064c412",
+    "url": "https://antonsoo.github.io/haidao/",
+    "httpStatus": 200,
+    "observedBytes": 15619,
+    "observedSha256": "e48f48a14446c505f903f6014de796df08466dddfa17bd8bd52580a6c064c412",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "assets/index-6MzJSeck.js",
+      "bytes": 43388,
+      "sha256": "055215388dadea92c67c50a0f07af09b26d0378a108f980120b06a8358e01940",
+      "url": "https://antonsoo.github.io/haidao/assets/index-6MzJSeck.js",
+      "httpStatus": 200,
+      "observedBytes": 43388,
+      "observedSha256": "055215388dadea92c67c50a0f07af09b26d0378a108f980120b06a8358e01940",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-Ds4OExWG.css",
+      "bytes": 10026,
+      "sha256": "cb9636fc62495272e73bb95e0885430d8a2044fb8bf7fdf3dc1522f67542f8c2",
+      "url": "https://antonsoo.github.io/haidao/assets/index-Ds4OExWG.css",
+      "httpStatus": 200,
+      "observedBytes": 10026,
+      "observedSha256": "cb9636fc62495272e73bb95e0885430d8a2044fb8bf7fdf3dc1522f67542f8c2",
+      "state": "verified"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 283,
+      "sha256": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058",
+      "url": "https://antonsoo.github.io/haidao/favicon.svg",
+      "httpStatus": 200,
+      "observedBytes": 283,
+      "observedSha256": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/Atkinson-OFL.txt",
+      "bytes": 4431,
+      "sha256": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030",
+      "url": "https://antonsoo.github.io/haidao/fonts/Atkinson-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4431,
+      "observedSha256": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "bytes": 114552,
+      "sha256": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745",
+      "url": "https://antonsoo.github.io/haidao/fonts/AtkinsonHyperlegibleNext.ttf",
+      "httpStatus": 200,
+      "observedBytes": 114552,
+      "observedSha256": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/HaidaoCJK.woff2",
+      "bytes": 44284,
+      "sha256": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf",
+      "url": "https://antonsoo.github.io/haidao/fonts/HaidaoCJK.woff2",
+      "httpStatus": 200,
+      "observedBytes": 44284,
+      "observedSha256": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/Noto-NOTICE.txt",
+      "bytes": 118,
+      "sha256": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec",
+      "url": "https://antonsoo.github.io/haidao/fonts/Noto-NOTICE.txt",
+      "httpStatus": 200,
+      "observedBytes": 118,
+      "observedSha256": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/Noto-OFL.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "url": "https://antonsoo.github.io/haidao/fonts/Noto-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4301,
+      "observedSha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/characters.txt",
+      "bytes": 399,
+      "sha256": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c",
+      "url": "https://antonsoo.github.io/haidao/fonts/characters.txt",
+      "httpStatus": 200,
+      "observedBytes": 399,
+      "observedSha256": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 344,
+      "sha256": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664",
+      "url": "https://antonsoo.github.io/haidao/fonts/provenance.json",
+      "httpStatus": 200,
+      "observedBytes": 344,
+      "observedSha256": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 15619,
+      "sha256": "e48f48a14446c505f903f6014de796df08466dddfa17bd8bd52580a6c064c412",
+      "url": "https://antonsoo.github.io/haidao/index.html",
+      "httpStatus": 200,
+      "observedBytes": 15619,
+      "observedSha256": "e48f48a14446c505f903f6014de796df08466dddfa17bd8bd52580a6c064c412",
+      "state": "verified"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 2775,
+      "sha256": "1d03e1123b42bf82fc3e9f8fa762325ec682063e9c9f1e79dc704f6e6662931f",
+      "url": "https://antonsoo.github.io/haidao/source-manifest.json",
+      "httpStatus": 200,
+      "observedBytes": 2775,
+      "observedSha256": "1d03e1123b42bf82fc3e9f8fa762325ec682063e9c9f1e79dc704f6e6662931f",
+      "state": "verified"
+    },
+    {
+      "path": "sources/waseda-09.jpg",
+      "bytes": 944202,
+      "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43",
+      "url": "https://antonsoo.github.io/haidao/sources/waseda-09.jpg",
+      "httpStatus": 200,
+      "observedBytes": 944202,
+      "observedSha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43",
+      "state": "verified"
+    },
+    {
+      "path": "sources/waseda-10.jpg",
+      "bytes": 796216,
+      "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be",
+      "url": "https://antonsoo.github.io/haidao/sources/waseda-10.jpg",
+      "httpStatus": 200,
+      "observedBytes": 796216,
+      "observedSha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be",
+      "state": "verified"
+    },
+    {
+      "path": "sources/waseda-11.jpg",
+      "bytes": 1018547,
+      "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0",
+      "url": "https://antonsoo.github.io/haidao/sources/waseda-11.jpg",
+      "httpStatus": 200,
+      "observedBytes": 1018547,
+      "observedSha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0",
+      "state": "verified"
+    },
+    {
+      "path": "sources/waseda-12.jpg",
+      "bytes": 982697,
+      "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e",
+      "url": "https://antonsoo.github.io/haidao/sources/waseda-12.jpg",
+      "httpStatus": 200,
+      "observedBytes": 982697,
+      "observedSha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e",
+      "state": "verified"
+    },
+    {
+      "path": "sources/waseda-13.jpg",
+      "bytes": 1010533,
+      "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4",
+      "url": "https://antonsoo.github.io/haidao/sources/waseda-13.jpg",
+      "httpStatus": 200,
+      "observedBytes": 1010533,
+      "observedSha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4",
+      "state": "verified"
+    },
+    {
+      "path": "sources/waseda-metadata.json",
+      "bytes": 2294,
+      "sha256": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341",
+      "url": "https://antonsoo.github.io/haidao/sources/waseda-metadata.json",
+      "httpStatus": 200,
+      "observedBytes": 2294,
+      "observedSha256": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341",
+      "state": "verified"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 5675,
+      "sha256": "a582e2576510b82089f84e51d0405cbd34a7abf9b86011c33d7d5cf9cce68c91",
+      "url": "https://antonsoo.github.io/haidao/sw.js",
+      "httpStatus": 200,
+      "observedBytes": 5675,
+      "observedSha256": "a582e2576510b82089f84e51d0405cbd34a7abf9b86011c33d7d5cf9cce68c91",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}

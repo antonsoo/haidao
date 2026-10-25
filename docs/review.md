@@ -53,7 +53,7 @@ MIT/OFL notices. The eight HTML files had no script, worked offline with scripts
 disabled in both browsers, and retained all five complete source openings.
 
 The actual retained A4 PDF has **25 pages**, is tagged, contains no JavaScript,
-and keeps all 120 language fields. All 3,666 extracted words lay inside page
+and keeps all 120 language fields. All 3,667 extracted words lay inside page
 bounds. Its five extracted source JPEGs are byte-identical to the retained
 photographs. The PDF is a Chromium print of the native downloaded HTML, not a
 manually typeset substitute. See [examples](../examples/).
@@ -97,3 +97,7 @@ A final print review separated the verdict from its following explanation in
 `285cebe`; the local four-configuration operated review and all native artifact
 checks were repeated for that source. The retained HTML/PDF and browser receipts
 include the correction.
+
+The final clean checkout of `f42a7c4` repeated `npm ci` and `npm run check`.
+All nineteen output files and all five retained examples again matched exactly;
+the clean-build receipt records this final source.
