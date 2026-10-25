@@ -31,3 +31,23 @@ byte-identical extraction of all five source JPEGs. See
 
 These receipts establish the recorded source/build/public-file/browser state.
 They do not infer CI execution, physical surveying or physical printing.
+
+## Full-resolution source reader
+
+Source `650d966` improves the small-note reading at phone and desktop sizes.
+Static branch `cf8ee84d50d3eefe626be599e012823576dc76bf` publishes it. The updated clean checkout passes
+`npm run check`, with all nineteen final output files byte-identical to the
+reviewed build. All nineteen canonical public files match that build as well.
+
+The complete public four-configuration lesson replay now also asserts a source
+image display width equal to its natural width: 3,600 pixels. Keyboard panning
+advances the existing scroll position. Actual before/after photographs are
+retained in [source-reading.md](source-reading.md). The held/wrong-source and
+cache deletion/rebuild workflows pass for this edition in both engines.
+
+All forty native HTML/CSV/SVG downloads remain byte-identical to the original
+print-corrected study files. The public PDF again passes the tagged/script-free,
+120-field, page-bound and five identical source-image checks. Its 25 pages retain
+3,667 words within page bounds. See the `source-resolution-*` receipts in
+[evidence](evidence/). These are distinct clean-build, public-file, browser,
+source-guard and native-artifact observations.

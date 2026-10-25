@@ -1,0 +1,30 @@
+{
+  "source_commit": "650d9663f3dba5c22915fd422096072ccb260329",
+  "node": "24.21.0",
+  "commands": [
+    "clean checkout of new source; existing unchanged locked dependencies",
+    "npm run check"
+  ],
+  "identical_output_files": 19,
+  "sha256": {
+    "sw.js": "548f3bd9e9792f543c66a574f591c6e6885486ebc5d99766d62e6eb3a304e53a",
+    "favicon.svg": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058",
+    "index.html": "3331d31e5b213d8856588deeace69cd65c629686305f609c73d1f14120ca7587",
+    "source-manifest.json": "1d03e1123b42bf82fc3e9f8fa762325ec682063e9c9f1e79dc704f6e6662931f",
+    "fonts/provenance.json": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664",
+    "fonts/Noto-NOTICE.txt": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec",
+    "fonts/Noto-OFL.txt": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+    "fonts/Atkinson-OFL.txt": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030",
+    "fonts/AtkinsonHyperlegibleNext.ttf": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745",
+    "fonts/HaidaoCJK.woff2": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf",
+    "fonts/characters.txt": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c",
+    "sources/waseda-metadata.json": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341",
+    "sources/waseda-13.jpg": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4",
+    "sources/waseda-09.jpg": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43",
+    "sources/waseda-12.jpg": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e",
+    "sources/waseda-10.jpg": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be",
+    "sources/waseda-11.jpg": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0",
+    "assets/index-tMdykEIH.css": "c2d1886c26e8c0ab5aa49f615ae28498bfb7a9421a81ef7ddc90fffae988dc7a",
+    "assets/index-ih6VYFxP.js": "773c6c21dd33333c180d0560534b21fbac29bef3dc309e6b372842a8ce9b18f1"
+  }
+}
