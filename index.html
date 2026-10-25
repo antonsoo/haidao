@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f6f3">
+    <meta
+      name="description"
+      content="Check Liu Hui's sea-island calculation against two sightings. Operate the recipe, read Classical Chinese with English, and inspect five whole source openings."
+    >
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Haidao — Check the second sighting</title>
+  </head>
+  <body>
+    <a class="skip" href="#survey">Skip to the survey</a>
+    <header>
+      <a class="brand" href="./"><span lang="zh-Hant">海島算經</span> <span>HAIDAO</span></a>
+      <nav aria-label="Sections">
+        <a href="#survey">Survey</a><a href="#reading">Read</a><a href="#uncertainty">Uncertainty</a
+        ><a href="#save">Keep a copy</a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">Liu Hui · Sea Island Mathematical Manual · Problem 1</p>
+          <h1 id="intro-title">Check the<br>second sighting.</h1>
+          <p class="lead">Two poles. Two retreats. One island you cannot reach.</p>
+          <p>
+            The printed commentary names one divisor. A smaller editorial note corrects it. Try
+            both: a calculation can satisfy the first observation and still miss the second.
+          </p>
+          <a class="start" href="#survey">Work the survey <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="opening-note">
+          <p lang="zh-Hant">相多為法</p>
+          <p>“Use the excess as divisor.”</p>
+          <p>But the excess of <em>what</em>?</p>
+          <a href="#reading">Read the words beside the witness →</a>
+        </aside>
+      </section>
+      <p id="address-warning" role="status"></p>
+      <section id="survey" class="section" aria-labelledby="survey-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Make a record</p>
+          <h2 id="survey-title">Observe first. Calculate second.</h2>
+        </div>
+        <p class="section-deck">
+          Model the source exercise with equal vertical poles on one level baseline and each eye on
+          the ground. No angle is given or measured. Every length below is in bu.
+        </p>
+        <fieldset class="presets" aria-label="Observation records">
+          <button type="button" id="source-preset">Source exercise</button
+          ><button type="button" id="near-preset">Nearby comparison</button
+          ><button type="button" id="parallel-preset">Equal retreats</button>
+        </fieldset>
+        <form id="observations">
+          <div class="fields">
+            <label
+              >Equal pole height <span>h · bu</span>
+              <input name="pole" type="number" step="0.25" min="0.25" max="100" required></label
+            ><label
+              >Gap between poles <span>s · bu</span>
+              <input name="gap" type="number" step="0.25" min="0.25" max="10000" required></label
+            ><label
+              >Front retreat <span>a · bu</span>
+              <input name="front" type="number" step="0.25" min="0.25" max="2000" required></label
+            ><label
+              >Rear retreat <span>b · bu</span>
+              <input name="rear" type="number" step="0.25" min="0.25" max="2000" required></label
+            >
+          </div>
+          <button class="primary" type="submit">Apply observations</button>
+          <p id="record-status" role="status"></p>
+        </form>
+        <p class="unit-note">
+          Here 1 bu = 6 chi (<span lang="zh-Hant">尺</span>), 1 zhang (<span lang="zh-Hant">丈</span
+          >) = 10 chi, and 1 li (<span lang="zh-Hant">里</span>) = 300 bu. Thus the source's
+          three-zhang poles are five bu high. These are units in the exercise; no conversion to
+          metres is assumed. The following pine problem converts fifty bu to three hundred chi
+          across openings 12–13.
+        </p>
+        <div class="survey-layout">
+          <div class="diagrams">
+            <figure>
+              <section
+                class="diagram-frame"
+                id="overview-frame"
+                tabindex="0"
+                aria-label="Whole survey; arrow keys pan when enlarged"
+              >
+                <div id="overview"></div>
+              </section>
+              <button
+                type="button"
+                class="text-button"
+                data-diagram="overview-frame"
+                aria-pressed="false"
+              >
+                Enlarge survey
+              </button>
+              <figcaption>
+                <span class="front-key">— Front sighting</span>
+                <span class="rear-key">- - Rear sighting</span> <span>× Candidate peak</span>
+                <br>Both rays are constructed from their own pole and eye, before testing the
+                candidate. Dotted height: their forward intersection, when one exists.
+              </figcaption>
+            </figure>
+            <figure>
+              <section
+                class="diagram-frame"
+                id="retreats-frame"
+                tabindex="0"
+                aria-label="Setback rulers; arrow keys pan when enlarged"
+              >
+                <div id="retreats"></div>
+              </section>
+              <button
+                type="button"
+                class="text-button"
+                data-diagram="retreats-frame"
+                aria-pressed="false"
+              >
+                Enlarge rulers
+              </button>
+              <figcaption>
+                The aligned rulers compare retreats from different poles. They do not move the two
+                poles together in the survey.
+              </figcaption>
+            </figure>
+          </div>
+          <div id="operation" class="operation">
+            <p class="eyebrow">02 / Operate the recipe</p>
+            <fieldset id="divisors" aria-label="Choose a divisor"></fieldset>
+            <p id="stage-name" class="stage-name"></p>
+            <div id="calculation" aria-live="polite"></div>
+            <div class="step-controls">
+              <button id="previous-step" type="button">Previous</button
+              ><button id="next-step" class="primary" type="button">Next operation</button>
+            </div>
+            <button id="reset-steps" class="text-button" type="button">
+              Return to the observations
+            </button>
+            <div id="checks" aria-live="polite"></div>
+          </div>
+        </div>
+        <details class="derivation">
+          <summary>Why does checking the second sighting matter?</summary>
+          <p>
+            Put the front pole at x = 0, rear pole at x = s, and the island foot at x = −D. Each
+            pole has height h. The ground eyes are at x = a and x = s + b.
+          </p>
+          <div class="equations">
+            <p>Front line: y = h(a − x) / a</p>
+            <p>Rear line: y = h(s + b − x) / b</p>
+            <p>At the common peak: H = h(a + D) / a = h(s + b + D) / b</p>
+            <p>So D(b − a) = as; H = h + hs/(b − a).</p>
+          </div>
+          <p>
+            For <em>any</em> nonzero divisor f, the recipe's candidate D = as/f and H = h + hs/f
+            fits the front line exactly. The second line rejects it unless f = b − a. When b = a,
+            the lines are parallel; when b &lt; a, their intersection is behind the front pole and
+            below pole height, outside the forward-island setup.
+          </p>
+          <p>
+            This coordinate derivation is modern. It explains the model here; it is not presented as
+            Liu Hui's own proof.
+          </p>
+        </details>
+      </section>
+      <section id="reading" class="section" aria-labelledby="reading-title">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Read three voices</p>
+          <h2 id="reading-title">A procedure, a gloss, a correction.</h2>
+        </div>
+        <p class="section-deck">
+          Selected Classical Chinese clauses with new English renderings and modern Mandarin
+          pronunciation aids. Punctuation is supplied; the original column layout and small notes
+          remain visible in the whole photographed openings.
+        </p>
+        <div class="reader-layout">
+          <div>
+            <label class="select-label" for="reading-choice">Choose a passage</label
+            ><select id="reading-choice"></select>
+            <article id="passage"></article>
+            <div class="step-controls">
+              <button type="button" id="previous-reading">Previous passage</button
+              ><button type="button" id="next-reading">Next passage</button>
+            </div>
+            <button type="button" class="text-button" id="read-opening">
+              Show this passage's opening →
+            </button>
+          </div>
+          <div class="witness">
+            <div class="source-controls">
+              <label for="source-page">Whole source opening</label
+              ><select id="source-page">
+                <option value="9">9 · Bibliographic preface</option>
+                <option value="10">10 · The problem</option>
+                <option value="11">11 · Procedure and correction</option>
+                <option value="12">12 · Distance answer and next problem</option>
+                <option value="13">13 · Unit conversion continued</option>
+              </select><button type="button" id="source-zoom" aria-pressed="false">
+                Enlarge source
+              </button>
+            </div>
+            <p id="source-status" role="status"></p>
+            <section
+              id="source-frame"
+              class="source-frame"
+              tabindex="0"
+              aria-label="Whole source opening; use arrow keys to pan when enlarged"
+            ></section>
+            <p class="source-location">
+              Read columns from right to left, top to bottom. Opening numbers count PDF pages. The
+              two photographed leaves remain together, with margins, stamps and all notes.
+            </p>
+          </div>
+        </div>
+        <details>
+          <summary>Which witness is this?</summary>
+          <p>
+            <cite>Haidao suanjing</cite>, Waseda University Library ni02 00649, catalogued as 1777.
+            The bibliographic preface is dated the fourth month of Qianlong 40 (1775). Its header
+            attributes the work to Liu Hui of Jin and the commentary to Li Chunfeng of Tang. The
+            work is associated with Liu Hui's third-century mathematics; this photographed Qing book
+            is a much later printed witness.
+          </p>
+          <p>
+            The Qing preface says the material was compiled from the
+            <cite>Yongle Encyclopedia</cite>. The contradictory wording in the commentary is what
+            this witness transmits; we do not infer where that reading originated. The ten excerpts
+            here are selected clauses, not a complete critical edition or a reconstruction of
+            ancient pronunciation.
+          </p>
+          <p>
+            <a href="https://commons.wikimedia.org/w/index.php?curid=99007136"
+              >Public-domain scan and catalogue description</a
+            >
+            ·
+            <a href="https://www.wul.waseda.ac.jp/kotenseki/html/ni02/ni02_00649/index.html"
+              >Waseda catalogue</a
+            >
+            ·
+            <a href="https://doi.org/10.1016/0315-0860(86)90024-8"
+              >Ang Tian Se and Frank J. Swetz (1986), historical study</a
+            >
+          </p>
+          <p id="source-provenance"></p>
+        </details>
+      </section>
+      <section id="uncertainty" class="section" aria-labelledby="uncertainty-title">
+        <div class="section-heading">
+          <p class="eyebrow">04 / A modern measurement experiment</p>
+          <h2 id="uncertainty-title">Four bu can carry a very large island.</h2>
+        </div>
+        <div class="uncertainty-layout">
+          <div>
+            <p>
+              Now allow each retreat to differ independently by an amount you choose. Pole height
+              and pole gap stay exact. These are allowed intervals, with no probability attached.
+            </p>
+            <label class="error-control" for="error-width"
+              >Each retreat may differ by ±<output id="error-value" for="error-width">0</output>
+              bu<input type="range" id="error-width" min="0" max="64" step="1" value="0"></label
+            >
+            <fieldset class="presets" aria-label="Set a retreat half-width">
+              <button type="button" data-error="0">Exact</button
+              ><button type="button" data-error="4">±1 bu</button
+              ><button type="button" data-error="8">±2 bu</button>
+            </fieldset>
+            <p>
+              The source exercise reports exact numbers. This slider is our experiment, rather than
+              an error estimate supplied by the text. It does not include uneven terrain, unequal
+              poles, eye height or atmospheric effects.
+            </p>
+          </div>
+          <div id="bounds" aria-live="polite"></div>
+        </div>
+      </section>
+      <section id="save" class="section" aria-labelledby="save-title">
+        <div class="section-heading">
+          <p class="eyebrow">05 / Keep an inspectable record</p>
+          <h2 id="save-title">Take the observations with you.</h2>
+        </div>
+        <p>
+          Save the applied record and current operation, the exact fractions, both sighting checks,
+          and the chosen uncertainty interval. The reading copy includes all ten passages, five
+          whole source openings, embedded fonts, source identities, and a blank working sheet. It
+          needs no scripts or network.
+        </p>
+        <div class="downloads">
+          <button type="button" id="save-html" class="primary">Save reading copy · HTML</button
+          ><button type="button" id="save-csv">Save exact record · CSV</button
+          ><button type="button" id="save-svg">Save whole survey · SVG</button
+          ><button type="button" id="share">Copy this state’s address</button
+          ><button type="button" id="print">Print current page</button>
+        </div>
+        <p id="save-status" role="status"></p>
+        <p id="offline-status" role="status">Offline edition has not been checked.</p>
+        <button type="button" class="text-button" id="offline-check">
+          Check complete offline edition
+        </button>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Haidao · Original model, diagrams and English © 2026 Anton Soloviev ·
+        <a href="https://github.com/antonsoo/haidao">Source and review</a>
+        · MIT. Whole source photographs are public domain; fonts retain their OFL notices.
+      </p>
+      <p>
+        Learning from an idealized historical exercise. No island location, actual expedition,
+        historical instrument diagram or absolute length standard is inferred.
+      </p>
+    </footer>
+    <noscript
+      ><p class="noscript">
+        The interactive survey needs JavaScript. Complete, script-free reading copies are retained
+        in the repository's examples directory.
+      </p></noscript
+    >
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

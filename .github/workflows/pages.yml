@@ -1,0 +1,34 @@
+name: Pages
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - name: Update the static branch without rewriting history
+        run: |
+          git config user.name "Anton Soloviev"
+          git config user.email "anton@praviel.com"
+          git fetch origin gh-pages
+          git worktree add --detach /tmp/haidao-pages origin/gh-pages
+          rsync -a --delete --exclude=.git --exclude=assets/ dist/ /tmp/haidao-pages/
+          mkdir -p /tmp/haidao-pages/assets
+          cp -a dist/assets/. /tmp/haidao-pages/assets/
+          touch /tmp/haidao-pages/.nojekyll
+          git -C /tmp/haidao-pages add -A
+          if ! git -C /tmp/haidao-pages diff --cached --quiet; then
+            git -C /tmp/haidao-pages commit -m "build: publish the reviewed Haidao edition"
+            git -C /tmp/haidao-pages push origin HEAD:gh-pages
+          fi

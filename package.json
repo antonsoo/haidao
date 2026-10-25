@@ -1,0 +1,50 @@
+{
+  "name": "@antonsoloviev/haidao",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Test a sea-island calculation against two sightings, with Classical Chinese and whole source openings.",
+  "type": "module",
+  "author": "Anton Soloviev <anton@praviel.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonsoo/haidao.git"
+  },
+  "homepage": "https://antonsoo.github.io/haidao/",
+  "keywords": [
+    "liu-hui",
+    "ancient-china",
+    "geometry",
+    "classical-chinese",
+    "surveying",
+    "education"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4333 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4333 --strictPort",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "verify:survey": "node --import tsx scripts/survey-cases.ts | python3 scripts/survey-oracle.py",
+    "test:browser": "node scripts/browser-check.mjs",
+    "verify:sources": "node scripts/source-guards.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@biomejs/biome": "2.6.2",
+    "@types/node": "24.19.2",
+    "playwright": "1.63.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
