@@ -88,3 +88,7 @@ refraction and probabilities are not modeled. The selected excerpts and modern
 Mandarin aids are not a complete critical edition or ancient pronunciation.
 The contradiction belongs to the received printed witness; its origin in the
 transmission has not been established.
+
+The clean Node 24.21.0 clone of `ffa528d` passed `npm ci` and `npm run check`.
+All nineteen output files and all five retained native examples matched byte for
+byte. See [clean-build.json](evidence/clean-build.json).
