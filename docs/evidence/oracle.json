@@ -1,0 +1,12 @@
+{
+  "records": 3005,
+  "candidate_comparisons": 6009,
+  "forward_interval_samples": 121132,
+  "interval_kinds": {
+    "bounded": 1472,
+    "none": 1473,
+    "unbounded": 42,
+    "invalid": 18
+  },
+  "method": "Python Fraction; independent 2x2 determinant from two point-defined sight lines; 9x9 interval samples and exact endpoint checks"
+}
