@@ -4,7 +4,7 @@
   "private": true,
   "description": "Test a sea-island calculation against two sightings, with Classical Chinese and whole source openings.",
   "type": "module",
-  "author": "Anton Soloviev <anton@praviel.com>",
+  "author": "Anthony Mercer <anthony@praviel.com>",
   "license": "MIT",
   "repository": {
     "type": "git",

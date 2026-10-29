@@ -154,7 +154,7 @@ failure. Prefer a deeper, checkable lesson to a larger catalogue.
 ## License and sources
 
 Original software, diagrams, selected transcription and English: [MIT](LICENSE),
-Copyright © 2026 Anton Soloviev. The photographed historical book is public
+Copyright © 2026 Anthony Mercer. The photographed historical book is public
 domain; fonts carry their complete SIL Open Font License notices.
 
 - [Waseda scan and catalogue metadata](https://commons.wikimedia.org/w/index.php?curid=99007136).
