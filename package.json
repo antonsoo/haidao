@@ -5,7 +5,7 @@
   "description": "Test a sea-island calculation against two sightings, with Classical Chinese and whole source openings.",
   "type": "module",
   "author": "Anthony Mercer <anthony@praviel.com>",
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/antonsoo/haidao.git"

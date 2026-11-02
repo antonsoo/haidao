@@ -2,7 +2,7 @@
 
 **Test a sea-island calculation against two sightings.**
 
-[Live lesson](https://antonsoo.github.io/haidao/) · [MIT](LICENSE)
+[Live lesson](https://antonsoo.github.io/haidao/) · [PolyForm Noncommercial 1.0.0](LICENSE)
 
 The first problem of Liu Hui's *Sea Island Mathematical Manual* gives two equal
 poles and two ground-level sighting retreats. In the retained printed witness,
@@ -153,7 +153,9 @@ failure. Prefer a deeper, checkable lesson to a larger catalogue.
 
 ## License and sources
 
-Original software, diagrams, selected transcription and English: [MIT](LICENSE),
+New versions are released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It is free for any noncommercial purpose, including personal study, teaching and research, and for use by charities, schools, universities, research organizations and government institutions. Commercial use needs written permission from Anthony Mercer (anthony@praviel.com). Versions up to commit [`0e8a3bf`](https://github.com/antonsoo/haidao/tree/0e8a3bf) (2026-11-01) were released under the MIT License, and copies of those versions keep it.
+
+Original software, diagrams, selected transcription and English: [PolyForm Noncommercial 1.0.0](LICENSE),
 Copyright © 2026 Anthony Mercer. The photographed historical book is public
 domain; fonts carry their complete SIL Open Font License notices.
 
