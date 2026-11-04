@@ -1,0 +1,750 @@
+{
+  "results": [
+    {
+      "engine": "chromium",
+      "slowReadMs": 19030,
+      "slowSaveMs": 20812,
+      "cancelledWithoutDownload": true,
+      "snapshotPreserved": true,
+      "retryWithoutChangingOpening": true,
+      "faults": [
+        {
+          "mode": "headers",
+          "elapsedMs": 15030,
+          "status": "Opening unavailable. No data arrived for 15 seconds. Check the connection and retry. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "body",
+          "elapsedMs": 15194,
+          "status": "Opening unavailable. No data arrived for 15 seconds. Check the connection and retry. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "wrong",
+          "elapsedMs": 43,
+          "status": "Opening unavailable. The identity check failed for the retained file. Reload or retry with the complete edition. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "short",
+          "elapsedMs": 40,
+          "status": "Opening unavailable. The identity check failed for the retained file. Reload or retry with the complete edition. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "long",
+          "elapsedMs": 40,
+          "status": "Opening unavailable. The identity check failed: the retained file is larger than expected. Use Retry this opening after reconnecting."
+        }
+      ],
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "slowReadMs": 19156,
+      "slowSaveMs": 19449,
+      "cancelledWithoutDownload": true,
+      "snapshotPreserved": true,
+      "retryWithoutChangingOpening": true,
+      "faults": [
+        {
+          "mode": "headers",
+          "elapsedMs": 15025,
+          "status": "Opening unavailable. No data arrived for 15 seconds. Check the connection and retry. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "body",
+          "elapsedMs": 15157,
+          "status": "Opening unavailable. No data arrived for 15 seconds. Check the connection and retry. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "wrong",
+          "elapsedMs": 61,
+          "status": "Opening unavailable. The identity check failed for the retained file. Reload or retry with the complete edition. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "short",
+          "elapsedMs": 43,
+          "status": "Opening unavailable. The identity check failed for the retained file. Reload or retry with the complete edition. Use Retry this opening after reconnecting."
+        },
+        {
+          "mode": "long",
+          "elapsedMs": 50,
+          "status": "Opening unavailable. The identity check failed: the retained file is larger than expected. Use Retry this opening after reconnecting."
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "requests": [
+    {
+      "name": "index.html",
+      "mode": "normal",
+      "received": 18024,
+      "started": 1793779055655,
+      "ended": 1793779055662
+    },
+    {
+      "name": "assets/index-Bj1hLz3P.js",
+      "mode": "normal",
+      "received": 61573,
+      "started": 1793779055685,
+      "ended": 1793779055688
+    },
+    {
+      "name": "assets/index-DN5hjxwI.css",
+      "mode": "normal",
+      "received": 10706,
+      "started": 1793779055686,
+      "ended": 1793779055690
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779055708,
+      "ended": 1793779055721
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779055922,
+      "ended": 1793779055939
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779055923,
+      "ended": 1793779055938
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "slow",
+      "received": 1018547,
+      "started": 1793779058923,
+      "ended": 1793779077838
+    },
+    {
+      "name": "sources/waseda-09.jpg",
+      "mode": "normal",
+      "received": 944202,
+      "started": 1793779059290,
+      "ended": 1793779059302
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779059293,
+      "ended": 1793779059303
+    },
+    {
+      "name": "sources/waseda-12.jpg",
+      "mode": "normal",
+      "received": 982697,
+      "started": 1793779059293,
+      "ended": 1793779059309
+    },
+    {
+      "name": "sources/waseda-13.jpg",
+      "mode": "normal",
+      "received": 1010533,
+      "started": 1793779059294,
+      "ended": 1793779059310
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "slow",
+      "received": 98304,
+      "started": 1793779059295,
+      "ended": 1793779061376
+    },
+    {
+      "name": "sources/waseda-metadata.json",
+      "mode": "normal",
+      "received": 2294,
+      "started": 1793779059311,
+      "ended": 1793779059312
+    },
+    {
+      "name": "fonts/Atkinson-OFL.txt",
+      "mode": "normal",
+      "received": 4431,
+      "started": 1793779059319,
+      "ended": 1793779059320
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779059319,
+      "ended": 1793779059321
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779059321,
+      "ended": 1793779059322
+    },
+    {
+      "name": "fonts/Noto-NOTICE.txt",
+      "mode": "normal",
+      "received": 118,
+      "started": 1793779059330,
+      "ended": 1793779059331
+    },
+    {
+      "name": "fonts/Noto-OFL.txt",
+      "mode": "normal",
+      "received": 4301,
+      "started": 1793779059338,
+      "ended": 1793779059339
+    },
+    {
+      "name": "fonts/characters.txt",
+      "mode": "normal",
+      "received": 399,
+      "started": 1793779059339,
+      "ended": 1793779059340
+    },
+    {
+      "name": "fonts/provenance.json",
+      "mode": "normal",
+      "received": 344,
+      "started": 1793779059340,
+      "ended": 1793779059341
+    },
+    {
+      "name": "sources/waseda-09.jpg",
+      "mode": "normal",
+      "received": 944202,
+      "started": 1793779079359,
+      "ended": 1793779079362
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779079360,
+      "ended": 1793779079369
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "slow",
+      "received": 1018547,
+      "started": 1793779079360,
+      "ended": 1793779098274
+    },
+    {
+      "name": "sources/waseda-12.jpg",
+      "mode": "normal",
+      "received": 982697,
+      "started": 1793779079360,
+      "ended": 1793779079374
+    },
+    {
+      "name": "sources/waseda-13.jpg",
+      "mode": "normal",
+      "received": 1010533,
+      "started": 1793779079361,
+      "ended": 1793779079373
+    },
+    {
+      "name": "sources/waseda-metadata.json",
+      "mode": "normal",
+      "received": 2294,
+      "started": 1793779079361,
+      "ended": 1793779079363
+    },
+    {
+      "name": "fonts/Atkinson-OFL.txt",
+      "mode": "normal",
+      "received": 4431,
+      "started": 1793779079369,
+      "ended": 1793779079373
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779079373,
+      "ended": 1793779079374
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779079380,
+      "ended": 1793779079380
+    },
+    {
+      "name": "fonts/Noto-NOTICE.txt",
+      "mode": "normal",
+      "received": 118,
+      "started": 1793779079380,
+      "ended": 1793779079381
+    },
+    {
+      "name": "fonts/Noto-OFL.txt",
+      "mode": "normal",
+      "received": 4301,
+      "started": 1793779079386,
+      "ended": 1793779079387
+    },
+    {
+      "name": "fonts/characters.txt",
+      "mode": "normal",
+      "received": 399,
+      "started": 1793779079387,
+      "ended": 1793779079387
+    },
+    {
+      "name": "fonts/provenance.json",
+      "mode": "normal",
+      "received": 344,
+      "started": 1793779079387,
+      "ended": 1793779079388
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779099417,
+      "ended": 1793779099510
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "headers",
+      "received": 0,
+      "started": 1793779099644,
+      "ended": 1793779114646
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779114711,
+      "ended": 1793779114719
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779114833,
+      "ended": 1793779114837
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "body",
+      "received": 1024,
+      "started": 1793779114944,
+      "ended": 1793779129952
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779130173,
+      "ended": 1793779130181
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779130276,
+      "ended": 1793779130285
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "wrong",
+      "received": 982697,
+      "started": 1793779130387,
+      "ended": 1793779130400
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779130450,
+      "ended": 1793779130452
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779130571,
+      "ended": 1793779130573
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "short",
+      "received": 100000,
+      "started": 1793779130655,
+      "ended": 1793779130666
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779130716,
+      "ended": 1793779130718
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779130823,
+      "ended": 1793779130826
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "long",
+      "received": 1018569,
+      "started": 1793779130920,
+      "ended": 1793779130923
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779130983,
+      "ended": 1793779130986
+    },
+    {
+      "name": "index.html",
+      "mode": "normal",
+      "received": 18024,
+      "started": 1793779133321,
+      "ended": 1793779133324
+    },
+    {
+      "name": "assets/index-Bj1hLz3P.js",
+      "mode": "normal",
+      "received": 61573,
+      "started": 1793779133687,
+      "ended": 1793779133688
+    },
+    {
+      "name": "assets/index-DN5hjxwI.css",
+      "mode": "normal",
+      "received": 10706,
+      "started": 1793779133688,
+      "ended": 1793779133689
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779133752,
+      "ended": 1793779133759
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779133794,
+      "ended": 1793779133795
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779133794,
+      "ended": 1793779133796
+    },
+    {
+      "name": "favicon.svg",
+      "mode": "normal",
+      "received": 283,
+      "started": 1793779133831,
+      "ended": 1793779133832
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "slow",
+      "received": 1018547,
+      "started": 1793779134230,
+      "ended": 1793779153157
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779134756,
+      "ended": 1793779134763
+    },
+    {
+      "name": "sources/waseda-09.jpg",
+      "mode": "normal",
+      "received": 944202,
+      "started": 1793779134772,
+      "ended": 1793779134774
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779134780,
+      "ended": 1793779134787
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779134781,
+      "ended": 1793779134782
+    },
+    {
+      "name": "sources/waseda-metadata.json",
+      "mode": "normal",
+      "received": 2294,
+      "started": 1793779134787,
+      "ended": 1793779134788
+    },
+    {
+      "name": "sources/waseda-13.jpg",
+      "mode": "normal",
+      "received": 1010533,
+      "started": 1793779134788,
+      "ended": 1793779134799
+    },
+    {
+      "name": "sources/waseda-12.jpg",
+      "mode": "normal",
+      "received": 982697,
+      "started": 1793779134789,
+      "ended": 1793779134802
+    },
+    {
+      "name": "fonts/Atkinson-OFL.txt",
+      "mode": "normal",
+      "received": 4431,
+      "started": 1793779134840,
+      "ended": 1793779134844
+    },
+    {
+      "name": "fonts/Noto-NOTICE.txt",
+      "mode": "normal",
+      "received": 118,
+      "started": 1793779134840,
+      "ended": 1793779134842
+    },
+    {
+      "name": "fonts/Noto-OFL.txt",
+      "mode": "normal",
+      "received": 4301,
+      "started": 1793779134841,
+      "ended": 1793779134844
+    },
+    {
+      "name": "fonts/characters.txt",
+      "mode": "normal",
+      "received": 399,
+      "started": 1793779134841,
+      "ended": 1793779134844
+    },
+    {
+      "name": "fonts/provenance.json",
+      "mode": "normal",
+      "received": 344,
+      "started": 1793779134841,
+      "ended": 1793779134844
+    },
+    {
+      "name": "sources/waseda-09.jpg",
+      "mode": "normal",
+      "received": 944202,
+      "started": 1793779153364,
+      "ended": 1793779153369
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779153369,
+      "ended": 1793779153375
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "slow",
+      "received": 1018547,
+      "started": 1793779153369,
+      "ended": 1793779172276
+    },
+    {
+      "name": "sources/waseda-12.jpg",
+      "mode": "normal",
+      "received": 982697,
+      "started": 1793779153370,
+      "ended": 1793779153375
+    },
+    {
+      "name": "sources/waseda-13.jpg",
+      "mode": "normal",
+      "received": 1010533,
+      "started": 1793779153375,
+      "ended": 1793779153382
+    },
+    {
+      "name": "sources/waseda-metadata.json",
+      "mode": "normal",
+      "received": 2294,
+      "started": 1793779153378,
+      "ended": 1793779153379
+    },
+    {
+      "name": "fonts/Atkinson-OFL.txt",
+      "mode": "normal",
+      "received": 4431,
+      "started": 1793779153380,
+      "ended": 1793779153381
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779153384,
+      "ended": 1793779153386
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779153385,
+      "ended": 1793779153386
+    },
+    {
+      "name": "fonts/Noto-NOTICE.txt",
+      "mode": "normal",
+      "received": 118,
+      "started": 1793779153388,
+      "ended": 1793779153389
+    },
+    {
+      "name": "fonts/Noto-OFL.txt",
+      "mode": "normal",
+      "received": 4301,
+      "started": 1793779153389,
+      "ended": 1793779153390
+    },
+    {
+      "name": "fonts/characters.txt",
+      "mode": "normal",
+      "received": 399,
+      "started": 1793779153390,
+      "ended": 1793779153391
+    },
+    {
+      "name": "fonts/provenance.json",
+      "mode": "normal",
+      "received": 344,
+      "started": 1793779153390,
+      "ended": 1793779153391
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779173352,
+      "ended": 1793779173356
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "headers",
+      "received": 0,
+      "started": 1793779173448,
+      "ended": 1793779188440
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779188519,
+      "ended": 1793779188524
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779188645,
+      "ended": 1793779188649
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "body",
+      "received": 1024,
+      "started": 1793779188808,
+      "ended": 1793779203817
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779203985,
+      "ended": 1793779203992
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779204133,
+      "ended": 1793779204145
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "wrong",
+      "received": 982697,
+      "started": 1793779204275,
+      "ended": 1793779204279
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779204368,
+      "ended": 1793779204372
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779204488,
+      "ended": 1793779204489
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "short",
+      "received": 100000,
+      "started": 1793779204599,
+      "ended": 1793779204601
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779204684,
+      "ended": 1793779204685
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779204784,
+      "ended": 1793779204785
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "long",
+      "received": 1018569,
+      "started": 1793779204879,
+      "ended": 1793779204881
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779204967,
+      "ended": 1793779204969
+    }
+  ]
+}

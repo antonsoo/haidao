@@ -1,0 +1,33 @@
+{
+  "source": "fc55571",
+  "results": [
+    {
+      "engine": "chromium",
+      "slowSource": {
+        "elapsedMs": 15049,
+        "status": "Opening unavailable. The user aborted a request. Select another opening and return to retry.",
+        "images": 0
+      },
+      "staleOtherTab": "Complete offline edition e02bd222c9ae3f3b3ada: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "failedInitialRetry": {
+        "controller": false,
+        "addedRequests": 0,
+        "status": "The complete offline edition is not controlling this page yet. Keep this page open online, then check again."
+      }
+    },
+    {
+      "engine": "firefox",
+      "slowSource": {
+        "elapsedMs": 15077,
+        "status": "Opening unavailable. The operation was aborted.  Select another opening and return to retry.",
+        "images": 0
+      },
+      "staleOtherTab": "Complete offline edition e02bd222c9ae3f3b3ada: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "failedInitialRetry": {
+        "controller": false,
+        "addedRequests": 0,
+        "status": "The complete offline edition is not controlling this page yet. Keep this page open online, then check again."
+      }
+    }
+  ]
+}

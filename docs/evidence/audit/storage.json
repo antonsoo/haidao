@@ -1,0 +1,446 @@
+{
+  "results": [
+    {
+      "version": "before",
+      "engine": "chromium",
+      "injectedFailure": "Cache.put rejects source opening 11 with QuotaExceededError in the candidate worker",
+      "before": [
+        {
+          "name": "/haidao/assets/index-DN5hjxwI.css",
+          "hash": "552e33f76c1374d204c6a3af55ce48ed830d0326224ed0abc5915c1266cdf525"
+        },
+        {
+          "name": "/haidao/assets/index-POcf5NN2.js",
+          "hash": "653ebe1a15579581e9f49be2252d4b6aa6886c7f3bc24e64b7d6906a0073dac5"
+        },
+        {
+          "name": "/haidao/favicon.svg",
+          "hash": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058"
+        },
+        {
+          "name": "/haidao/fonts/Atkinson-OFL.txt",
+          "hash": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+        },
+        {
+          "name": "/haidao/fonts/AtkinsonHyperlegibleNext.ttf",
+          "hash": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+        },
+        {
+          "name": "/haidao/fonts/characters.txt",
+          "hash": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c"
+        },
+        {
+          "name": "/haidao/fonts/HaidaoCJK.woff2",
+          "hash": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf"
+        },
+        {
+          "name": "/haidao/fonts/Noto-NOTICE.txt",
+          "hash": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec"
+        },
+        {
+          "name": "/haidao/fonts/Noto-OFL.txt",
+          "hash": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        {
+          "name": "/haidao/fonts/provenance.json",
+          "hash": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664"
+        },
+        {
+          "name": "/haidao/index.html",
+          "hash": "8847228f6cce4f5c488a77fd7d8fca71211219e2ee0edb42544b1d5a9de71db2"
+        },
+        {
+          "name": "/haidao/source-manifest.json",
+          "hash": "657dc24c0291a3cf9d78f982291a9acd8fb09e164ae7b289864a6286a80ae5a8"
+        },
+        {
+          "name": "/haidao/sources/waseda-09.jpg",
+          "hash": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "name": "/haidao/sources/waseda-10.jpg",
+          "hash": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "name": "/haidao/sources/waseda-12.jpg",
+          "hash": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "name": "/haidao/sources/waseda-13.jpg",
+          "hash": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        },
+        {
+          "name": "/haidao/sources/waseda-metadata.json",
+          "hash": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341"
+        }
+      ],
+      "after": []
+    },
+    {
+      "version": "before",
+      "engine": "firefox",
+      "injectedFailure": "Cache.put rejects source opening 11 with QuotaExceededError in the candidate worker",
+      "before": [
+        {
+          "name": "/haidao/assets/index-DN5hjxwI.css",
+          "hash": "552e33f76c1374d204c6a3af55ce48ed830d0326224ed0abc5915c1266cdf525"
+        },
+        {
+          "name": "/haidao/assets/index-POcf5NN2.js",
+          "hash": "653ebe1a15579581e9f49be2252d4b6aa6886c7f3bc24e64b7d6906a0073dac5"
+        },
+        {
+          "name": "/haidao/favicon.svg",
+          "hash": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058"
+        },
+        {
+          "name": "/haidao/fonts/Atkinson-OFL.txt",
+          "hash": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+        },
+        {
+          "name": "/haidao/fonts/AtkinsonHyperlegibleNext.ttf",
+          "hash": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+        },
+        {
+          "name": "/haidao/fonts/characters.txt",
+          "hash": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c"
+        },
+        {
+          "name": "/haidao/fonts/HaidaoCJK.woff2",
+          "hash": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf"
+        },
+        {
+          "name": "/haidao/fonts/Noto-NOTICE.txt",
+          "hash": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec"
+        },
+        {
+          "name": "/haidao/fonts/Noto-OFL.txt",
+          "hash": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        {
+          "name": "/haidao/fonts/provenance.json",
+          "hash": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664"
+        },
+        {
+          "name": "/haidao/index.html",
+          "hash": "8847228f6cce4f5c488a77fd7d8fca71211219e2ee0edb42544b1d5a9de71db2"
+        },
+        {
+          "name": "/haidao/source-manifest.json",
+          "hash": "657dc24c0291a3cf9d78f982291a9acd8fb09e164ae7b289864a6286a80ae5a8"
+        },
+        {
+          "name": "/haidao/sources/waseda-09.jpg",
+          "hash": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "name": "/haidao/sources/waseda-10.jpg",
+          "hash": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "name": "/haidao/sources/waseda-12.jpg",
+          "hash": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "name": "/haidao/sources/waseda-13.jpg",
+          "hash": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        },
+        {
+          "name": "/haidao/sources/waseda-metadata.json",
+          "hash": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341"
+        }
+      ],
+      "after": []
+    },
+    {
+      "version": "current",
+      "engine": "chromium",
+      "injectedFailure": "Cache.put rejects source opening 11 with QuotaExceededError in the candidate worker",
+      "before": [
+        {
+          "name": "/haidao/assets/index-DGzAlZ_U.js",
+          "hash": "4bf0f375e09562de115b0f2226c74217daff760c9e34377bc5ffc3cc11d7c172"
+        },
+        {
+          "name": "/haidao/assets/index-DN5hjxwI.css",
+          "hash": "552e33f76c1374d204c6a3af55ce48ed830d0326224ed0abc5915c1266cdf525"
+        },
+        {
+          "name": "/haidao/favicon.svg",
+          "hash": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058"
+        },
+        {
+          "name": "/haidao/fonts/Atkinson-OFL.txt",
+          "hash": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+        },
+        {
+          "name": "/haidao/fonts/AtkinsonHyperlegibleNext.ttf",
+          "hash": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+        },
+        {
+          "name": "/haidao/fonts/characters.txt",
+          "hash": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c"
+        },
+        {
+          "name": "/haidao/fonts/HaidaoCJK.woff2",
+          "hash": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf"
+        },
+        {
+          "name": "/haidao/fonts/Noto-NOTICE.txt",
+          "hash": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec"
+        },
+        {
+          "name": "/haidao/fonts/Noto-OFL.txt",
+          "hash": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        {
+          "name": "/haidao/fonts/provenance.json",
+          "hash": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664"
+        },
+        {
+          "name": "/haidao/index.html",
+          "hash": "f38ccab5d0f1ebf9af683e77b4c2787db9148ef4008ab8efab169eb149cad37c"
+        },
+        {
+          "name": "/haidao/source-manifest.json",
+          "hash": "657dc24c0291a3cf9d78f982291a9acd8fb09e164ae7b289864a6286a80ae5a8"
+        },
+        {
+          "name": "/haidao/sources/waseda-09.jpg",
+          "hash": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "name": "/haidao/sources/waseda-10.jpg",
+          "hash": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "name": "/haidao/sources/waseda-12.jpg",
+          "hash": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "name": "/haidao/sources/waseda-13.jpg",
+          "hash": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        },
+        {
+          "name": "/haidao/sources/waseda-metadata.json",
+          "hash": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341"
+        }
+      ],
+      "after": [
+        {
+          "name": "/haidao/assets/index-DGzAlZ_U.js",
+          "hash": "4bf0f375e09562de115b0f2226c74217daff760c9e34377bc5ffc3cc11d7c172"
+        },
+        {
+          "name": "/haidao/assets/index-DN5hjxwI.css",
+          "hash": "552e33f76c1374d204c6a3af55ce48ed830d0326224ed0abc5915c1266cdf525"
+        },
+        {
+          "name": "/haidao/favicon.svg",
+          "hash": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058"
+        },
+        {
+          "name": "/haidao/fonts/Atkinson-OFL.txt",
+          "hash": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+        },
+        {
+          "name": "/haidao/fonts/AtkinsonHyperlegibleNext.ttf",
+          "hash": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+        },
+        {
+          "name": "/haidao/fonts/characters.txt",
+          "hash": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c"
+        },
+        {
+          "name": "/haidao/fonts/HaidaoCJK.woff2",
+          "hash": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf"
+        },
+        {
+          "name": "/haidao/fonts/Noto-NOTICE.txt",
+          "hash": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec"
+        },
+        {
+          "name": "/haidao/fonts/Noto-OFL.txt",
+          "hash": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        {
+          "name": "/haidao/fonts/provenance.json",
+          "hash": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664"
+        },
+        {
+          "name": "/haidao/index.html",
+          "hash": "f38ccab5d0f1ebf9af683e77b4c2787db9148ef4008ab8efab169eb149cad37c"
+        },
+        {
+          "name": "/haidao/source-manifest.json",
+          "hash": "657dc24c0291a3cf9d78f982291a9acd8fb09e164ae7b289864a6286a80ae5a8"
+        },
+        {
+          "name": "/haidao/sources/waseda-09.jpg",
+          "hash": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "name": "/haidao/sources/waseda-10.jpg",
+          "hash": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "name": "/haidao/sources/waseda-12.jpg",
+          "hash": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "name": "/haidao/sources/waseda-13.jpg",
+          "hash": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        },
+        {
+          "name": "/haidao/sources/waseda-metadata.json",
+          "hash": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341"
+        }
+      ]
+    },
+    {
+      "version": "current",
+      "engine": "firefox",
+      "injectedFailure": "Cache.put rejects source opening 11 with QuotaExceededError in the candidate worker",
+      "before": [
+        {
+          "name": "/haidao/assets/index-DGzAlZ_U.js",
+          "hash": "4bf0f375e09562de115b0f2226c74217daff760c9e34377bc5ffc3cc11d7c172"
+        },
+        {
+          "name": "/haidao/assets/index-DN5hjxwI.css",
+          "hash": "552e33f76c1374d204c6a3af55ce48ed830d0326224ed0abc5915c1266cdf525"
+        },
+        {
+          "name": "/haidao/favicon.svg",
+          "hash": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058"
+        },
+        {
+          "name": "/haidao/fonts/Atkinson-OFL.txt",
+          "hash": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+        },
+        {
+          "name": "/haidao/fonts/AtkinsonHyperlegibleNext.ttf",
+          "hash": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+        },
+        {
+          "name": "/haidao/fonts/characters.txt",
+          "hash": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c"
+        },
+        {
+          "name": "/haidao/fonts/HaidaoCJK.woff2",
+          "hash": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf"
+        },
+        {
+          "name": "/haidao/fonts/Noto-NOTICE.txt",
+          "hash": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec"
+        },
+        {
+          "name": "/haidao/fonts/Noto-OFL.txt",
+          "hash": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        {
+          "name": "/haidao/fonts/provenance.json",
+          "hash": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664"
+        },
+        {
+          "name": "/haidao/index.html",
+          "hash": "f38ccab5d0f1ebf9af683e77b4c2787db9148ef4008ab8efab169eb149cad37c"
+        },
+        {
+          "name": "/haidao/source-manifest.json",
+          "hash": "657dc24c0291a3cf9d78f982291a9acd8fb09e164ae7b289864a6286a80ae5a8"
+        },
+        {
+          "name": "/haidao/sources/waseda-09.jpg",
+          "hash": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "name": "/haidao/sources/waseda-10.jpg",
+          "hash": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "name": "/haidao/sources/waseda-12.jpg",
+          "hash": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "name": "/haidao/sources/waseda-13.jpg",
+          "hash": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        },
+        {
+          "name": "/haidao/sources/waseda-metadata.json",
+          "hash": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341"
+        }
+      ],
+      "after": [
+        {
+          "name": "/haidao/assets/index-DGzAlZ_U.js",
+          "hash": "4bf0f375e09562de115b0f2226c74217daff760c9e34377bc5ffc3cc11d7c172"
+        },
+        {
+          "name": "/haidao/assets/index-DN5hjxwI.css",
+          "hash": "552e33f76c1374d204c6a3af55ce48ed830d0326224ed0abc5915c1266cdf525"
+        },
+        {
+          "name": "/haidao/favicon.svg",
+          "hash": "d643c8d70cb63f8202d3ee4b959f22ae8b7f12978b4206bc1af669cdbb125058"
+        },
+        {
+          "name": "/haidao/fonts/Atkinson-OFL.txt",
+          "hash": "aca6a428580965d2297d1b718042dd427c2a9443ece3b0d02d758e161e0c4030"
+        },
+        {
+          "name": "/haidao/fonts/AtkinsonHyperlegibleNext.ttf",
+          "hash": "5a455d1cfa099b601ab70751bb9673e8fe1854dc4500c80e1a220d0d75e31745"
+        },
+        {
+          "name": "/haidao/fonts/characters.txt",
+          "hash": "4ad5a7fbd124841f41e752ab50b23f1563b3ca1dd37c15d45b4bdfdd1960ed4c"
+        },
+        {
+          "name": "/haidao/fonts/HaidaoCJK.woff2",
+          "hash": "27a27fb302131881c0f1a600f6b62989a44622748490b36c57f11a7df456edaf"
+        },
+        {
+          "name": "/haidao/fonts/Noto-NOTICE.txt",
+          "hash": "f0aeeb7b1cf3c018211e235091ad316e184e8d3bdac3922b03dca9598451d1ec"
+        },
+        {
+          "name": "/haidao/fonts/Noto-OFL.txt",
+          "hash": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        {
+          "name": "/haidao/fonts/provenance.json",
+          "hash": "ad16696e82aa2e31a8b11d76316245a2c64e4e8a5832042b9289b54a29446664"
+        },
+        {
+          "name": "/haidao/index.html",
+          "hash": "f38ccab5d0f1ebf9af683e77b4c2787db9148ef4008ab8efab169eb149cad37c"
+        },
+        {
+          "name": "/haidao/source-manifest.json",
+          "hash": "657dc24c0291a3cf9d78f982291a9acd8fb09e164ae7b289864a6286a80ae5a8"
+        },
+        {
+          "name": "/haidao/sources/waseda-09.jpg",
+          "hash": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "name": "/haidao/sources/waseda-10.jpg",
+          "hash": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "name": "/haidao/sources/waseda-12.jpg",
+          "hash": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "name": "/haidao/sources/waseda-13.jpg",
+          "hash": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        },
+        {
+          "name": "/haidao/sources/waseda-metadata.json",
+          "hash": "c34ac06a8920c62ea271561180e5ff089bdb06ba5972b5d1b874e91edd9b2341"
+        }
+      ]
+    }
+  ]
+}

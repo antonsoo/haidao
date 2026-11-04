@@ -1,0 +1,114 @@
+[
+  {
+    "engine": "chromium",
+    "motion": "no-preference",
+    "js": true,
+    "before": {
+      "y": 0,
+      "top": 3389.625,
+      "behavior": "smooth"
+    },
+    "after": {
+      "y": 3372,
+      "top": 17.625
+    }
+  },
+  {
+    "engine": "chromium",
+    "motion": "no-preference",
+    "js": false,
+    "before": {
+      "y": 2856,
+      "top": 20.03125,
+      "behavior": "smooth"
+    },
+    "after": {
+      "y": 2858,
+      "top": 18.03125
+    }
+  },
+  {
+    "engine": "chromium",
+    "motion": "reduce",
+    "js": true,
+    "before": {
+      "y": 3372,
+      "top": 17.625,
+      "behavior": "auto"
+    },
+    "after": {
+      "y": 3372,
+      "top": 17.625
+    }
+  },
+  {
+    "engine": "chromium",
+    "motion": "reduce",
+    "js": false,
+    "before": {
+      "y": 2855,
+      "top": 21.03125,
+      "behavior": "auto"
+    },
+    "after": {
+      "y": 2858,
+      "top": 18.03125
+    }
+  },
+  {
+    "engine": "firefox",
+    "motion": "no-preference",
+    "js": true,
+    "before": {
+      "y": 3368.13330078125,
+      "top": 18,
+      "behavior": "smooth"
+    },
+    "after": {
+      "y": 3368,
+      "top": 18.133331298828125
+    }
+  },
+  {
+    "engine": "firefox",
+    "motion": "no-preference",
+    "js": false,
+    "before": {
+      "y": 2854.5166015625,
+      "top": 18,
+      "behavior": "smooth"
+    },
+    "after": {
+      "y": 2855,
+      "top": 17.51666259765625
+    }
+  },
+  {
+    "engine": "firefox",
+    "motion": "reduce",
+    "js": true,
+    "before": {
+      "y": 3368.13330078125,
+      "top": 18,
+      "behavior": "auto"
+    },
+    "after": {
+      "y": 3368.13330078125,
+      "top": 18
+    }
+  },
+  {
+    "engine": "firefox",
+    "motion": "reduce",
+    "js": false,
+    "before": {
+      "y": 2854.5166015625,
+      "top": 18,
+      "behavior": "auto"
+    },
+    "after": {
+      "y": 2854.5166015625,
+      "top": 18
+    }
+  }
+]

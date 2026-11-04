@@ -53,35 +53,38 @@ happen to coincide.
 
 ## Same allowance. Different islands.
 
-In **Uncertainty**, choose **Try the source at ±2 bu**. At the selected 99%,
-opposing errors leave a retreat difference of only 1/25 bu. Height becomes
-125005 bu. Move one keyboard step to 100%: the two sightings become parallel.
-Switch to **Shared offset** while keeping the same setting: height is 1255 bu
-and distance is 31250 bu.
+In **Uncertainty**, choose **Try the source at ±2 bu**. Opposing errors of
++99% and −99% leave a retreat difference of only 1/25 bu: height becomes
+125005 bu. Take the front slider to +100% and the rear to −100%: the sightings
+become parallel.
 
-The whole-set comparison explains why:
+Now choose **Make this pair's errors equal**. Height is 1255 bu, but the
+complete independent bounds are still unbounded. You changed one selected
+pair, not the allowed set. Switch the whole assumption to **Shared offset**:
+now the full height bound is fixed too.
 
 | Both retreats within ±2 bu | Height H, bu | Distance D, bu |
 | --- | --- | --- |
 | Every independent pair permitted | 630; no finite upper bound | 15125; no finite upper bound |
 | Equal additive offsets only | 1255, fixed | 30250 to 31250 |
 
-The error diagram distinguishes the allowed square from the shared diagonal,
-locates parallel pairs and follows one exact pair. Independent mode's slider
-traces opposing errors; the bounds still cover the whole square. This teaches
-how assumptions about which errors can occur together affect an inference.
-It does not establish ancient instrument precision or a probability distribution.
+Separate front and rear sliders select pairs throughout the square. The
+shared-offset mode links them on its diagonal; returning to independent mode
+restores the rear setting. The diagram locates parallel sightings and follows
+the exact selected pair. Slider steps sample the set in 1% increments; exact
+bounds include intermediate values. Neither assumption establishes ancient
+instrument precision or a probability distribution.
 
-![The allowed shared diagonal, fixed height and complete comparison](docs/assets/shared-offset-desktop.png)
+![An equal selected pair inside the still-unbounded independent square](docs/assets/error-pair-desktop.png)
 
-Share links retain the assumption and selected pair; old links retain their
-original independent-error interpretation. CSV and illustrated HTML preserve
-both complete bounds and the selected intersection without changing the applied
+Share links retain the assumption and both controls; old single-probe links
+retain their original opposing pair. CSV and illustrated HTML preserve both
+complete bounds and the selected intersection without changing the applied
 survey record. The [model](docs/model.md#equal-errors-change-the-allowed-set)
-and [operated review](docs/shared-offset-review.md) give the derivation and limits.
-A [saved reading](examples/shared-offset/reading.html.gz),
+and [audit](docs/audit.md#try-the-actual-work) give the derivation and limits.
+An actual [saved reading](examples/shared-offset/reading.html.gz),
 [27-page PDF](examples/shared-offset/reading.pdf) and
-[exact CSV](examples/shared-offset/record.csv) retain an actual browser export.
+[exact CSV](examples/shared-offset/record.csv) retain the shared-offset example.
 Decompress the HTML before opening it.
 
 ## Read and retain the evidence
@@ -102,7 +105,7 @@ Decompress the HTML before opening it.
   the record and licenses. Enlarging a diagram changes its display size equally
   in both directions.
 - A shared address restores the applied observations, divisor, operation,
-  passage, source opening and uncertainty allowance. Unapplied form edits remain
+  passage, source opening, uncertainty allowance and both selected errors. Unapplied form edits remain
   visibly separate from the record used for drawings and downloads.
 
 Retained native examples and the printable reading copy are in [examples](examples/).
@@ -133,12 +136,19 @@ two extrema. When the interval reaches zero and includes positive values,
 forward cases have no finite upper bound. Nonpositive allowed setbacks are
 reported as outside this interval model; they are never silently clipped.
 
-The offline worker hashes the **finished build files**, verifies every response
-before installation, and reports readiness only when the page and controller
-editions agree and every cached file passes its identity check. Cache inspection
-does not create a missing cache. The user can explicitly rebuild an incomplete
-copy. Source viewing and HTML downloads separately verify the retained asset
-identities and reject substituted or incomplete files.
+The offline worker hashes the **finished build files**, verifies each received
+file, and reports readiness only when the page and controller editions agree
+and every cached file passes its identity check. Two background transfers leave
+room for foreground reading. Repair retains already verified files; detected
+damage withdraws readiness in other tabs, and returning to a tab rechecks it.
+A failed first installation can be retried directly. A mismatched page offers
+a reload that retains its applied record in the address.
+
+Source viewing and HTML downloads separately verify retained bytes. Healthy
+transfers may take longer than fifteen seconds; fifteen seconds without data
+ends a stalled request. Source failures have a direct retry. **Cancel saving**
+stops an illustrated export while preserving the current experiment; a completed
+save retains the selection from the moment it began.
 
 ## Accuracy and limits
 
@@ -175,6 +185,9 @@ npm run preview
 node scripts/browser-check.mjs http://127.0.0.1:4333/haidao/ /tmp/haidao-browser
 node scripts/source-guards.mjs /tmp/haidao-source-guards.json
 python3 scripts/error-artifacts.py /tmp/haidao-browser
+node scripts/transfer-audit.mjs /tmp/haidao-transfers
+node scripts/offline-audit.mjs /tmp/haidao-offline
+node scripts/cold-transfer-audit.mjs /tmp/haidao-cold
 ```
 
 Install Playwright's Chromium and Firefox if they are not already available.

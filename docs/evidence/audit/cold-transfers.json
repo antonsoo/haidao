@@ -1,0 +1,395 @@
+{
+  "results": [
+    {
+      "engine": "chromium",
+      "sharedBytesPerSecond": 128000,
+      "firstReadMs": 20106,
+      "secondReadMs": 24166,
+      "installMs": 55887,
+      "actualConnectionOutage": true,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "sharedBytesPerSecond": 128000,
+      "firstReadMs": 20199,
+      "secondReadMs": 24033,
+      "installMs": 56249,
+      "actualConnectionOutage": true,
+      "errors": []
+    }
+  ],
+  "requests": [
+    {
+      "name": "index.html",
+      "mode": "normal",
+      "received": 18024,
+      "started": 1793779055675,
+      "ended": 1793779055959
+    },
+    {
+      "name": "assets/index-DN5hjxwI.css",
+      "mode": "normal",
+      "received": 10706,
+      "started": 1793779055739,
+      "ended": 1793779056008
+    },
+    {
+      "name": "assets/index-Bj1hLz3P.js",
+      "mode": "normal",
+      "received": 61573,
+      "started": 1793779055740,
+      "ended": 1793779056409
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779056419,
+      "ended": 1793779075711
+    },
+    {
+      "name": "sw.js",
+      "mode": "normal",
+      "received": 10531,
+      "started": 1793779056421,
+      "ended": 1793779056712
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779056566,
+      "ended": 1793779060489
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779056570,
+      "ended": 1793779058276
+    },
+    {
+      "name": "assets/index-Bj1hLz3P.js",
+      "mode": "normal",
+      "received": 61573,
+      "started": 1793779056720,
+      "ended": 1793779059234
+    },
+    {
+      "name": "assets/index-DN5hjxwI.css",
+      "mode": "normal",
+      "received": 10706,
+      "started": 1793779056721,
+      "ended": 1793779057216
+    },
+    {
+      "name": "favicon.svg",
+      "mode": "normal",
+      "received": 283,
+      "started": 1793779057225,
+      "ended": 1793779057368
+    },
+    {
+      "name": "fonts/Atkinson-OFL.txt",
+      "mode": "normal",
+      "received": 4431,
+      "started": 1793779057390,
+      "ended": 1793779057620
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779057635,
+      "ended": 1793779060740
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779059245,
+      "ended": 1793779060790
+    },
+    {
+      "name": "fonts/Noto-NOTICE.txt",
+      "mode": "normal",
+      "received": 118,
+      "started": 1793779060747,
+      "ended": 1793779060790
+    },
+    {
+      "name": "fonts/Noto-OFL.txt",
+      "mode": "normal",
+      "received": 4301,
+      "started": 1793779060798,
+      "ended": 1793779060940
+    },
+    {
+      "name": "fonts/characters.txt",
+      "mode": "normal",
+      "received": 399,
+      "started": 1793779060798,
+      "ended": 1793779060890
+    },
+    {
+      "name": "fonts/provenance.json",
+      "mode": "normal",
+      "received": 344,
+      "started": 1793779060901,
+      "ended": 1793779060940
+    },
+    {
+      "name": "index.html",
+      "mode": "normal",
+      "received": 18024,
+      "started": 1793779060948,
+      "ended": 1793779061394
+    },
+    {
+      "name": "source-manifest.json",
+      "mode": "normal",
+      "received": 2794,
+      "started": 1793779060949,
+      "ended": 1793779061040
+    },
+    {
+      "name": "sources/waseda-09.jpg",
+      "mode": "normal",
+      "received": 944202,
+      "started": 1793779061047,
+      "ended": 1793779083237
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779061404,
+      "ended": 1793779080120
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779075800,
+      "ended": 1793779099836
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779080132,
+      "ended": 1793779103553
+    },
+    {
+      "name": "sources/waseda-12.jpg",
+      "mode": "normal",
+      "received": 982697,
+      "started": 1793779083258,
+      "ended": 1793779103253
+    },
+    {
+      "name": "sources/waseda-13.jpg",
+      "mode": "normal",
+      "received": 1010533,
+      "started": 1793779103272,
+      "ended": 1793779111394
+    },
+    {
+      "name": "sources/waseda-metadata.json",
+      "mode": "normal",
+      "received": 2294,
+      "started": 1793779103574,
+      "ended": 1793779103604
+    },
+    {
+      "name": "index.html",
+      "mode": "normal",
+      "received": 18024,
+      "started": 1793779113943,
+      "ended": 1793779114057
+    },
+    {
+      "name": "assets/index-Bj1hLz3P.js",
+      "mode": "normal",
+      "received": 61573,
+      "started": 1793779114403,
+      "ended": 1793779115465
+    },
+    {
+      "name": "assets/index-DN5hjxwI.css",
+      "mode": "normal",
+      "received": 10706,
+      "started": 1793779114404,
+      "ended": 1793779114610
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779114679,
+      "ended": 1793779115616
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779114681,
+      "ended": 1793779118024
+    },
+    {
+      "name": "sw.js",
+      "mode": "normal",
+      "received": 10531,
+      "started": 1793779115492,
+      "ended": 1793779115816
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779115493,
+      "ended": 1793779133950
+    },
+    {
+      "name": "favicon.svg",
+      "mode": "normal",
+      "received": 283,
+      "started": 1793779115819,
+      "ended": 1793779115916
+    },
+    {
+      "name": "assets/index-Bj1hLz3P.js",
+      "mode": "normal",
+      "received": 61573,
+      "started": 1793779116089,
+      "ended": 1793779117672
+    },
+    {
+      "name": "assets/index-DN5hjxwI.css",
+      "mode": "normal",
+      "received": 10706,
+      "started": 1793779116090,
+      "ended": 1793779116567
+    },
+    {
+      "name": "favicon.svg",
+      "mode": "normal",
+      "received": 283,
+      "started": 1793779116580,
+      "ended": 1793779116668
+    },
+    {
+      "name": "fonts/Atkinson-OFL.txt",
+      "mode": "normal",
+      "received": 4431,
+      "started": 1793779116683,
+      "ended": 1793779116868
+    },
+    {
+      "name": "fonts/AtkinsonHyperlegibleNext.ttf",
+      "mode": "normal",
+      "received": 114552,
+      "started": 1793779116880,
+      "ended": 1793779119831
+    },
+    {
+      "name": "fonts/HaidaoCJK.woff2",
+      "mode": "normal",
+      "received": 44284,
+      "started": 1793779117685,
+      "ended": 1793779118879
+    },
+    {
+      "name": "fonts/Noto-NOTICE.txt",
+      "mode": "normal",
+      "received": 118,
+      "started": 1793779118892,
+      "ended": 1793779118979
+    },
+    {
+      "name": "fonts/Noto-OFL.txt",
+      "mode": "normal",
+      "received": 4301,
+      "started": 1793779118991,
+      "ended": 1793779119129
+    },
+    {
+      "name": "fonts/characters.txt",
+      "mode": "normal",
+      "received": 399,
+      "started": 1793779119140,
+      "ended": 1793779119229
+    },
+    {
+      "name": "fonts/provenance.json",
+      "mode": "normal",
+      "received": 344,
+      "started": 1793779119241,
+      "ended": 1793779119329
+    },
+    {
+      "name": "index.html",
+      "mode": "normal",
+      "received": 18024,
+      "started": 1793779119343,
+      "ended": 1793779119781
+    },
+    {
+      "name": "source-manifest.json",
+      "mode": "normal",
+      "received": 2794,
+      "started": 1793779119794,
+      "ended": 1793779119881
+    },
+    {
+      "name": "sources/waseda-09.jpg",
+      "mode": "normal",
+      "received": 944202,
+      "started": 1793779119844,
+      "ended": 1793779141881
+    },
+    {
+      "name": "sources/waseda-10.jpg",
+      "mode": "normal",
+      "received": 796216,
+      "started": 1793779119893,
+      "ended": 1793779138669
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779134173,
+      "ended": 1793779158042
+    },
+    {
+      "name": "sources/waseda-11.jpg",
+      "mode": "normal",
+      "received": 1018547,
+      "started": 1793779138704,
+      "ended": 1793779162055
+    },
+    {
+      "name": "sources/waseda-12.jpg",
+      "mode": "normal",
+      "received": 982697,
+      "started": 1793779141922,
+      "ended": 1793779161704
+    },
+    {
+      "name": "sources/waseda-13.jpg",
+      "mode": "normal",
+      "received": 1010533,
+      "started": 1793779161749,
+      "ended": 1793779169884
+    },
+    {
+      "name": "sources/waseda-metadata.json",
+      "mode": "normal",
+      "received": 2294,
+      "started": 1793779162075,
+      "ended": 1793779162105
+    }
+  ]
+}

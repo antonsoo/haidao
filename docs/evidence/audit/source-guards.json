@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "cacheRebuildAndOfflineReload": true,
+      "engine": "chromium",
+      "wrongPhotographRefused": true,
+      "completeDownloadRefused": true,
+      "lateResponseRetainsOpening12": true,
+      "heldSourceDoesNotClaimReady": "Installing and verifying the complete offline edition. You can keep reading while files arrive.",
+      "completeEdition": "Complete offline edition 9126e700c4128df985cd: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "deletedCaches": [
+        "haidao-9126e700c4128df985cd"
+      ],
+      "inspectionCreatedNoCaches": []
+    },
+    {
+      "cacheRebuildAndOfflineReload": true,
+      "engine": "firefox",
+      "wrongPhotographRefused": true,
+      "completeDownloadRefused": true,
+      "lateResponseRetainsOpening12": true,
+      "heldSourceDoesNotClaimReady": "Installing and verifying the complete offline edition. You can keep reading while files arrive.",
+      "completeEdition": "Complete offline edition 9126e700c4128df985cd: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "deletedCaches": [
+        "haidao-9126e700c4128df985cd"
+      ],
+      "inspectionCreatedNoCaches": []
+    }
+  ]
+}

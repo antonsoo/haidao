@@ -75,9 +75,12 @@ assistive-technology use are not established by this review.
 
 ## Retained work and limits
 
-[Actual HTML, compressed](../examples/shared-offset/reading.html.gz),
-[PDF](../examples/shared-offset/reading.pdf), and
-[CSV](../examples/shared-offset/record.csv) were saved through the final browser
+The links below pin this first review's captured files. Later revisions update
+the working tree's examples after the separate [audit](audit.md).
+
+[Actual HTML, compressed](https://github.com/antonsoo/haidao/blob/fc5557162852e7d929b4e04044fd5ec77659fa05/examples/shared-offset/reading.html.gz),
+[PDF](https://github.com/antonsoo/haidao/blob/fc5557162852e7d929b4e04044fd5ec77659fa05/examples/shared-offset/reading.pdf), and
+[CSV](https://github.com/antonsoo/haidao/blob/fc5557162852e7d929b4e04044fd5ec77659fa05/examples/shared-offset/record.csv) were saved through the final browser
 interface. Decompress the HTML before opening it. It needs no scripts or
 network and retains the exact state, source images, fonts and complete licenses.
 
@@ -93,8 +96,9 @@ experiment. Nonpositive allowed retreats invalidate the complete bound rather
 than being silently clipped. Older shared addresses default to independent
 errors and the zero probe.
 
-No push, publication, public-byte comparison or remote CI result belongs to
-this change. The supplied Pages workflow is unchanged. A local preview does
+At this first review's snapshot, no push, publication, public-byte comparison
+or remote CI result had been performed. Subsequent work is recorded in the
+separate audit and publication evidence. The supplied Pages workflow is unchanged. A local preview does
 not prove public delivery.
 
 Suggested repository description: “Read Liu Hui's island survey, test both

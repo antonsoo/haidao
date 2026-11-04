@@ -1,0 +1,593 @@
+{
+  "base": "http://127.0.0.1:4333/haidao/",
+  "results": [
+    {
+      "name": "chromium-1440",
+      "width": 1440,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 1440
+      },
+      "files": [
+        {
+          "file": "chromium-1440-wrong-divisor.csv",
+          "bytes": 5564,
+          "sha256": "f07fb41e0d90b661fc8746af7739fe39012dd7407d5b5db204d1cc6981506409"
+        },
+        {
+          "file": "chromium-1440-wrong-divisor.svg",
+          "bytes": 165286,
+          "sha256": "7fad8c5a18900b4f17fc08fa319e0285ac14d7e410e6e37f717f33ccf215eae1"
+        },
+        {
+          "file": "chromium-1440-unapplied.csv",
+          "bytes": 5575,
+          "sha256": "b0a50beae259b378b6adf06e23c083ee5fa80bb6415ba7348bff7218be427b30"
+        },
+        {
+          "file": "chromium-1440-parallel.csv",
+          "bytes": 5276,
+          "sha256": "4f1a3604424880ed5393665f34e950e38ff5d2a70bd75666432986642391c7b9"
+        },
+        {
+          "file": "chromium-1440-coincident.csv",
+          "bytes": 5477,
+          "sha256": "694a244ddefba86586becf1e6cedd3375205c07a04fe7a25968af0e9a234d8d0"
+        },
+        {
+          "file": "chromium-1440-coincident.svg",
+          "bytes": 165321,
+          "sha256": "4f49c0f036317d0e20c2d4eb4da2b5134338619a706e516c810693bd6edcd8ef"
+        },
+        {
+          "file": "chromium-1440-record.csv",
+          "bytes": 5598,
+          "sha256": "b1fb7ceea94ba8ff06d7228b6d13b2adf2aebac7cc5aa094f054a6e2bee42105"
+        },
+        {
+          "file": "chromium-1440-unequal.csv",
+          "bytes": 5634,
+          "sha256": "336228e1a322dd226e811bb2ec1ea1a6aa83f4604403deab25e981f19865fe35"
+        },
+        {
+          "file": "chromium-1440-shared.csv",
+          "bytes": 5597,
+          "sha256": "b98f41b7a30a82ba5d112e905fc90cb5ad6bac87af6b0f13775b0176bd2b9f0b"
+        },
+        {
+          "file": "chromium-1440-shared-reading.html",
+          "bytes": 6601811,
+          "sha256": "94519315534ccdcf664cd9543ea522d11b845a7d5b7ea256dad0e3259f32bb16"
+        },
+        {
+          "file": "chromium-1440-comparison.csv",
+          "bytes": 5630,
+          "sha256": "f1a8a9b11218138048550ecdaee634e86a997b25f22f659f34c3fd6ec490fc39"
+        },
+        {
+          "file": "chromium-1440-survey.svg",
+          "bytes": 165269,
+          "sha256": "e684652782004a194bc700209d6ad2c85f101412dec9f1322e24a5b6a2888e70"
+        },
+        {
+          "file": "chromium-1440-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        },
+        {
+          "file": "chromium-1440-offline-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        }
+      ],
+      "offline": "Complete offline edition 9dc90b12e68d81e011fa: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    },
+    {
+      "name": "chromium-375",
+      "width": 375,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 375
+      },
+      "files": [
+        {
+          "file": "chromium-375-wrong-divisor.csv",
+          "bytes": 5564,
+          "sha256": "f07fb41e0d90b661fc8746af7739fe39012dd7407d5b5db204d1cc6981506409"
+        },
+        {
+          "file": "chromium-375-wrong-divisor.svg",
+          "bytes": 165286,
+          "sha256": "7fad8c5a18900b4f17fc08fa319e0285ac14d7e410e6e37f717f33ccf215eae1"
+        },
+        {
+          "file": "chromium-375-unapplied.csv",
+          "bytes": 5575,
+          "sha256": "b0a50beae259b378b6adf06e23c083ee5fa80bb6415ba7348bff7218be427b30"
+        },
+        {
+          "file": "chromium-375-parallel.csv",
+          "bytes": 5276,
+          "sha256": "4f1a3604424880ed5393665f34e950e38ff5d2a70bd75666432986642391c7b9"
+        },
+        {
+          "file": "chromium-375-coincident.csv",
+          "bytes": 5477,
+          "sha256": "694a244ddefba86586becf1e6cedd3375205c07a04fe7a25968af0e9a234d8d0"
+        },
+        {
+          "file": "chromium-375-coincident.svg",
+          "bytes": 165321,
+          "sha256": "4f49c0f036317d0e20c2d4eb4da2b5134338619a706e516c810693bd6edcd8ef"
+        },
+        {
+          "file": "chromium-375-record.csv",
+          "bytes": 5598,
+          "sha256": "b1fb7ceea94ba8ff06d7228b6d13b2adf2aebac7cc5aa094f054a6e2bee42105"
+        },
+        {
+          "file": "chromium-375-unequal.csv",
+          "bytes": 5634,
+          "sha256": "336228e1a322dd226e811bb2ec1ea1a6aa83f4604403deab25e981f19865fe35"
+        },
+        {
+          "file": "chromium-375-shared.csv",
+          "bytes": 5597,
+          "sha256": "b98f41b7a30a82ba5d112e905fc90cb5ad6bac87af6b0f13775b0176bd2b9f0b"
+        },
+        {
+          "file": "chromium-375-shared-reading.html",
+          "bytes": 6601811,
+          "sha256": "94519315534ccdcf664cd9543ea522d11b845a7d5b7ea256dad0e3259f32bb16"
+        },
+        {
+          "file": "chromium-375-comparison.csv",
+          "bytes": 5630,
+          "sha256": "f1a8a9b11218138048550ecdaee634e86a997b25f22f659f34c3fd6ec490fc39"
+        },
+        {
+          "file": "chromium-375-survey.svg",
+          "bytes": 165269,
+          "sha256": "e684652782004a194bc700209d6ad2c85f101412dec9f1322e24a5b6a2888e70"
+        },
+        {
+          "file": "chromium-375-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        },
+        {
+          "file": "chromium-375-offline-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        }
+      ],
+      "offline": "Complete offline edition 9dc90b12e68d81e011fa: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    },
+    {
+      "name": "firefox-1440",
+      "width": 1440,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 1440
+      },
+      "files": [
+        {
+          "file": "firefox-1440-wrong-divisor.csv",
+          "bytes": 5564,
+          "sha256": "f07fb41e0d90b661fc8746af7739fe39012dd7407d5b5db204d1cc6981506409"
+        },
+        {
+          "file": "firefox-1440-wrong-divisor.svg",
+          "bytes": 165286,
+          "sha256": "7fad8c5a18900b4f17fc08fa319e0285ac14d7e410e6e37f717f33ccf215eae1"
+        },
+        {
+          "file": "firefox-1440-unapplied.csv",
+          "bytes": 5575,
+          "sha256": "b0a50beae259b378b6adf06e23c083ee5fa80bb6415ba7348bff7218be427b30"
+        },
+        {
+          "file": "firefox-1440-parallel.csv",
+          "bytes": 5276,
+          "sha256": "4f1a3604424880ed5393665f34e950e38ff5d2a70bd75666432986642391c7b9"
+        },
+        {
+          "file": "firefox-1440-coincident.csv",
+          "bytes": 5477,
+          "sha256": "694a244ddefba86586becf1e6cedd3375205c07a04fe7a25968af0e9a234d8d0"
+        },
+        {
+          "file": "firefox-1440-coincident.svg",
+          "bytes": 165321,
+          "sha256": "4f49c0f036317d0e20c2d4eb4da2b5134338619a706e516c810693bd6edcd8ef"
+        },
+        {
+          "file": "firefox-1440-record.csv",
+          "bytes": 5598,
+          "sha256": "b1fb7ceea94ba8ff06d7228b6d13b2adf2aebac7cc5aa094f054a6e2bee42105"
+        },
+        {
+          "file": "firefox-1440-unequal.csv",
+          "bytes": 5634,
+          "sha256": "336228e1a322dd226e811bb2ec1ea1a6aa83f4604403deab25e981f19865fe35"
+        },
+        {
+          "file": "firefox-1440-shared.csv",
+          "bytes": 5597,
+          "sha256": "b98f41b7a30a82ba5d112e905fc90cb5ad6bac87af6b0f13775b0176bd2b9f0b"
+        },
+        {
+          "file": "firefox-1440-shared-reading.html",
+          "bytes": 6601811,
+          "sha256": "94519315534ccdcf664cd9543ea522d11b845a7d5b7ea256dad0e3259f32bb16"
+        },
+        {
+          "file": "firefox-1440-comparison.csv",
+          "bytes": 5630,
+          "sha256": "f1a8a9b11218138048550ecdaee634e86a997b25f22f659f34c3fd6ec490fc39"
+        },
+        {
+          "file": "firefox-1440-survey.svg",
+          "bytes": 165269,
+          "sha256": "e684652782004a194bc700209d6ad2c85f101412dec9f1322e24a5b6a2888e70"
+        },
+        {
+          "file": "firefox-1440-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        },
+        {
+          "file": "firefox-1440-offline-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        }
+      ],
+      "offline": "Complete offline edition 9dc90b12e68d81e011fa: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    },
+    {
+      "name": "firefox-375",
+      "width": 375,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 375
+      },
+      "files": [
+        {
+          "file": "firefox-375-wrong-divisor.csv",
+          "bytes": 5564,
+          "sha256": "f07fb41e0d90b661fc8746af7739fe39012dd7407d5b5db204d1cc6981506409"
+        },
+        {
+          "file": "firefox-375-wrong-divisor.svg",
+          "bytes": 165286,
+          "sha256": "7fad8c5a18900b4f17fc08fa319e0285ac14d7e410e6e37f717f33ccf215eae1"
+        },
+        {
+          "file": "firefox-375-unapplied.csv",
+          "bytes": 5575,
+          "sha256": "b0a50beae259b378b6adf06e23c083ee5fa80bb6415ba7348bff7218be427b30"
+        },
+        {
+          "file": "firefox-375-parallel.csv",
+          "bytes": 5276,
+          "sha256": "4f1a3604424880ed5393665f34e950e38ff5d2a70bd75666432986642391c7b9"
+        },
+        {
+          "file": "firefox-375-coincident.csv",
+          "bytes": 5477,
+          "sha256": "694a244ddefba86586becf1e6cedd3375205c07a04fe7a25968af0e9a234d8d0"
+        },
+        {
+          "file": "firefox-375-coincident.svg",
+          "bytes": 165321,
+          "sha256": "4f49c0f036317d0e20c2d4eb4da2b5134338619a706e516c810693bd6edcd8ef"
+        },
+        {
+          "file": "firefox-375-record.csv",
+          "bytes": 5598,
+          "sha256": "b1fb7ceea94ba8ff06d7228b6d13b2adf2aebac7cc5aa094f054a6e2bee42105"
+        },
+        {
+          "file": "firefox-375-unequal.csv",
+          "bytes": 5634,
+          "sha256": "336228e1a322dd226e811bb2ec1ea1a6aa83f4604403deab25e981f19865fe35"
+        },
+        {
+          "file": "firefox-375-shared.csv",
+          "bytes": 5597,
+          "sha256": "b98f41b7a30a82ba5d112e905fc90cb5ad6bac87af6b0f13775b0176bd2b9f0b"
+        },
+        {
+          "file": "firefox-375-shared-reading.html",
+          "bytes": 6601811,
+          "sha256": "94519315534ccdcf664cd9543ea522d11b845a7d5b7ea256dad0e3259f32bb16"
+        },
+        {
+          "file": "firefox-375-comparison.csv",
+          "bytes": 5630,
+          "sha256": "f1a8a9b11218138048550ecdaee634e86a997b25f22f659f34c3fd6ec490fc39"
+        },
+        {
+          "file": "firefox-375-survey.svg",
+          "bytes": 165269,
+          "sha256": "e684652782004a194bc700209d6ad2c85f101412dec9f1322e24a5b6a2888e70"
+        },
+        {
+          "file": "firefox-375-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        },
+        {
+          "file": "firefox-375-offline-reading.html",
+          "bytes": 6601988,
+          "sha256": "6b579192bd34f091f22a85789a0ae72a99e1142ead077933eb4634e12fcff413"
+        }
+      ],
+      "offline": "Complete offline edition 9dc90b12e68d81e011fa: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    }
+  ]
+}
