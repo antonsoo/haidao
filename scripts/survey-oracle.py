@@ -19,6 +19,8 @@ def main():
     count = 0
     comparisons = 0
     interval_samples = 0
+    shared_samples = 0
+    witness_count = 0
     kinds = {}
     for line in sys.stdin:
         j = json.loads(line)
@@ -66,9 +68,40 @@ def main():
                         if expected == 'bounded':
                             assert -actual[0] <= value(bound['highD']) and actual[1] <= value(bound['highH'])
                         interval_samples += 1
+        shared = j['shared']
+        expected_shared = 'invalid' if min(a,b)-e <= 0 else 'none' if b <= a else 'bounded'
+        assert shared['kind'] == expected_shared
+        if expected_shared == 'bounded':
+            endpoints = [intersection(h,s,a+offset,b+offset) for offset in (-e,e)]
+            assert [value(shared[k]) for k in ('lowD','highD')] == [-pt[0] for pt in endpoints]
+            assert value(shared['lowH']) == value(shared['highH']) == endpoints[0][1] == endpoints[1][1]
+            assert value(shared['deltaLow']) == value(shared['deltaHigh']) == b-a
+            for i in range(21):
+                offset = -e + 2*e*F(i,20)
+                point = intersection(h,s,a+offset,b+offset)
+                assert value(shared['lowD']) <= -point[0] <= value(shared['highD'])
+                assert point[1] == value(shared['lowH'])
+                shared_samples += 1
+        for w in j['witnesses']:
+            u = e*F(w['probe'],100)
+            v = u if w['errorMode'] == 'shared' else -u
+            assert value(w['frontError']) == u and value(w['rearError']) == v
+            assert value(w['adjusted']['a']) == a+u and value(w['adjusted']['b']) == b+v
+            if min(a+u,b+v) <= 0:
+                assert w['solution'] is None
+            else:
+                pt = intersection(h,s,a+u,b+v)
+                solution = w['solution']
+                assert solution['kind'] == ('parallel' if pt is None else 'forward' if pt[0] < 0 else 'behind')
+                if pt is None:
+                    assert solution['difference'] is None
+                else:
+                    assert -pt[0] == value(solution['difference']['distance'])
+                    assert pt[1] == value(solution['difference']['height'])
+            witness_count += 1
         count += 1
     assert count == 3005, f"Incomplete independent comparison: {count} records"
-    print(json.dumps({'records':count,'candidate_comparisons':comparisons,'forward_interval_samples':interval_samples,'interval_kinds':kinds,'method':'Python Fraction; independent 2x2 determinant from two point-defined sight lines; 9x9 interval samples and exact endpoint checks'},indent=2))
+    print(json.dumps({'records':count,'shared_offset_samples':shared_samples,'trace_witnesses':witness_count,'candidate_comparisons':comparisons,'forward_interval_samples':interval_samples,'interval_kinds':kinds,'method':'Python Fraction; independent 2x2 determinant from two point-defined sight lines; 9x9 interval samples and exact endpoint checks'},indent=2))
 
 if __name__ == '__main__':
     main()

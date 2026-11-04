@@ -1,4 +1,4 @@
-import { bounds, INITIAL, NEAR, q, record, solve } from "../src/core/survey.ts";
+import { bounds, errorWitness, INITIAL, NEAR, q, record, solve } from "../src/core/survey.ts";
 
 let seed = 0x51a7;
 function random(max: number) {
@@ -24,6 +24,6 @@ for (let i = 0; i < 3000; i++)
 for (const state of states) {
   const r = record(state);
   process.stdout.write(
-    `${JSON.stringify({ state, solution: solve(r), bounds: bounds(r, q(state.error, 4)) }, (_key, value) => (typeof value === "bigint" ? String(value) : value))}\n`,
+    `${JSON.stringify({ state, solution: solve(r), bounds: bounds(r, q(state.error, 4)), shared: bounds(r, q(state.error, 4), "shared"), witnesses: [-100, -99, -1, 0, 1, 99, 100].flatMap((probe) => (["independent", "shared"] as const).map((errorMode) => ({ probe, errorMode, ...errorWitness({ ...state, probe, errorMode }) }))) }, (_key, value) => (typeof value === "bigint" ? String(value) : value))}\n`,
   );
 }

@@ -153,6 +153,59 @@ for (const [engine, launcher] of [
       .screenshot({ path: path.join(out, `${name}-unbounded.png`) });
     const csvPath = await save("save-csv", "record.csv");
     assert.match(await readFile(csvPath, "utf8"), /"height_upper","unbounded"/);
+    await page.locator("#try-errors").click();
+    assert.equal(await page.locator("#error-probe").inputValue(), "99");
+    assert.match(await page.locator("#error-witness").innerText(), /H = 125005 bu; D = 3124500 bu/);
+    const comparison = page.locator('#error-comparison [data-error-model="shared"]');
+    assert.match(await comparison.innerText(), /1255/);
+    assert.match(await comparison.innerText(), /30250 to 31250/);
+    await page.locator("#error-probe").focus();
+    await page.keyboard.press("ArrowRight");
+    assert.equal(
+      await page.locator("#error-witness .witness-result").getAttribute("data-kind"),
+      "parallel",
+    );
+    await page.locator("#error-mode").selectOption("shared");
+    assert.match(await page.locator("#bounds").innerText(), /30250/);
+    assert.match(await page.locator("#bounds").innerText(), /31250/);
+    assert.match(await page.locator("#error-witness").innerText(), /H = 1255 bu; D = 31250 bu/);
+    const sharedUrl = page.url();
+    assert.equal(new URL(sharedUrl).searchParams.get("errorMode"), "shared");
+    await page.reload();
+    assert.equal(await page.locator("#error-mode").inputValue(), "shared");
+    assert.equal(await page.locator("#error-probe").inputValue(), "100");
+    const sharedCsv = await save("save-csv", "shared.csv");
+    assert.match(await readFile(sharedCsv, "utf8"), /"error_model","shared"/);
+    assert.match(await readFile(sharedCsv, "utf8"), /"probe_distance","31250"/);
+    const sharedHtml = await save("save-html", "shared-reading.html");
+    assert.match(await readFile(sharedHtml, "utf8"), /H = 1255 bu; D = 31250 bu/);
+    await page.locator("#error-mode").selectOption("independent");
+    await page.goBack();
+    assert.equal(await page.locator("#error-mode").inputValue(), "shared");
+    await page.goForward();
+    assert.equal(await page.locator("#error-mode").inputValue(), "independent");
+    // The reference line crosses the square above the original ±2 bu allowance.
+    await page.locator("#error-width").evaluate((el) => {
+      el.value = "12";
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    assert.equal(
+      await page.locator("#error-witness .witness-result").getAttribute("data-kind"),
+      "behind",
+    );
+    await page.locator("#uncertainty").screenshot({ path: path.join(out, `${name}-errors.png`) });
+    await page.locator('[data-error="8"]').click();
+    await page.locator("#error-mode").selectOption("shared");
+    await page.locator("#uncertainty").screenshot({ path: path.join(out, `${name}-shared.png`) });
+    await page.locator("#error-mode").selectOption("independent");
+    await page.locator("#error-probe").evaluate((el) => {
+      el.value = "99";
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    await page
+      .locator("#uncertainty")
+      .screenshot({ path: path.join(out, `${name}-comparison.png`) });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     const svgPath = await save("save-svg", "survey.svg");
     assert.match(await readFile(svgPath, "utf8"), /data-height="1255" data-distance="30750"/);
     const htmlPath = await save("save-html", "reading.html");
@@ -193,6 +246,19 @@ for (const [engine, launcher] of [
         tagged: true,
         outline: true,
       });
+    await standalone.goto(`file://${sharedHtml}`);
+    assert.match(
+      await standalone.locator(".witness-result").innerText(),
+      /H = 1255 bu; D = 31250 bu/,
+    );
+    assert.equal(await standalone.locator("script").count(), 0);
+    assert.equal(await standalone.evaluate(() => document.documentElement.scrollWidth), width);
+    if (engine === "chromium" && width === 1440)
+      await standalone.pdf({
+        path: path.join(out, "shared-reading.pdf"),
+        printBackground: true,
+        preferCSSPageSize: true,
+      });
     await standaloneContext.close();
     const axe = await new AxeBuilder({ page }).analyze();
     assert.deepEqual(
@@ -208,6 +274,12 @@ for (const [engine, launcher] of [
     await page.reload();
     await page.waitForFunction(() => document.querySelector("#source-frame img")?.complete);
     assert.match(await page.locator("#bounds").innerText(), /No finite upper bound/);
+    assert.equal(await page.locator("#error-mode").inputValue(), "independent");
+    assert.equal(await page.locator("#error-probe").inputValue(), "99");
+    assert.match(await page.locator("#error-witness").innerText(), /125005/);
+    await page.locator("#error-mode").selectOption("shared");
+    assert.match(await page.locator("#error-witness").innerText(), /H = 1255/);
+    await page.locator("#error-mode").selectOption("independent");
     const offlineHtml = await save("save-html", "offline-reading.html");
     assert.equal(sha(await readFile(offlineHtml)), sha(await readFile(htmlPath)));
     await context.setOffline(false);
