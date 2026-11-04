@@ -1,0 +1,209 @@
+{
+  "base": "https://antonsoo.github.io/haidao/",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "edition": "9dc90b12e68d81e011fa",
+      "verifiedCachedFiles": 18,
+      "actualTunnelCut": true,
+      "browserNetworkingEnabled": true,
+      "probeFailure": "TypeError",
+      "refusedTunnels": 2,
+      "csv": {
+        "filename": "chromium-1440.csv",
+        "bytes": 5603,
+        "sha256": "2f60e7287c72186b542619ed9de2a4791c20fb18f1f0896284cb6ac20574cf51"
+      },
+      "html": {
+        "filename": "chromium-1440.html",
+        "bytes": 6601863,
+        "sha256": "f350e99c34cc5708d0b250c0f7ab53fc2004eb1b618f2b2c57a7c2fa4dd66c0b"
+      },
+      "portable": {
+        "images": [
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          }
+        ],
+        "fonts": [
+          "loaded",
+          "loaded"
+        ],
+        "width": 1440
+      },
+      "canonicalDirectoryAndIndexRechecked": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "edition": "9dc90b12e68d81e011fa",
+      "verifiedCachedFiles": 18,
+      "actualTunnelCut": true,
+      "browserNetworkingEnabled": true,
+      "probeFailure": "TypeError",
+      "refusedTunnels": 2,
+      "csv": {
+        "filename": "chromium-375.csv",
+        "bytes": 5603,
+        "sha256": "2f60e7287c72186b542619ed9de2a4791c20fb18f1f0896284cb6ac20574cf51"
+      },
+      "html": {
+        "filename": "chromium-375.html",
+        "bytes": 6601863,
+        "sha256": "f350e99c34cc5708d0b250c0f7ab53fc2004eb1b618f2b2c57a7c2fa4dd66c0b"
+      },
+      "portable": {
+        "images": [
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          }
+        ],
+        "fonts": [
+          "loaded",
+          "loaded"
+        ],
+        "width": 375
+      },
+      "canonicalDirectoryAndIndexRechecked": true,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "edition": "9dc90b12e68d81e011fa",
+      "verifiedCachedFiles": 18,
+      "actualTunnelCut": true,
+      "browserNetworkingEnabled": true,
+      "probeFailure": "TypeError",
+      "refusedTunnels": 2,
+      "csv": {
+        "filename": "firefox-1440.csv",
+        "bytes": 5603,
+        "sha256": "2f60e7287c72186b542619ed9de2a4791c20fb18f1f0896284cb6ac20574cf51"
+      },
+      "html": {
+        "filename": "firefox-1440.html",
+        "bytes": 6601863,
+        "sha256": "f350e99c34cc5708d0b250c0f7ab53fc2004eb1b618f2b2c57a7c2fa4dd66c0b"
+      },
+      "portable": {
+        "images": [
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          }
+        ],
+        "fonts": [
+          "loaded",
+          "loaded"
+        ],
+        "width": 1440
+      },
+      "canonicalDirectoryAndIndexRechecked": true,
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "edition": "9dc90b12e68d81e011fa",
+      "verifiedCachedFiles": 18,
+      "actualTunnelCut": true,
+      "browserNetworkingEnabled": true,
+      "probeFailure": "TypeError",
+      "refusedTunnels": 2,
+      "csv": {
+        "filename": "firefox-375.csv",
+        "bytes": 5603,
+        "sha256": "2f60e7287c72186b542619ed9de2a4791c20fb18f1f0896284cb6ac20574cf51"
+      },
+      "html": {
+        "filename": "firefox-375.html",
+        "bytes": 6601863,
+        "sha256": "f350e99c34cc5708d0b250c0f7ab53fc2004eb1b618f2b2c57a7c2fa4dd66c0b"
+      },
+      "portable": {
+        "images": [
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          },
+          {
+            "complete": true,
+            "width": 3600
+          }
+        ],
+        "fonts": [
+          "loaded",
+          "loaded"
+        ],
+        "width": 375
+      },
+      "canonicalDirectoryAndIndexRechecked": true,
+      "errors": []
+    }
+  ]
+}

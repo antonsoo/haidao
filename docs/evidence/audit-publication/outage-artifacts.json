@@ -1,0 +1,33 @@
+{
+  "records": [
+    {
+      "file": "chromium-1440.html",
+      "height": "1255",
+      "distance": "30940",
+      "sourceImages": 5,
+      "nativeCsvMatchesEmbeddedRecord": true
+    },
+    {
+      "file": "chromium-375.html",
+      "height": "1255",
+      "distance": "30940",
+      "sourceImages": 5,
+      "nativeCsvMatchesEmbeddedRecord": true
+    },
+    {
+      "file": "firefox-1440.html",
+      "height": "1255",
+      "distance": "30940",
+      "sourceImages": 5,
+      "nativeCsvMatchesEmbeddedRecord": true
+    },
+    {
+      "file": "firefox-375.html",
+      "height": "1255",
+      "distance": "30940",
+      "sourceImages": 5,
+      "nativeCsvMatchesEmbeddedRecord": true
+    }
+  ],
+  "method": "Independent Python Fraction point-defined line determinants; actual native CSV/HTML pairs and decoded source bytes"
+}

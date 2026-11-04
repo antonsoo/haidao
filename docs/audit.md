@@ -108,7 +108,7 @@ at 1440 and 375 px: both divisors, readings, keyboard source panning, history,
 unapplied drafts, arbitrary and equal error pairs, native files, standalone
 readings without scripts/network, and offline reload. Page errors and the
 bounded automated accessibility audit are checked in those actual states.
-Publication and final build receipts are recorded separately. Reducing only the
+[Publication and final delivery receipts](audit-publication.md) are recorded separately. Reducing only the
 printed error diagram's width prevents the source/model note from spilling onto
 an otherwise almost empty page; the current shared reading is 27 pages, with
 the same complete source and license material.

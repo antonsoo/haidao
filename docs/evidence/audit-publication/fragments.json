@@ -1,0 +1,557 @@
+{
+  "base": "https://antonsoo.github.io/haidao/",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "survey",
+      "initial": {
+        "actual": 722,
+        "expected": 721.953125,
+        "top": 17.953125,
+        "bottom": 1397.421875,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "reading",
+      "initial": {
+        "actual": 2101,
+        "expected": 2101.421875,
+        "top": 18.421875,
+        "bottom": 1288.625,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 3372,
+        "expected": 3371.625,
+        "top": 17.625,
+        "bottom": 2127.1875,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "history": {
+        "actual": 3372,
+        "expected": 3371.625,
+        "top": 17.625,
+        "bottom": 2127.1875,
+        "width": 1440,
+        "viewport": 1440,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "save",
+      "initial": {
+        "actual": 5213,
+        "expected": 5213,
+        "top": 286.1875,
+        "bottom": 789.265625,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "survey",
+      "initial": {
+        "actual": 722,
+        "expected": 721.953125,
+        "top": 17.953125,
+        "bottom": 1397.421875,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "reading",
+      "initial": {
+        "actual": 2101,
+        "expected": 2101.421875,
+        "top": 18.421875,
+        "bottom": 1288.625,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 3372,
+        "expected": 3371.625,
+        "top": 17.625,
+        "bottom": 2127.1875,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "history": {
+        "actual": 3372,
+        "expected": 3371.625,
+        "top": 17.625,
+        "bottom": 2127.1875,
+        "width": 1440,
+        "viewport": 1440,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "save",
+      "initial": {
+        "actual": 5213,
+        "expected": 5213,
+        "top": 286.1875,
+        "bottom": 789.265625,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "survey",
+      "initial": {
+        "actual": 1039,
+        "expected": 1039.109375,
+        "top": 17.109375,
+        "bottom": 2168.25,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "reading",
+      "initial": {
+        "actual": 3190,
+        "expected": 3190.25,
+        "top": 17.25,
+        "bottom": 2197.296875,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 5349,
+        "expected": 5370.296875,
+        "top": 38.296875,
+        "bottom": 3639.703125,
+        "width": 375,
+        "viewport": 375
+      },
+      "history": {
+        "actual": 5370,
+        "expected": 5370.296875,
+        "top": 17.296875,
+        "bottom": 3618.703125,
+        "width": 375,
+        "viewport": 375,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "save",
+      "initial": {
+        "actual": 8972,
+        "expected": 8971.703125,
+        "top": 16.703125,
+        "bottom": 874.8125,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "reduce",
+      "section": "survey",
+      "initial": {
+        "actual": 1039,
+        "expected": 1039.109375,
+        "top": 17.109375,
+        "bottom": 2168.25,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "reduce",
+      "section": "reading",
+      "initial": {
+        "actual": 3190,
+        "expected": 3190.25,
+        "top": 17.25,
+        "bottom": 2197.296875,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "reduce",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 5349,
+        "expected": 5349.234375,
+        "top": 17.234375,
+        "bottom": 3618.640625,
+        "width": 375,
+        "viewport": 375
+      },
+      "history": {
+        "actual": 5370,
+        "expected": 5370.296875,
+        "top": 17.296875,
+        "bottom": 3618.703125,
+        "width": 375,
+        "viewport": 375,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "motion": "reduce",
+      "section": "save",
+      "initial": {
+        "actual": 8972,
+        "expected": 8971.703125,
+        "top": 16.703125,
+        "bottom": 874.8125,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "survey",
+      "initial": {
+        "actual": 721.433349609375,
+        "expected": 721.433349609375,
+        "top": 18,
+        "bottom": 1397.0333251953125,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "reading",
+      "initial": {
+        "actual": 2100.466552734375,
+        "expected": 2100.466552734375,
+        "top": 18,
+        "bottom": 1285.6666259765625,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 3368.13330078125,
+        "expected": 3368.13330078125,
+        "top": 18,
+        "bottom": 2125.433349609375,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "history": {
+        "actual": 0,
+        "expected": 3368.13330078125,
+        "top": 3386.13330078125,
+        "bottom": 5493.566650390625,
+        "width": 1440,
+        "viewport": 1440,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "no-preference",
+      "section": "save",
+      "initial": {
+        "actual": 5207,
+        "expected": 5207,
+        "top": 286.566650390625,
+        "bottom": 789.1166381835938,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "survey",
+      "initial": {
+        "actual": 721.433349609375,
+        "expected": 721.433349609375,
+        "top": 18,
+        "bottom": 1397.0333251953125,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "reading",
+      "initial": {
+        "actual": 2100.466552734375,
+        "expected": 2100.466552734375,
+        "top": 18,
+        "bottom": 1285.6666259765625,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 3368.13330078125,
+        "expected": 3368.13330078125,
+        "top": 18,
+        "bottom": 2125.433349609375,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "history": {
+        "actual": 0,
+        "expected": 3368.13330078125,
+        "top": 3386.13330078125,
+        "bottom": 5493.566650390625,
+        "width": 1440,
+        "viewport": 1440,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "motion": "reduce",
+      "section": "save",
+      "initial": {
+        "actual": 5207,
+        "expected": 5207,
+        "top": 286.566650390625,
+        "bottom": 789.1166381835938,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "survey",
+      "initial": {
+        "actual": 1039.433349609375,
+        "expected": 1039.433349609375,
+        "top": 17,
+        "bottom": 2169.35009765625,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "reading",
+      "initial": {
+        "actual": 3191.783447265625,
+        "expected": 3191.783447265625,
+        "top": 17,
+        "bottom": 2193.4833984375,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 5368.2666015625,
+        "expected": 5368.2666015625,
+        "top": 17,
+        "bottom": 3648.25,
+        "width": 375,
+        "viewport": 375
+      },
+      "history": {
+        "actual": 0,
+        "expected": 5368.2666015625,
+        "top": 5385.2666015625,
+        "bottom": 9016.5166015625,
+        "width": 375,
+        "viewport": 375,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "no-preference",
+      "section": "save",
+      "initial": {
+        "actual": 8999.7001953125,
+        "expected": 8999.516860961914,
+        "top": 16.816665649414062,
+        "bottom": 875.2333526611328,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "reduce",
+      "section": "survey",
+      "initial": {
+        "actual": 1039.433349609375,
+        "expected": 1039.433349609375,
+        "top": 17,
+        "bottom": 2169.35009765625,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "reduce",
+      "section": "reading",
+      "initial": {
+        "actual": 3191.783447265625,
+        "expected": 3191.783447265625,
+        "top": 17,
+        "bottom": 2193.4833984375,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "reduce",
+      "section": "uncertainty",
+      "initial": {
+        "actual": 5368.2666015625,
+        "expected": 5368.2666015625,
+        "top": 17,
+        "bottom": 3648.25,
+        "width": 375,
+        "viewport": 375
+      },
+      "history": {
+        "actual": 0,
+        "expected": 5368.2666015625,
+        "top": 5385.2666015625,
+        "bottom": 9016.5166015625,
+        "width": 375,
+        "viewport": 375,
+        "beforeNavigation": 0
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "motion": "reduce",
+      "section": "save",
+      "initial": {
+        "actual": 8999.7001953125,
+        "expected": 8999.516860961914,
+        "top": 16.816665649414062,
+        "bottom": 875.2333526611328,
+        "width": 375,
+        "viewport": 375
+      },
+      "errors": []
+    }
+  ]
+}

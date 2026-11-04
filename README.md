@@ -82,6 +82,7 @@ retain their original opposing pair. CSV and illustrated HTML preserve both
 complete bounds and the selected intersection without changing the applied
 survey record. The [model](docs/model.md#equal-errors-change-the-allowed-set)
 and [audit](docs/audit.md#try-the-actual-work) give the derivation and limits.
+[Public delivery and real-connection outage review](docs/audit-publication.md).
 An actual [saved reading](examples/shared-offset/reading.html.gz),
 [27-page PDF](examples/shared-offset/reading.pdf) and
 [exact CSV](examples/shared-offset/record.csv) retain the shared-offset example.

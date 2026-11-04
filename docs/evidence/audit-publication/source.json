@@ -1,0 +1,31 @@
+{
+  "head": "df50794e1aa0aa59f1b8e355b7507298a142dd7c",
+  "remoteMain": "df50794e1aa0aa59f1b8e355b7507298a142dd7c",
+  "cleanAtCheck": true,
+  "artifacts": [
+    {
+      "path": "docs/audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/haidao/df50794e1aa0aa59f1b8e355b7507298a142dd7c/docs/audit.md",
+      "bytes": 12218,
+      "sha256": "9fb436b2d53eb3386b77c0b08a88ede39c266bedf032b93918cdafdf05c5b224"
+    },
+    {
+      "path": "docs/evidence/audit/oracle.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/haidao/df50794e1aa0aa59f1b8e355b7507298a142dd7c/docs/evidence/audit/oracle.json",
+      "bytes": 402,
+      "sha256": "bb8d1fa0efd889c08dd4dc2201909660d164fb5bb4b4536ec49d046dc5777e32"
+    },
+    {
+      "path": "docs/evidence/audit/storage.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/haidao/df50794e1aa0aa59f1b8e355b7507298a142dd7c/docs/evidence/audit/storage.json",
+      "bytes": 16956,
+      "sha256": "9350be20851f465442e7016942115bb262d62e5e5205e7c2c4ed629b46101029"
+    },
+    {
+      "path": "examples/shared-offset/record.csv",
+      "url": "https://raw.githubusercontent.com/antonsoo/haidao/df50794e1aa0aa59f1b8e355b7507298a142dd7c/examples/shared-offset/record.csv",
+      "bytes": 5594,
+      "sha256": "fe265a7829950d66b869019b1431a49fe026f4437a7a0965dbb4a782a735fe3e"
+    }
+  ]
+}

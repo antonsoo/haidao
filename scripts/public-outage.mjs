@@ -212,7 +212,11 @@ try {
             if (/^https?:/.test(req.url())) external.push(req.url());
           });
           await portable.goto(pathToFileURL(path.join(out, html.filename)).href);
-          await portable.evaluate(() => document.fonts.ready);
+          // Firefox with scripts disabled can leave fonts.ready pending even
+          // when the embedded faces have loaded. Inspect actual laid-out faces.
+          await portable.evaluate(() => {
+            void document.body.offsetHeight;
+          });
           assert.equal(await portable.locator("script").count(), 0);
           assert.match(
             await portable.locator(".witness-result").textContent(),
