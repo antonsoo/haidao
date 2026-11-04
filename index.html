@@ -10,8 +10,8 @@
     >
     <link rel="icon" type="image/svg+xml" href="/haidao/favicon.svg">
     <title>Haidao — Check the second sighting</title>
-    <script type="module" crossorigin src="/haidao/assets/index-ih6VYFxP.js"></script>
-    <link rel="stylesheet" crossorigin href="/haidao/assets/index-tMdykEIH.css">
+    <script type="module" crossorigin src="/haidao/assets/index-uwR9ZuhD.js"></script>
+    <link rel="stylesheet" crossorigin href="/haidao/assets/index-C-39hrMN.css">
   </head>
   <body>
     <a class="skip" href="#survey">Skip to the survey</a>
@@ -207,6 +207,7 @@
               </button>
             </div>
             <p id="source-status" role="status"></p>
+            <button type="button" id="source-retry" hidden>Retry this opening</button>
             <section
               id="source-frame"
               class="source-frame"
@@ -254,14 +255,20 @@
       <section id="uncertainty" class="section" aria-labelledby="uncertainty-title">
         <div class="section-heading">
           <p class="eyebrow">04 / A modern measurement experiment</p>
-          <h2 id="uncertainty-title">Four bu can carry a very large island.</h2>
+          <h2 id="uncertainty-title">Same allowance. Different islands.</h2>
         </div>
         <div class="uncertainty-layout">
           <div>
             <p>
-              Now allow each retreat to differ independently by an amount you choose. Pole height
-              and pole gap stay exact. These are allowed intervals, with no probability attached.
+              Could the same ±2 bu allowance leave height fixed, or without any finite upper bound?
+              Change which error pairs are allowed. Pole height and pole gap stay exact.
             </p>
+            <button type="button" id="try-errors">Try the source at ±2 bu</button>
+            <label class="select-label" for="error-mode">How may the errors combine?</label>
+            <select id="error-mode">
+              <option value="independent">Independent · any error pair</option>
+              <option value="shared">Shared offset · equal errors</option>
+            </select>
             <label class="error-control" for="error-width"
               >Each retreat may differ by ±<output id="error-value" for="error-width">0</output>
               bu<input type="range" id="error-width" min="0" max="64" step="1" value="0"></label
@@ -278,6 +285,40 @@
             </p>
           </div>
           <div id="bounds" aria-live="polite"></div>
+        </div>
+        <div id="error-comparison"></div>
+        <div class="uncertainty-layout error-explorer">
+          <figure>
+            <div id="error-diagram"></div>
+            <figcaption>
+              The dark point is the selected error pair. A red ring or dashed line locates parallel
+              sightings. Only the shaded square or thick teal line is allowed by the chosen
+              assumption.
+            </figcaption>
+          </figure>
+          <div>
+            <h3>Choose one pair. Keep the whole set.</h3>
+            <label class="error-control" for="error-probe"
+              >Front error as a share of the allowance:
+              <output id="probe-value" for="error-probe">0%</output>
+              <input type="range" id="error-probe" min="-100" max="100" step="1" value="0">
+            </label>
+            <label class="error-control" for="rear-error-probe"
+              >Rear error as a share of the allowance:
+              <output id="rear-probe-value" for="rear-error-probe">0%</output>
+              <input type="range" id="rear-error-probe" min="-100" max="100" step="1" value="0">
+            </label>
+            <p id="rear-probe-note" class="source-location"></p>
+            <fieldset class="presets" aria-label="Compare two selected error pairs">
+              <button type="button" id="equal-errors">Make this pair's errors equal</button>
+              <button type="button" id="opposed-errors">Oppose the front error</button>
+            </fieldset>
+            <p>
+              At ±2 bu on the source exercise, take the front to 100% and rear to −100% for parallel
+              sightings. Make the pair equal, then switch the complete assumption to Shared offset.
+            </p>
+            <div id="error-witness" aria-live="polite"></div>
+          </div>
         </div>
       </section>
       <section id="save" class="section" aria-labelledby="save-title">
@@ -298,6 +339,7 @@
           ><button type="button" id="share">Copy this state’s address</button
           ><button type="button" id="print">Print current page</button>
         </div>
+        <button type="button" id="save-cancel" hidden>Cancel saving</button>
         <p id="save-status" role="status"></p>
         <p id="offline-status" role="status">Offline edition has not been checked.</p>
         <button type="button" class="text-button" id="offline-check">
@@ -307,9 +349,10 @@
     </main>
     <footer>
       <p>
-        Haidao · Original model, diagrams and English © 2026 Anton Soloviev ·
+        Haidao · Original model, diagrams and English © 2026 Anthony Mercer ·
         <a href="https://github.com/antonsoo/haidao">Source and review</a>
-        · MIT. Whole source photographs are public domain; fonts retain their OFL notices.
+        · PolyForm Noncommercial. Whole source photographs are public domain; fonts retain their OFL
+        notices.
       </p>
       <p>
         Learning from an idealized historical exercise. No island location, actual expedition,
