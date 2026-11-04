@@ -164,3 +164,17 @@ pre {
     break-inside: avoid;
   }
 }
+.comparison-scroll {
+  overflow-x: auto;
+}
+#error-diagram {
+  max-width: 450px;
+}
+.witness-result {
+  border-left: 3px solid #006c74;
+  padding-left: 1rem;
+}
+
+.scroll-note {
+  display: none;
+}

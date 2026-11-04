@@ -801,3 +801,51 @@ fieldset#divisors {
     flex-basis: 100%;
   }
 }
+
+#error-mode {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+#try-errors {
+  margin-bottom: 1.5rem;
+}
+.comparison-scroll {
+  overflow-x: auto;
+  margin-block: 1rem;
+}
+.comparison-scroll table {
+  min-width: 600px;
+}
+.comparison-scroll caption {
+  text-align: left;
+  font-size: 0.85rem;
+  padding-bottom: 0.75rem;
+}
+.error-explorer {
+  border-top: 1px solid var(--line, #a5bab1);
+  padding-top: 2rem;
+}
+#error-diagram {
+  max-width: 480px;
+  margin-inline: auto;
+}
+#error-diagram svg {
+  width: 100%;
+  height: auto;
+}
+.witness-result {
+  border-left: 3px solid var(--teal);
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  overflow-wrap: anywhere;
+}
+
+.scroll-note {
+  display: none;
+}
+@media (max-width: 650px) {
+  .scroll-note {
+    display: block;
+    font-size: 0.8rem;
+  }
+}

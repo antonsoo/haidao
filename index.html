@@ -252,14 +252,20 @@
       <section id="uncertainty" class="section" aria-labelledby="uncertainty-title">
         <div class="section-heading">
           <p class="eyebrow">04 / A modern measurement experiment</p>
-          <h2 id="uncertainty-title">Four bu can carry a very large island.</h2>
+          <h2 id="uncertainty-title">Same allowance. Different islands.</h2>
         </div>
         <div class="uncertainty-layout">
           <div>
             <p>
-              Now allow each retreat to differ independently by an amount you choose. Pole height
-              and pole gap stay exact. These are allowed intervals, with no probability attached.
+              Could the same ±2 bu allowance leave height fixed, or without any finite upper bound?
+              Change which error pairs are allowed. Pole height and pole gap stay exact.
             </p>
+            <button type="button" id="try-errors">Try the source at ±2 bu</button>
+            <label class="select-label" for="error-mode">How may the errors combine?</label>
+            <select id="error-mode">
+              <option value="independent">Independent · any error pair</option>
+              <option value="shared">Shared offset · equal errors</option>
+            </select>
             <label class="error-control" for="error-width"
               >Each retreat may differ by ±<output id="error-value" for="error-width">0</output>
               bu<input type="range" id="error-width" min="0" max="64" step="1" value="0"></label
@@ -276,6 +282,30 @@
             </p>
           </div>
           <div id="bounds" aria-live="polite"></div>
+        </div>
+        <div id="error-comparison"></div>
+        <div class="uncertainty-layout error-explorer">
+          <figure>
+            <div id="error-diagram"></div>
+            <figcaption>
+              The dark point is the selected error pair. A red ring or dashed line locates parallel
+              sightings. Only the shaded square or thick teal line is allowed by the chosen
+              assumption.
+            </figcaption>
+          </figure>
+          <div>
+            <h3>Move one pair through the allowed set.</h3>
+            <label class="error-control" for="error-probe"
+              >Front error as a share of the allowance:
+              <output id="probe-value" for="error-probe">0%</output>
+              <input type="range" id="error-probe" min="-100" max="100" step="1" value="0">
+            </label>
+            <p>
+              At ±2 bu on the source exercise, try 99%, then 100%. Switch the assumption while
+              keeping that setting.
+            </p>
+            <div id="error-witness" aria-live="polite"></div>
+          </div>
         </div>
       </section>
       <section id="save" class="section" aria-labelledby="save-title">

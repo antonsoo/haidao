@@ -1,14 +1,24 @@
 import appLicense from "../LICENSE?raw";
 import { base64, manifest, verified } from "./assets.ts";
 import { h, readingMarkup, readings, stages } from "./content.ts";
-import { bounds, exact, q, record, type State, serialize, solve } from "./core/survey.ts";
+import {
+  bounds,
+  errorWitness,
+  exact,
+  q,
+  record,
+  type State,
+  serialize,
+  solve,
+} from "./core/survey.ts";
 import { overview, retreats } from "./drawing.ts";
 import { boundsMarkup, calculation, checks } from "./presentation.ts";
 import readingCss from "./reading.css?raw";
+import { comparisonMarkup, errorDiagram, errorNames, witnessMarkup } from "./uncertainty.ts";
 export function csv(s: State): string {
   const r = record(s),
     m = solve(r),
-    b = bounds(r, q(s.error, 4));
+    b = bounds(r, q(s.error, 4), s.errorMode);
   const rows: (string | number)[][] = [
     ["field", "exact_value", "unit", "meaning"],
     [
@@ -16,6 +26,18 @@ export function csv(s: State): string {
       "Haidao first problem",
       "",
       "Modern exact coordinate model; no physical survey claimed",
+    ],
+    [
+      "license",
+      "PolyForm Noncommercial 1.0.0",
+      "",
+      "https://polyformproject.org/licenses/noncommercial/1.0.0/",
+    ],
+    [
+      "required_notice",
+      "Copyright (c) 2026 Anthony Mercer (https://github.com/antonsoo/haidao)",
+      "",
+      "Original model and teaching material; sources and fonts retain their own notices",
     ],
     ["operator_stage", s.step, "0-6", stages[s.step] ?? ""],
     [
@@ -30,14 +52,51 @@ export function csv(s: State): string {
     ["rear_retreat", exact(r.b), "bu", "b"],
     ["retreat_difference", exact(m.delta), "bu", "b-a"],
     ["intersection_kind", m.kind, "", "forward / parallel / behind"],
-    [
-      "setback_half_width",
-      exact(q(s.error, 4)),
-      "bu",
-      "independent allowed intervals; h and s exact",
-    ],
+    ["setback_half_width", exact(q(s.error, 4)), "bu", `${errorNames[s.errorMode]}; h and s exact`],
     ["interval_kind", b.kind, "", "bounded / unbounded / invalid / none"],
   ];
+  rows.push(
+    ["error_model", s.errorMode, "", "independent square or equal additive offsets"],
+    ["probe_percent", s.probe, "%", "selected trace; not the entire independent square"],
+  );
+  const w = errorWitness(s);
+  for (const [name, v] of [
+    ["front_error", w.frontError],
+    ["rear_error", w.rearError],
+    ["adjusted_front", w.adjusted.a],
+    ["adjusted_rear", w.adjusted.b],
+  ] as const)
+    rows.push([name, exact(v), "bu", "selected error pair; applied observations unchanged"]);
+  rows.push(["probe_kind", w.solution?.kind ?? "invalid", "", "selected error pair"]);
+  for (const key of ["height", "distance"] as const)
+    rows.push([
+      `probe_${key}`,
+      w.solution?.difference ? exact(w.solution.difference[key]) : "undefined",
+      "bu",
+      "intersection; may be outside forward geometry",
+    ]);
+  for (const mode of ["independent", "shared"] as const) {
+    const comparison = bounds(r, q(s.error, 4), mode);
+    rows.push([`${mode}_kind`, comparison.kind, "", "complete allowed set"]);
+    if (comparison.kind === "bounded" || comparison.kind === "unbounded") {
+      for (const key of ["lowH", "lowD", "deltaLow", "deltaHigh"] as const)
+        rows.push([`${mode}_${key}`, exact(comparison[key]), "bu", "complete allowed set"]);
+      rows.push(
+        [
+          `${mode}_highH`,
+          comparison.kind === "bounded" ? exact(comparison.highH) : "unbounded",
+          "bu",
+          "complete allowed set",
+        ],
+        [
+          `${mode}_highD`,
+          comparison.kind === "bounded" ? exact(comparison.highD) : "unbounded",
+          "bu",
+          "complete allowed set",
+        ],
+      );
+    } else rows.push([`${mode}_explanation`, comparison.explanation, "", "complete allowed set"]);
+  }
   for (const key of ["difference", "gap"] as const) {
     const c = m[key];
     for (const field of [
@@ -131,7 +190,8 @@ export async function readingFile(s: State): Promise<string> {
 <section>
 <h2>Observations and current operation</h2>
 <p>h = ${s.pole / 4}; s = ${s.gap / 4}; a = ${s.front / 4}; b = ${s.rear / 4} bu. Proposed divisor: ${h(s.choice)}.</p>${overview(s)}${retreats(s)}${calculation(s)}${checks({ ...s, step: 6 })}<h3>Modern setback intervals</h3>
-<p>Each retreat independently ±${s.error / 4} bu; h and s exact.</p>${boundsMarkup(s)}</section>
+<p>${errorNames[s.errorMode]}; allowance ±${s.error / 4} bu; h and s exact.</p>${boundsMarkup(s)}
+${comparisonMarkup(s)}<h3>The selected error pair</h3><p>Front error: ${s.probe}% of the allowance.</p><div id="error-diagram">${errorDiagram(s)}</div><p class="source-location">The dark point is selected. Red locates parallel sightings. Only the shaded square or thick teal line is allowed by the chosen assumption.</p>${witnessMarkup(s)}</section>
 <section>
 <h2>Why one observation is insufficient</h2>
 <p>Front pole (0,h), rear pole (s,h), front ground eye (a,0), rear ground eye (s+b,0), island peak (−D,H). Front line: y=h(a−x)/a. Rear line: y=h(s+b−x)/b. Equating them gives D(b−a)=as and H=h+hs/(b−a).</p>
@@ -157,7 +217,7 @@ export async function readingFile(s: State): Promise<string> {
 <p>Compute H = h + hs/f and D = as/f:</p>
 <p>Front line at x = −D; candidate minus front:</p>
 <p>Rear line at x = −D; candidate minus rear:</p>
-<p>Choose allowed retreat intervals. Can b − a approach zero?</p>
+<p>Choose the allowed error pairs. Can b − a approach zero? What changes if both errors are equal?</p>
 </section>
 <section>
 <h2>Exact machine-readable record</h2>

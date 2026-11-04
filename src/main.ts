@@ -17,6 +17,8 @@ import { overview, retreats } from "./drawing.ts";
 import { csv, download, readingFile, svgFile } from "./files.ts";
 import { boundsMarkup, calculation, checks, isSource } from "./presentation.ts";
 
+import { comparisonMarkup, errorDiagram, witnessMarkup } from "./uncertainty.ts";
+
 function el<T extends HTMLElement = HTMLElement>(id: string): T {
   const value = document.getElementById(id);
   if (!value) throw new Error(`Missing ${id}`);
@@ -123,6 +125,12 @@ function render() {
   el<HTMLInputElement>("error-width").value = String(state.error);
   el<HTMLOutputElement>("error-value").value = String(state.error / 4);
   el("bounds").innerHTML = boundsMarkup(state);
+  el<HTMLSelectElement>("error-mode").value = state.errorMode;
+  el<HTMLInputElement>("error-probe").value = String(state.probe);
+  el<HTMLOutputElement>("probe-value").value = `${state.probe}%`;
+  el("error-diagram").innerHTML = errorDiagram(state);
+  el("error-comparison").innerHTML = comparisonMarkup(state);
+  el("error-witness").innerHTML = witnessMarkup(state);
   for (const button of document.querySelectorAll<HTMLButtonElement>("[data-error]"))
     button.setAttribute("aria-pressed", String(Number(button.dataset.error) === state.error));
   for (const [id, s] of [
@@ -205,6 +213,16 @@ el("error-width").addEventListener("input", () =>
 );
 for (const button of document.querySelectorAll<HTMLButtonElement>("[data-error]"))
   button.addEventListener("click", () => update({ error: Number(button.dataset.error) }));
+el("error-mode").addEventListener("change", () =>
+  update({ errorMode: el<HTMLSelectElement>("error-mode").value as State["errorMode"] }),
+);
+el("error-probe").addEventListener("input", () =>
+  update({ probe: Number(el<HTMLInputElement>("error-probe").value) }, false),
+);
+el("try-errors").addEventListener("click", () => {
+  update({ ...INITIAL, error: 8, probe: 99, read: state.read, page: state.page });
+  syncForm();
+});
 async function save(
   id: string,
   mime: string,
