@@ -1,0 +1,114 @@
+{
+  "records": 20,
+  "readings": [
+    {
+      "file": "chromium-1440-shared-reading.html",
+      "model": "shared",
+      "sourceImages": 5,
+      "marker": [
+        "315",
+        "55"
+      ]
+    },
+    {
+      "file": "chromium-1440-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    },
+    {
+      "file": "chromium-1440-offline-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    },
+    {
+      "file": "chromium-375-shared-reading.html",
+      "model": "shared",
+      "sourceImages": 5,
+      "marker": [
+        "315",
+        "55"
+      ]
+    },
+    {
+      "file": "chromium-375-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    },
+    {
+      "file": "chromium-375-offline-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    },
+    {
+      "file": "firefox-1440-shared-reading.html",
+      "model": "shared",
+      "sourceImages": 5,
+      "marker": [
+        "315",
+        "55"
+      ]
+    },
+    {
+      "file": "firefox-1440-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    },
+    {
+      "file": "firefox-1440-offline-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    },
+    {
+      "file": "firefox-375-shared-reading.html",
+      "model": "shared",
+      "sourceImages": 5,
+      "marker": [
+        "315",
+        "55"
+      ]
+    },
+    {
+      "file": "firefox-375-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    },
+    {
+      "file": "firefox-375-offline-reading.html",
+      "model": "independent",
+      "sourceImages": 5,
+      "marker": [
+        "314",
+        "254"
+      ]
+    }
+  ],
+  "method": "Python Fraction; point-defined 2x2 line intersection; decoded original source bytes; actual SVG marker coordinates"
+}

@@ -51,6 +51,39 @@ may use positive quarter-bu increments; invalid edits never partially alter an
 applied record. Both divisor choices can agree when their numerical values
 happen to coincide.
 
+## Same allowance. Different islands.
+
+In **Uncertainty**, choose **Try the source at ±2 bu**. At the selected 99%,
+opposing errors leave a retreat difference of only 1/25 bu. Height becomes
+125005 bu. Move one keyboard step to 100%: the two sightings become parallel.
+Switch to **Shared offset** while keeping the same setting: height is 1255 bu
+and distance is 31250 bu.
+
+The whole-set comparison explains why:
+
+| Both retreats within ±2 bu | Height H, bu | Distance D, bu |
+| --- | --- | --- |
+| Every independent pair permitted | 630; no finite upper bound | 15125; no finite upper bound |
+| Equal additive offsets only | 1255, fixed | 30250 to 31250 |
+
+The error diagram distinguishes the allowed square from the shared diagonal,
+locates parallel pairs and follows one exact pair. Independent mode's slider
+traces opposing errors; the bounds still cover the whole square. This teaches
+how assumptions about which errors can occur together affect an inference.
+It does not establish ancient instrument precision or a probability distribution.
+
+![The allowed shared diagonal, fixed height and complete comparison](docs/assets/shared-offset-desktop.png)
+
+Share links retain the assumption and selected pair; old links retain their
+original independent-error interpretation. CSV and illustrated HTML preserve
+both complete bounds and the selected intersection without changing the applied
+survey record. The [model](docs/model.md#equal-errors-change-the-allowed-set)
+and [operated review](docs/shared-offset-review.md) give the derivation and limits.
+A [saved reading](examples/shared-offset/reading.html.gz),
+[27-page PDF](examples/shared-offset/reading.pdf) and
+[exact CSV](examples/shared-offset/record.csv) retain an actual browser export.
+Decompress the HTML before opening it.
+
 ## Read and retain the evidence
 
 - Ten selected Chinese clauses, new English renderings, thirty word notes and
@@ -113,7 +146,8 @@ This is an idealized geometry lesson, not a survey tool. The model assumes a
 level common baseline, equal vertical poles, point-like tips and targets, and
 eyes at ground level. It does not model terrain, refraction or instrument error.
 The modern uncertainty experiment holds pole height and pole gap exact and
-places no probability distribution on allowed setbacks.
+places no probability distribution on allowed setbacks. The alternative equal-offset
+model changes their allowed combinations; a shared scale error is not modeled.
 
 The selected Chinese clauses have supplied modern punctuation. Pinyin is a
 modern Mandarin aid, not reconstructed ancient pronunciation. The whole source
@@ -140,6 +174,7 @@ npm run build
 npm run preview
 node scripts/browser-check.mjs http://127.0.0.1:4333/haidao/ /tmp/haidao-browser
 node scripts/source-guards.mjs /tmp/haidao-source-guards.json
+python3 scripts/error-artifacts.py /tmp/haidao-browser
 ```
 
 Install Playwright's Chromium and Firefox if they are not already available.

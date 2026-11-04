@@ -102,6 +102,61 @@ This is a chosen interval experiment, not historical measurement precision,
 rounding inferred from integer givens, or a confidence interval. Pole height and
 gap uncertainty, terrain and atmospheric effects are omitted explicitly.
 
+## Equal errors change the allowed set
+
+The uncertainty room also permits a **shared additive offset**: `a=a₀+u`,
+`b=b₀+u`, with `−e≤u≤e`. This is a new modern hypothesis, not an error model
+inferred from the Chinese text or an instrument attributed to Liu Hui.
+
+Then `b−a=b₀−a₀=δ`. When `δ>0` and both allowed retreats stay positive:
+
+```text
+H(u) = h + hs/δ                  unchanged
+D(u) = s(a₀+u)/δ = D(0) + su/δ   affine in u
+```
+
+So the closed range of distances is attained at `u=−e,+e`; both height bounds
+are the same exact fraction. A common scale error is a different hypothesis.
+The experiment does not assert that a shared offset occurred or that its bounds
+are a better estimate of ancient measurement precision.
+
+For the source exercise at ±2 bu:
+
+| Allowed pairs | Retreat difference, bu | Height, bu | Distance, bu |
+| --- | --- | --- | --- |
+| All combinations in the independent square | 0 to 8 | 630, unbounded above | 15125, unbounded above |
+| Equal additive offsets only | 4 | 1255 | 30250 to 31250 |
+
+The shared diagonal is a subset of the independent square. Here “independent”
+means every combination is permitted, with no probability distribution. For a
+zero or negative nominal difference, equal offsets cannot create a forward
+island. If the allowance includes a nonpositive retreat, the complete bound is
+marked outside the positive-setback model; the app does not clip the domain.
+A selected positive pair can still be inspected separately in that case.
+
+### Follow a pair without replacing the observations
+
+The selected percentage `t`, from −100 to 100, produces `u=e*t/100`. In shared
+mode `v=u`; in independent mode the slider traces **only** `v=−u`, not every
+point in the square. The exact complete bounds still cover every permitted
+pair. The two adjusted point-defined sight lines determine the selected
+intersection separately from those bounds.
+
+At `e=2`, `t=99`, opposing errors give `a=6249/50`, `b=6251/50`, and
+`δ=1/25`. The resulting height is 125005 bu and distance is 3124500 bu.
+At `t=100` the rays become parallel; division by zero supplies no finite peak.
+Switching to equal errors at the same `t=100` gives `a=125`, `b=129`,
+`H=1255`, `D=31250`. Increasing the allowance to 3 at the opposing endpoint
+moves the intersection behind the poles. The app retains that case explicitly.
+
+The diagram uses normalized error coordinates; it is not a terrain plan. A red
+ring marks a parallel locus touching a square corner; a dashed red line marks a
+crossing. This reference can be outside the permitted shared diagonal. The
+selected pair never modifies the four applied observations or the recipe.
+Exact fractions, both models, the chosen pair, source identities and licenses
+travel in the CSV and script-free reading. Older URLs default to independent
+errors and a zero probe.
+
 ## Reproducing the retained assets
 
 `scripts/source-assets.py --pdf SOURCE.pdf` checks the PDF identity and renders

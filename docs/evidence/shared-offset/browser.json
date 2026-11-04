@@ -1,0 +1,553 @@
+{
+  "base": "http://127.0.0.1:4333/haidao/",
+  "results": [
+    {
+      "name": "chromium-1440",
+      "width": 1440,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 1440
+      },
+      "files": [
+        {
+          "file": "chromium-1440-wrong-divisor.csv",
+          "bytes": 5393,
+          "sha256": "2d303010506a44951e0b0107aefefa370256f962a2d67d41cf36745fda311c74"
+        },
+        {
+          "file": "chromium-1440-wrong-divisor.svg",
+          "bytes": 165262,
+          "sha256": "852aca4838fc675955f8f8a64e037a8d6388309d3efadaf5b014504ab3f85c33"
+        },
+        {
+          "file": "chromium-1440-unapplied.csv",
+          "bytes": 5404,
+          "sha256": "968bafae9dbdd485bdf7e105a24bc22453dbe87a72b533731c6f9db3d9fc84bc"
+        },
+        {
+          "file": "chromium-1440-parallel.csv",
+          "bytes": 5105,
+          "sha256": "e20d15d0b3bec40a05368ae93a497de49995a8d3d0a65be1105078b8ffb889ec"
+        },
+        {
+          "file": "chromium-1440-coincident.csv",
+          "bytes": 5306,
+          "sha256": "97c95dc8aedf2d7a4de7ee72514d133c8153f2b9dc2b2444b3b69a22221da2ff"
+        },
+        {
+          "file": "chromium-1440-coincident.svg",
+          "bytes": 165297,
+          "sha256": "1202783c1fb718d72ab5d3d6526242f6b52cb52b2af8b54cf02adf4a13446bb3"
+        },
+        {
+          "file": "chromium-1440-record.csv",
+          "bytes": 5427,
+          "sha256": "f68a63e9eed60e05f06f344e9d65c2c5f163e84ae3b254b85a2f81c858335ae9"
+        },
+        {
+          "file": "chromium-1440-shared.csv",
+          "bytes": 5418,
+          "sha256": "9b5aa648c4c77e1c6ffc9a7db6637e25e8d966ba9ce6f496f40e6e37f55c5c2e"
+        },
+        {
+          "file": "chromium-1440-shared-reading.html",
+          "bytes": 6601303,
+          "sha256": "84d8104cf54b361fd3f130b65e2c9b0d2b4720fa9812524b4264ef9a40f6c8fb"
+        },
+        {
+          "file": "chromium-1440-survey.svg",
+          "bytes": 165243,
+          "sha256": "7c399f3c61d4001ccbe2b43beac0bf80b486ef0caa65b41f31ae1f0010edef54"
+        },
+        {
+          "file": "chromium-1440-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        },
+        {
+          "file": "chromium-1440-offline-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        }
+      ],
+      "offline": "Complete offline edition e02bd222c9ae3f3b3ada: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    },
+    {
+      "name": "chromium-375",
+      "width": 375,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 375
+      },
+      "files": [
+        {
+          "file": "chromium-375-wrong-divisor.csv",
+          "bytes": 5393,
+          "sha256": "2d303010506a44951e0b0107aefefa370256f962a2d67d41cf36745fda311c74"
+        },
+        {
+          "file": "chromium-375-wrong-divisor.svg",
+          "bytes": 165262,
+          "sha256": "852aca4838fc675955f8f8a64e037a8d6388309d3efadaf5b014504ab3f85c33"
+        },
+        {
+          "file": "chromium-375-unapplied.csv",
+          "bytes": 5404,
+          "sha256": "968bafae9dbdd485bdf7e105a24bc22453dbe87a72b533731c6f9db3d9fc84bc"
+        },
+        {
+          "file": "chromium-375-parallel.csv",
+          "bytes": 5105,
+          "sha256": "e20d15d0b3bec40a05368ae93a497de49995a8d3d0a65be1105078b8ffb889ec"
+        },
+        {
+          "file": "chromium-375-coincident.csv",
+          "bytes": 5306,
+          "sha256": "97c95dc8aedf2d7a4de7ee72514d133c8153f2b9dc2b2444b3b69a22221da2ff"
+        },
+        {
+          "file": "chromium-375-coincident.svg",
+          "bytes": 165297,
+          "sha256": "1202783c1fb718d72ab5d3d6526242f6b52cb52b2af8b54cf02adf4a13446bb3"
+        },
+        {
+          "file": "chromium-375-record.csv",
+          "bytes": 5427,
+          "sha256": "f68a63e9eed60e05f06f344e9d65c2c5f163e84ae3b254b85a2f81c858335ae9"
+        },
+        {
+          "file": "chromium-375-shared.csv",
+          "bytes": 5418,
+          "sha256": "9b5aa648c4c77e1c6ffc9a7db6637e25e8d966ba9ce6f496f40e6e37f55c5c2e"
+        },
+        {
+          "file": "chromium-375-shared-reading.html",
+          "bytes": 6601303,
+          "sha256": "84d8104cf54b361fd3f130b65e2c9b0d2b4720fa9812524b4264ef9a40f6c8fb"
+        },
+        {
+          "file": "chromium-375-survey.svg",
+          "bytes": 165243,
+          "sha256": "7c399f3c61d4001ccbe2b43beac0bf80b486ef0caa65b41f31ae1f0010edef54"
+        },
+        {
+          "file": "chromium-375-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        },
+        {
+          "file": "chromium-375-offline-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        }
+      ],
+      "offline": "Complete offline edition e02bd222c9ae3f3b3ada: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    },
+    {
+      "name": "firefox-1440",
+      "width": 1440,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 1440
+      },
+      "files": [
+        {
+          "file": "firefox-1440-wrong-divisor.csv",
+          "bytes": 5393,
+          "sha256": "2d303010506a44951e0b0107aefefa370256f962a2d67d41cf36745fda311c74"
+        },
+        {
+          "file": "firefox-1440-wrong-divisor.svg",
+          "bytes": 165262,
+          "sha256": "852aca4838fc675955f8f8a64e037a8d6388309d3efadaf5b014504ab3f85c33"
+        },
+        {
+          "file": "firefox-1440-unapplied.csv",
+          "bytes": 5404,
+          "sha256": "968bafae9dbdd485bdf7e105a24bc22453dbe87a72b533731c6f9db3d9fc84bc"
+        },
+        {
+          "file": "firefox-1440-parallel.csv",
+          "bytes": 5105,
+          "sha256": "e20d15d0b3bec40a05368ae93a497de49995a8d3d0a65be1105078b8ffb889ec"
+        },
+        {
+          "file": "firefox-1440-coincident.csv",
+          "bytes": 5306,
+          "sha256": "97c95dc8aedf2d7a4de7ee72514d133c8153f2b9dc2b2444b3b69a22221da2ff"
+        },
+        {
+          "file": "firefox-1440-coincident.svg",
+          "bytes": 165297,
+          "sha256": "1202783c1fb718d72ab5d3d6526242f6b52cb52b2af8b54cf02adf4a13446bb3"
+        },
+        {
+          "file": "firefox-1440-record.csv",
+          "bytes": 5427,
+          "sha256": "f68a63e9eed60e05f06f344e9d65c2c5f163e84ae3b254b85a2f81c858335ae9"
+        },
+        {
+          "file": "firefox-1440-shared.csv",
+          "bytes": 5418,
+          "sha256": "9b5aa648c4c77e1c6ffc9a7db6637e25e8d966ba9ce6f496f40e6e37f55c5c2e"
+        },
+        {
+          "file": "firefox-1440-shared-reading.html",
+          "bytes": 6601303,
+          "sha256": "84d8104cf54b361fd3f130b65e2c9b0d2b4720fa9812524b4264ef9a40f6c8fb"
+        },
+        {
+          "file": "firefox-1440-survey.svg",
+          "bytes": 165243,
+          "sha256": "7c399f3c61d4001ccbe2b43beac0bf80b486ef0caa65b41f31ae1f0010edef54"
+        },
+        {
+          "file": "firefox-1440-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        },
+        {
+          "file": "firefox-1440-offline-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        }
+      ],
+      "offline": "Complete offline edition e02bd222c9ae3f3b3ada: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    },
+    {
+      "name": "firefox-375",
+      "width": 375,
+      "errors": [],
+      "sourcePages": [
+        {
+          "page": 9,
+          "sha256": "bded88b54aad386512ddc06b8e28c5a37f6ae490558646013d597aaca9f27f43"
+        },
+        {
+          "page": 10,
+          "sha256": "2e2169694a4bc17830dc8415f5af3681fd2649fdd040c6bd51a36be47edbc3be"
+        },
+        {
+          "page": 11,
+          "sha256": "620dd0b10c6f195385d9c2484cf42bac798d5006e7533fc282febd3f253d2db0"
+        },
+        {
+          "page": 12,
+          "sha256": "40b8b9dc5ef1f2e9bb3e8a4218117a15a49d47abe21568f29f47e125fbbada4e"
+        },
+        {
+          "page": 13,
+          "sha256": "f460c01cc2aaba138cc779698996bba9a8b44aec76f20f7f5d17dad382c918c4"
+        }
+      ],
+      "sourceScale": {
+        "rendered": 3600,
+        "natural": 3600
+      },
+      "portable": {
+        "scripts": 0,
+        "readings": 10,
+        "images": [
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          },
+          {
+            "complete": true,
+            "width": 3600,
+            "height": 2400
+          }
+        ],
+        "fonts": [
+          {
+            "family": "Atkinson",
+            "status": "loaded"
+          },
+          {
+            "family": "Haidao",
+            "status": "loaded"
+          }
+        ],
+        "overflow": 375
+      },
+      "files": [
+        {
+          "file": "firefox-375-wrong-divisor.csv",
+          "bytes": 5393,
+          "sha256": "2d303010506a44951e0b0107aefefa370256f962a2d67d41cf36745fda311c74"
+        },
+        {
+          "file": "firefox-375-wrong-divisor.svg",
+          "bytes": 165262,
+          "sha256": "852aca4838fc675955f8f8a64e037a8d6388309d3efadaf5b014504ab3f85c33"
+        },
+        {
+          "file": "firefox-375-unapplied.csv",
+          "bytes": 5404,
+          "sha256": "968bafae9dbdd485bdf7e105a24bc22453dbe87a72b533731c6f9db3d9fc84bc"
+        },
+        {
+          "file": "firefox-375-parallel.csv",
+          "bytes": 5105,
+          "sha256": "e20d15d0b3bec40a05368ae93a497de49995a8d3d0a65be1105078b8ffb889ec"
+        },
+        {
+          "file": "firefox-375-coincident.csv",
+          "bytes": 5306,
+          "sha256": "97c95dc8aedf2d7a4de7ee72514d133c8153f2b9dc2b2444b3b69a22221da2ff"
+        },
+        {
+          "file": "firefox-375-coincident.svg",
+          "bytes": 165297,
+          "sha256": "1202783c1fb718d72ab5d3d6526242f6b52cb52b2af8b54cf02adf4a13446bb3"
+        },
+        {
+          "file": "firefox-375-record.csv",
+          "bytes": 5427,
+          "sha256": "f68a63e9eed60e05f06f344e9d65c2c5f163e84ae3b254b85a2f81c858335ae9"
+        },
+        {
+          "file": "firefox-375-shared.csv",
+          "bytes": 5418,
+          "sha256": "9b5aa648c4c77e1c6ffc9a7db6637e25e8d966ba9ce6f496f40e6e37f55c5c2e"
+        },
+        {
+          "file": "firefox-375-shared-reading.html",
+          "bytes": 6601303,
+          "sha256": "84d8104cf54b361fd3f130b65e2c9b0d2b4720fa9812524b4264ef9a40f6c8fb"
+        },
+        {
+          "file": "firefox-375-survey.svg",
+          "bytes": 165243,
+          "sha256": "7c399f3c61d4001ccbe2b43beac0bf80b486ef0caa65b41f31ae1f0010edef54"
+        },
+        {
+          "file": "firefox-375-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        },
+        {
+          "file": "firefox-375-offline-reading.html",
+          "bytes": 6601597,
+          "sha256": "c32eceec1623b49836c36ce63bc16aa6873bc6f168eb68b8118c8ee72f85bd78"
+        }
+      ],
+      "offline": "Complete offline edition e02bd222c9ae3f3b3ada: all 18 files checked, including all five source openings. Ready for an offline reload.",
+      "axeViolations": 0
+    }
+  ]
+}
