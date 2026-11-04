@@ -66,8 +66,9 @@ export type Bounds =
   | { kind: "none"; explanation: string }
   | { kind: "bounded"; lowH: Q; lowD: Q; highH: Q; highD: Q; deltaLow: Q; deltaHigh: Q }
   | { kind: "unbounded"; lowH: Q; lowD: Q; deltaLow: Q; deltaHigh: Q };
-/** Independent, closed setback intervals; h and s remain exact. No probability model. */
-export function bounds(r: RecordQ, error: Q): Bounds {
+export type ErrorMode = "independent" | "shared";
+/** Closed setback sets; h and s remain exact. No probability model. */
+export function bounds(r: RecordQ, error: Q, mode: ErrorMode = "independent"): Bounds {
   if (error.n < 0n) return { kind: "invalid", explanation: "The half-width must be nonnegative." };
   const al = sub(r.a, error),
     ah = add(r.a, error),
@@ -79,6 +80,27 @@ export function bounds(r: RecordQ, error: Q): Bounds {
       explanation:
         "An allowed setback reaches zero or less. Positive setbacks are required; no interval has been clipped.",
     };
+  if (mode === "shared") {
+    const delta = sub(r.b, r.a);
+    if (delta.n <= 0n)
+      return {
+        kind: "none",
+        explanation:
+          "An equal additive offset preserves b − a. These observations remain parallel or behind the poles; no allowed offset gives a forward island.",
+      };
+    const low = candidate({ ...r, a: al, b: bl }, delta);
+    const high = candidate({ ...r, a: ah, b: bh }, delta);
+    if (!low || !high) throw new Error("Positive unchanged difference required.");
+    return {
+      kind: "bounded",
+      lowH: low.height,
+      highH: high.height,
+      lowD: low.distance,
+      highD: high.distance,
+      deltaLow: delta,
+      deltaHigh: delta,
+    };
+  }
   const deltaLow = sub(bl, ah),
     deltaHigh = sub(bh, al);
   if (deltaHigh.n <= 0n)
@@ -112,6 +134,8 @@ export interface State {
   rear: number;
   error: number;
   choice: "difference" | "gap";
+  errorMode: ErrorMode;
+  probe: number;
   step: number;
   read: number;
   page: number;
@@ -122,6 +146,8 @@ export const INITIAL: State = {
   front: 492,
   rear: 508,
   error: 0,
+  errorMode: "independent",
+  probe: 0,
   choice: "difference",
   step: 0,
   read: 0,
@@ -165,6 +191,12 @@ export function parse(search: string): { state: State; warning: string } {
         const value = quarter(raw, min, max);
         if (value === null) throw new Error();
         s[field] = value;
+      } else if (key === "errorMode") {
+        if (raw !== "independent" && raw !== "shared") throw new Error();
+        s.errorMode = raw;
+      } else if (key === "probe") {
+        if (!/^-?(?:0|[1-9]\d{0,2})$/.test(raw) || Math.abs(Number(raw)) > 100) throw new Error();
+        s.probe = Number(raw);
       } else if (key === "choice") {
         if (raw !== "difference" && raw !== "gap") throw new Error();
         s.choice = raw;
@@ -188,4 +220,18 @@ export function parse(search: string): { state: State; warning: string } {
         "This address contains an invalid or repeated field. The complete source record has been restored; no partial record was used.",
     };
   }
+}
+
+/** Trace the common-offset diagonal or the opposing-error diagonal of the allowed square. */
+export function errorWitness(s: State) {
+  const r = record(s);
+  const frontError = q(s.error * s.probe, 400);
+  const rearError = s.errorMode === "shared" ? frontError : mul(frontError, q(-1));
+  const adjusted = { ...r, a: add(r.a, frontError), b: add(r.b, rearError) };
+  return {
+    frontError,
+    rearError,
+    adjusted,
+    solution: adjusted.a.n > 0n && adjusted.b.n > 0n ? solve(adjusted) : null,
+  };
 }

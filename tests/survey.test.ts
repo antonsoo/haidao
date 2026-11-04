@@ -3,6 +3,7 @@ import { test } from "node:test";
 import {
   bounds,
   candidate,
+  errorWitness,
   exact,
   INITIAL,
   NEAR,
@@ -73,4 +74,52 @@ test("a share address round-trips exact quarter-bu, but never accepts a mixed in
     assert.ok(result.warning);
     assert.deepEqual(result.state, INITIAL);
   }
+});
+
+test("a shared additive offset preserves height while shifting distance", () => {
+  const r = record(INITIAL);
+  const b = bounds(r, q(2), "shared");
+  assert.equal(b.kind, "bounded");
+  if (b.kind !== "bounded") throw new Error();
+  assert.equal(exact(b.lowH), "1255");
+  assert.equal(exact(b.highH), "1255");
+  assert.equal(exact(b.lowD), "30250");
+  assert.equal(exact(b.highD), "31250");
+  assert.equal(exact(b.deltaLow), "4");
+  assert.equal(exact(b.deltaHigh), "4");
+  assert.equal(bounds({ ...r, b: r.a }, q(2), "shared").kind, "none");
+  assert.equal(bounds({ ...r, b: q(120) }, q(2), "shared").kind, "none");
+  assert.equal(bounds(r, q(123), "shared").kind, "invalid");
+});
+test("old addresses retain independent errors; new assumptions round-trip and reject malformed probes", () => {
+  assert.equal(parse("error=2").state.errorMode, "independent");
+  const state = { ...INITIAL, error: 8, probe: -99, errorMode: "shared" as const };
+  assert.deepEqual(parse(serialize(state)).state, state);
+  for (const search of [
+    "probe=101",
+    "probe=-101",
+    "probe=1.5",
+    "errorMode=scale",
+    "probe=1&probe=2",
+  ]) {
+    assert.ok(parse(search).warning);
+    assert.deepEqual(parse(search).state, INITIAL);
+  }
+});
+
+test("opposing errors approach parallel rays; the common-offset trace stays finite", () => {
+  const state = { ...INITIAL, error: 8, probe: 99 };
+  const w = errorWitness(state);
+  assert.equal(exact(w.frontError), "99/50");
+  assert.equal(exact(w.rearError), "-99/50");
+  assert.ok(w.solution?.difference);
+  assert.equal(exact(w.solution.difference.height), "125005");
+  assert.equal(errorWitness({ ...state, probe: 100 }).solution?.kind, "parallel");
+  const shared = errorWitness({ ...state, probe: 100, errorMode: "shared" });
+  assert.ok(shared.solution?.difference);
+  assert.equal(exact(shared.solution.difference.height), "1255");
+  assert.equal(
+    errorWitness({ ...state, front: 4, errorMode: "shared", probe: -100 }).solution,
+    null,
+  );
 });
