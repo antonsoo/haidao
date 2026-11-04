@@ -126,7 +126,7 @@ export function bounds(r: RecordQ, error: Q, mode: ErrorMode = "independent"): B
   };
 }
 
-// Input integers count quarter-bu; this avoids decimal roundoff before exact arithmetic.
+// Length inputs count quarter-bu; probe inputs count whole percentages.
 export interface State {
   pole: number;
   gap: number;
@@ -136,6 +136,7 @@ export interface State {
   choice: "difference" | "gap";
   errorMode: ErrorMode;
   probe: number;
+  rearProbe: number;
   step: number;
   read: number;
   page: number;
@@ -148,6 +149,7 @@ export const INITIAL: State = {
   error: 0,
   errorMode: "independent",
   probe: 0,
+  rearProbe: 0,
   choice: "difference",
   step: 0,
   read: 0,
@@ -194,9 +196,9 @@ export function parse(search: string): { state: State; warning: string } {
       } else if (key === "errorMode") {
         if (raw !== "independent" && raw !== "shared") throw new Error();
         s.errorMode = raw;
-      } else if (key === "probe") {
+      } else if (key === "probe" || key === "rearProbe") {
         if (!/^-?(?:0|[1-9]\d{0,2})$/.test(raw) || Math.abs(Number(raw)) > 100) throw new Error();
-        s.probe = Number(raw);
+        s[key] = Number(raw) || 0;
       } else if (key === "choice") {
         if (raw !== "difference" && raw !== "gap") throw new Error();
         s.choice = raw;
@@ -212,6 +214,8 @@ export function parse(search: string): { state: State; warning: string } {
         else throw new Error();
       }
     }
+    // Earlier links used one slider to trace opposing errors. Preserve their pair.
+    if (!seen.has("rearProbe")) s.rearProbe = -s.probe || 0;
     return { state: s, warning: "" };
   } catch {
     return {
@@ -222,11 +226,11 @@ export function parse(search: string): { state: State; warning: string } {
   }
 }
 
-/** Trace the common-offset diagonal or the opposing-error diagonal of the allowed square. */
+/** One selected pair, independently set or constrained to the shared diagonal. */
 export function errorWitness(s: State) {
   const r = record(s);
   const frontError = q(s.error * s.probe, 400);
-  const rearError = s.errorMode === "shared" ? frontError : mul(frontError, q(-1));
+  const rearError = s.errorMode === "shared" ? frontError : q(s.error * s.rearProbe, 400);
   const adjusted = { ...r, a: add(r.a, frontError), b: add(r.b, rearError) };
   return {
     frontError,

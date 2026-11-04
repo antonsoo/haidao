@@ -84,7 +84,7 @@ def main():
                 shared_samples += 1
         for w in j['witnesses']:
             u = e*F(w['probe'],100)
-            v = u if w['errorMode'] == 'shared' else -u
+            v = u if w['errorMode'] == 'shared' else e*F(w['rearProbe'],100)
             assert value(w['frontError']) == u and value(w['rearError']) == v
             assert value(w['adjusted']['a']) == a+u and value(w['adjusted']['b']) == b+v
             if min(a+u,b+v) <= 0:
@@ -101,7 +101,7 @@ def main():
             witness_count += 1
         count += 1
     assert count == 3005, f"Incomplete independent comparison: {count} records"
-    print(json.dumps({'records':count,'shared_offset_samples':shared_samples,'trace_witnesses':witness_count,'candidate_comparisons':comparisons,'forward_interval_samples':interval_samples,'interval_kinds':kinds,'method':'Python Fraction; independent 2x2 determinant from two point-defined sight lines; 9x9 interval samples and exact endpoint checks'},indent=2))
+    print(json.dumps({'records':count,'shared_offset_samples':shared_samples,'pair_witnesses':witness_count,'candidate_comparisons':comparisons,'forward_interval_samples':interval_samples,'interval_kinds':kinds,'method':'Python Fraction; independent 2x2 determinant from two point-defined sight lines; 9x9 interval samples and exact endpoint checks'},indent=2))
 
 if __name__ == '__main__':
     main()

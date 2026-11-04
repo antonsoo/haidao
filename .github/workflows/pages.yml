@@ -19,8 +19,8 @@ jobs:
       - run: npm run check
       - name: Update the static branch without rewriting history
         run: |
-          git config user.name "Anton Soloviev"
-          git config user.email "anton@praviel.com"
+          git config user.name "Anthony Mercer"
+          git config user.email "anthony@praviel.com"
           git fetch origin gh-pages
           git worktree add --detach /tmp/haidao-pages origin/gh-pages
           rsync -a --delete --exclude=.git --exclude=assets/ dist/ /tmp/haidao-pages/

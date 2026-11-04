@@ -57,7 +57,19 @@ export function csv(s: State): string {
   ];
   rows.push(
     ["error_model", s.errorMode, "", "independent square or equal additive offsets"],
-    ["probe_percent", s.probe, "%", "selected trace; not the entire independent square"],
+    ["probe_percent", s.probe, "%", "front error; selected pair, not the complete bound"],
+    [
+      "rear_probe_percent",
+      s.errorMode === "shared" ? s.probe : s.rearProbe,
+      "%",
+      "rear error used in the selected pair",
+    ],
+    [
+      "independent_rear_probe_percent",
+      s.rearProbe,
+      "%",
+      "remembered rear setting for independent mode",
+    ],
   );
   const w = errorWitness(s);
   for (const [name, v] of [
@@ -154,10 +166,34 @@ export async function svgFile(s: State): Promise<string> {
     `<metadata>${h(JSON.stringify({ state: s, units: "bu", description: "Modern equal-scale model of Haidao problem 1", license: appLicense, fontLicense: new TextDecoder().decode(fontLicense) }))}</metadata><style>@font-face{font-family:Atkinson;src:url(data:font/ttf;base64,${font}) format('truetype');font-weight:200 800}`,
   );
 }
-export async function readingFile(s: State): Promise<string> {
+export interface SaveOptions {
+  signal?: AbortSignal;
+  onProgress?: (received: number, total: number) => void;
+}
+export async function readingFile(s: State, options: SaveOptions = {}): Promise<string> {
+  const cancel = new AbortController();
+  const signal = options.signal ? AbortSignal.any([options.signal, cancel.signal]) : cancel.signal;
+  const active = new Map<string, number>();
+  const total = manifest.assets.reduce((sum, asset) => sum + asset.bytes, 0);
   const loaded = await Promise.all(
-    manifest.assets.map(async (a) => [a.path, await verified(a.path)] as const),
-  );
+    manifest.assets.map(
+      async (a) =>
+        [
+          a.path,
+          await verified(a.path, signal, (received) => {
+            active.set(a.path, received);
+            options.onProgress?.(
+              [...active.values()].reduce((sum, bytes) => sum + bytes, 0),
+              total,
+            );
+          }),
+        ] as const,
+    ),
+  ).catch((error) => {
+    cancel.abort(error);
+    throw error;
+  });
+  signal.throwIfAborted();
   const assets = new Map(loaded);
   const get = (path: string) => {
     const v = assets.get(path);
@@ -191,7 +227,7 @@ export async function readingFile(s: State): Promise<string> {
 <h2>Observations and current operation</h2>
 <p>h = ${s.pole / 4}; s = ${s.gap / 4}; a = ${s.front / 4}; b = ${s.rear / 4} bu. Proposed divisor: ${h(s.choice)}.</p>${overview(s)}${retreats(s)}${calculation(s)}${checks({ ...s, step: 6 })}<h3>Modern setback intervals</h3>
 <p>${errorNames[s.errorMode]}; allowance ±${s.error / 4} bu; h and s exact.</p>${boundsMarkup(s)}
-${comparisonMarkup(s)}<h3>The selected error pair</h3><p>Front error: ${s.probe}% of the allowance.</p><div id="error-diagram">${errorDiagram(s)}</div><p class="source-location">The dark point is selected. Red locates parallel sightings. Only the shaded square or thick teal line is allowed by the chosen assumption.</p>${witnessMarkup(s)}</section>
+${comparisonMarkup(s)}<h3>The selected error pair</h3><p>Front error: ${s.probe}%; rear error: ${s.errorMode === "shared" ? s.probe : s.rearProbe}% of the allowance.</p><div id="error-diagram">${errorDiagram(s)}</div><p class="source-location">The dark point is selected. Red locates parallel sightings. Only the shaded square or thick teal line is allowed by the chosen assumption.</p>${witnessMarkup(s)}</section>
 <section>
 <h2>Why one observation is insufficient</h2>
 <p>Front pole (0,h), rear pole (s,h), front ground eye (a,0), rear ground eye (s+b,0), island peak (−D,H). Front line: y=h(a−x)/a. Rear line: y=h(s+b−x)/b. Equating them gives D(b−a)=as and H=h+hs/(b−a).</p>

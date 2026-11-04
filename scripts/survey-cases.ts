@@ -21,9 +21,51 @@ for (let i = 0; i < 3000; i++)
     rear: random(8000),
     error: random(65) - 1,
   });
+const pairs = [
+  [-100, -100],
+  [-100, 0],
+  [-100, 100],
+  [0, -100],
+  [0, 0],
+  [0, 100],
+  [100, -100],
+  [100, 0],
+  [100, 100],
+  [99, -99],
+  [37, -61],
+  [-43, 79],
+  [99, 99],
+] as const;
 for (const state of states) {
   const r = record(state);
   process.stdout.write(
-    `${JSON.stringify({ state, solution: solve(r), bounds: bounds(r, q(state.error, 4)), shared: bounds(r, q(state.error, 4), "shared"), witnesses: [-100, -99, -1, 0, 1, 99, 100].flatMap((probe) => (["independent", "shared"] as const).map((errorMode) => ({ probe, errorMode, ...errorWitness({ ...state, probe, errorMode }) }))) }, (_key, value) => (typeof value === "bigint" ? String(value) : value))}\n`,
+    `${JSON.stringify(
+      {
+        state,
+        solution: solve(r),
+        bounds: bounds(r, q(state.error, 4)),
+        shared: bounds(r, q(state.error, 4), "shared"),
+        witnesses: [
+          ...pairs.map(([probe, rearProbe]) => ({
+            probe,
+            rearProbe,
+            errorMode: "independent",
+            ...errorWitness({
+              ...state,
+              probe: probe ?? 0,
+              rearProbe: rearProbe ?? 0,
+              errorMode: "independent",
+            }),
+          })),
+          ...[-100, -99, -1, 0, 1, 99, 100].map((probe) => ({
+            probe,
+            rearProbe: 37,
+            errorMode: "shared",
+            ...errorWitness({ ...state, probe, rearProbe: 37, errorMode: "shared" }),
+          })),
+        ],
+      },
+      (_key, value) => (typeof value === "bigint" ? String(value) : value),
+    )}\n`,
   );
 }

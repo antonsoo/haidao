@@ -205,6 +205,7 @@
               </button>
             </div>
             <p id="source-status" role="status"></p>
+            <button type="button" id="source-retry" hidden>Retry this opening</button>
             <section
               id="source-frame"
               class="source-frame"
@@ -294,15 +295,25 @@
             </figcaption>
           </figure>
           <div>
-            <h3>Move one pair through the allowed set.</h3>
+            <h3>Choose one pair. Keep the whole set.</h3>
             <label class="error-control" for="error-probe"
               >Front error as a share of the allowance:
               <output id="probe-value" for="error-probe">0%</output>
               <input type="range" id="error-probe" min="-100" max="100" step="1" value="0">
             </label>
+            <label class="error-control" for="rear-error-probe"
+              >Rear error as a share of the allowance:
+              <output id="rear-probe-value" for="rear-error-probe">0%</output>
+              <input type="range" id="rear-error-probe" min="-100" max="100" step="1" value="0">
+            </label>
+            <p id="rear-probe-note" class="source-location"></p>
+            <fieldset class="presets" aria-label="Compare two selected error pairs">
+              <button type="button" id="equal-errors">Make this pair's errors equal</button>
+              <button type="button" id="opposed-errors">Oppose the front error</button>
+            </fieldset>
             <p>
-              At ±2 bu on the source exercise, try 99%, then 100%. Switch the assumption while
-              keeping that setting.
+              At ±2 bu on the source exercise, take the front to 100% and rear to −100% for parallel
+              sightings. Make the pair equal, then switch the complete assumption to Shared offset.
             </p>
             <div id="error-witness" aria-live="polite"></div>
           </div>
@@ -326,6 +337,7 @@
           ><button type="button" id="share">Copy this state’s address</button
           ><button type="button" id="print">Print current page</button>
         </div>
+        <button type="button" id="save-cancel" hidden>Cancel saving</button>
         <p id="save-status" role="status"></p>
         <p id="offline-status" role="status">Offline edition has not been checked.</p>
         <button type="button" class="text-button" id="offline-check">

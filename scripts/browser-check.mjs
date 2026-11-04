@@ -153,14 +153,41 @@ for (const [engine, launcher] of [
       .screenshot({ path: path.join(out, `${name}-unbounded.png`) });
     const csvPath = await save("save-csv", "record.csv");
     assert.match(await readFile(csvPath, "utf8"), /"height_upper","unbounded"/);
+    await page.goto(`${base}?error=2&probe=37&rearProbe=-61#uncertainty`);
+    await page.locator("#rear-error-probe").focus();
+    await page.keyboard.press("ArrowRight");
+    assert.equal(await page.locator("#error-probe").inputValue(), "37");
+    assert.equal(await page.locator("#rear-error-probe").inputValue(), "-60");
+    assert.match(
+      await page.locator("#error-witness").innerText(),
+      /H = 250515\/103 bu; D = 6187000\/103 bu/,
+    );
+    const selected = page.locator("#error-diagram [data-probe]");
+    assert.equal(await selected.getAttribute("cx"), "252");
+    assert.equal(await selected.getAttribute("cy"), "215");
+    await save("save-csv", "unequal.csv");
+    await page.locator("#equal-errors").click();
+    assert.equal(await page.locator("#rear-error-probe").inputValue(), "37");
+    assert.match(await page.locator("#error-witness").innerText(), /H = 1255 bu; D = 30935 bu/);
+    assert.match(await page.locator("#bounds").innerText(), /No finite upper bound/);
+    await page.locator("#error-mode").selectOption("shared");
+    assert.equal(await page.locator("#rear-error-probe").isDisabled(), true);
+    assert.match(await page.locator("#bounds").innerText(), /1255/);
+    await page.locator("#error-mode").selectOption("independent");
+    assert.equal(await page.locator("#rear-error-probe").isEnabled(), true);
+    await page.locator("#opposed-errors").click();
+    assert.equal(await page.locator("#rear-error-probe").inputValue(), "-37");
     await page.locator("#try-errors").click();
     assert.equal(await page.locator("#error-probe").inputValue(), "99");
+    assert.equal(await page.locator("#rear-error-probe").inputValue(), "-99");
     assert.match(await page.locator("#error-witness").innerText(), /H = 125005 bu; D = 3124500 bu/);
     const comparison = page.locator('#error-comparison [data-error-model="shared"]');
     assert.match(await comparison.innerText(), /1255/);
     assert.match(await comparison.innerText(), /30250 to 31250/);
     await page.locator("#error-probe").focus();
     await page.keyboard.press("ArrowRight");
+    await page.locator("#rear-error-probe").focus();
+    await page.keyboard.press("ArrowLeft");
     assert.equal(
       await page.locator("#error-witness .witness-result").getAttribute("data-kind"),
       "parallel",
@@ -202,10 +229,12 @@ for (const [engine, launcher] of [
       el.value = "99";
       el.dispatchEvent(new Event("input", { bubbles: true }));
     });
+    await page.locator("#opposed-errors").click();
     await page
       .locator("#uncertainty")
       .screenshot({ path: path.join(out, `${name}-comparison.png`) });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    await save("save-csv", "comparison.csv");
     const svgPath = await save("save-svg", "survey.svg");
     assert.match(await readFile(svgPath, "utf8"), /data-height="1255" data-distance="30750"/);
     const htmlPath = await save("save-html", "reading.html");
@@ -258,6 +287,8 @@ for (const [engine, launcher] of [
         path: path.join(out, "shared-reading.pdf"),
         printBackground: true,
         preferCSSPageSize: true,
+        tagged: true,
+        outline: true,
       });
     await standaloneContext.close();
     const axe = await new AxeBuilder({ page }).analyze();
@@ -286,6 +317,22 @@ for (const [engine, launcher] of [
     await page.goto(`${base}?front=123&front=124`);
     assert.match(await page.locator("#address-warning").innerText(), /complete source record/);
     assert.equal(await page.locator('[name="front"]').inputValue(), "123");
+    await page.locator("#choose-gap").click();
+    assert.equal(await page.locator("#address-warning").textContent(), "");
+    await page.goBack();
+    assert.match(await page.locator("#address-warning").textContent(), /complete source record/);
+    await page.locator("#parallel-preset").click();
+    await page.locator('[data-error="8"]').click();
+    await page.locator("#error-mode").selectOption("shared");
+    assert.match(await page.locator("#bounds").textContent(), /No forward island/);
+    assert.match(await page.locator("#error-comparison").textContent(), /When b − a is positive/);
+    assert.equal(
+      await page.locator("#error-witness .witness-result").getAttribute("data-kind"),
+      "parallel",
+    );
+    await page.locator("#error-mode").selectOption("independent");
+    assert.match(await page.locator("#bounds").textContent(), /No finite upper bound/);
+    assert.equal(await page.locator("#address-warning").textContent(), "");
     assert.deepEqual(errors, []);
     results.push({
       name,

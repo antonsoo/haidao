@@ -1,5 +1,5 @@
 import "./style.css";
-import { assetUrl, edition, manifest, verified } from "./assets.ts";
+import { manifest, verified } from "./assets.ts";
 import { h, readingMarkup, readings, stages } from "./content.ts";
 import {
   exact,
@@ -14,7 +14,8 @@ import {
   solve,
 } from "./core/survey.ts";
 import { overview, retreats } from "./drawing.ts";
-import { csv, download, readingFile, svgFile } from "./files.ts";
+import { csv, download, readingFile, type SaveOptions, svgFile } from "./files.ts";
+import { mountOffline } from "./offline.ts";
 import { boundsMarkup, calculation, checks, isSource } from "./presentation.ts";
 
 import { comparisonMarkup, errorDiagram, witnessMarkup } from "./uncertainty.ts";
@@ -40,6 +41,7 @@ function syncForm() {
     : "Applied: a modern comparison record. The source text retains its original numbers.";
 }
 function address(push = true) {
+  el("address-warning").textContent = "";
   const url = `${location.pathname}?${serialize(state)}${location.hash}`;
   if (push) history.pushState(null, "", url);
   else history.replaceState(null, "", url);
@@ -70,11 +72,17 @@ async function showSource(page: number) {
   frame.replaceChildren();
   if (sourceBlob) URL.revokeObjectURL(sourceBlob);
   sourceBlob = "";
+  el("source-retry").hidden = true;
   el("source-status").textContent = `Loading and checking whole opening ${page}…`;
   try {
     const bytes = await verified(
       `sources/waseda-${String(page).padStart(2, "0")}.jpg`,
       sourceRequest.signal,
+      (received, total) => {
+        if (ticket === sourceTicket)
+          el("source-status").textContent =
+            `Loading whole opening ${page}: ${Math.round(received / 1024)} of ${Math.round(total / 1024)} KiB received; verifying its identity before display…`;
+      },
     );
     if (ticket !== sourceTicket) return;
     const blob = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
@@ -94,7 +102,8 @@ async function showSource(page: number) {
   } catch (error) {
     if (ticket !== sourceTicket) return;
     el("source-status").textContent =
-      `Opening unavailable. ${error instanceof Error ? error.message : "Retry the source."} Select another opening and return to retry.`;
+      `Opening unavailable. ${error instanceof Error ? error.message : "Retry the source."} Use Retry this opening after reconnecting.`;
+    el("source-retry").hidden = false;
   }
 }
 function render() {
@@ -128,6 +137,18 @@ function render() {
   el<HTMLSelectElement>("error-mode").value = state.errorMode;
   el<HTMLInputElement>("error-probe").value = String(state.probe);
   el<HTMLOutputElement>("probe-value").value = `${state.probe}%`;
+  el<HTMLInputElement>("rear-error-probe").value = String(
+    state.errorMode === "shared" ? state.probe : state.rearProbe,
+  );
+  el<HTMLInputElement>("rear-error-probe").disabled = state.errorMode === "shared";
+  el<HTMLOutputElement>("rear-probe-value").value =
+    `${state.errorMode === "shared" ? state.probe : state.rearProbe}%`;
+  el("rear-probe-note").textContent =
+    state.errorMode === "shared"
+      ? "Shared offset: the rear error follows the front. Returning to independent errors restores your rear setting."
+      : "Independent errors: move either slider. Changing one selected pair does not narrow the complete allowed set.";
+  el<HTMLButtonElement>("equal-errors").disabled = state.errorMode === "shared";
+  el<HTMLButtonElement>("opposed-errors").disabled = state.errorMode === "shared";
   el("error-diagram").innerHTML = errorDiagram(state);
   el("error-comparison").innerHTML = comparisonMarkup(state);
   el("error-witness").innerHTML = witnessMarkup(state);
@@ -200,6 +221,7 @@ el("read-opening").addEventListener("click", () =>
 el("source-page").addEventListener("change", () =>
   update({ page: Number(el<HTMLSelectElement>("source-page").value) }),
 );
+el("source-retry").addEventListener("click", () => void showSource(state.page));
 el("source-zoom").addEventListener("click", () => {
   const zoom = el("source-frame").classList.toggle("enlarged");
   el("source-zoom").setAttribute("aria-pressed", String(zoom));
@@ -219,29 +241,55 @@ el("error-mode").addEventListener("change", () =>
 el("error-probe").addEventListener("input", () =>
   update({ probe: Number(el<HTMLInputElement>("error-probe").value) }, false),
 );
+el("rear-error-probe").addEventListener("input", () =>
+  update({ rearProbe: Number(el<HTMLInputElement>("rear-error-probe").value) }, false),
+);
+el("equal-errors").addEventListener("click", () => update({ rearProbe: state.probe }));
+el("opposed-errors").addEventListener("click", () => update({ rearProbe: -state.probe || 0 }));
 el("try-errors").addEventListener("click", () => {
-  update({ ...INITIAL, error: 8, probe: 99, read: state.read, page: state.page });
+  update({ ...INITIAL, error: 8, probe: 99, rearProbe: -99, read: state.read, page: state.page });
   syncForm();
 });
+let saveRequest: AbortController | undefined;
+el("save-cancel").addEventListener("click", () => saveRequest?.abort());
 async function save(
   id: string,
   mime: string,
   name: string,
-  make: (s: State) => string | Promise<string>,
+  make: (s: State, options?: SaveOptions) => string | Promise<string>,
 ) {
   const snapshot = { ...state },
     button = el<HTMLButtonElement>(id);
+  const request = new AbortController();
+  if (id === "save-html") {
+    saveRequest = request;
+    el("save-cancel").hidden = false;
+  }
   button.disabled = true;
   el("save-status").textContent =
     "Preparing the applied record; source assets must pass their identity checks…";
   try {
-    download(await make(snapshot), mime, name);
+    const text = await make(snapshot, {
+      signal: request.signal,
+      onProgress(received, total) {
+        if (request.signal.aborted) return;
+        el("save-status").textContent =
+          `Preparing the saved reading: ${Math.round(received / 1024)} of ${Math.round(total / 1024)} KiB received and being checked. The saved record keeps your starting selection.`;
+      },
+    });
+    request.signal.throwIfAborted();
+    download(text, mime, name);
     el("save-status").textContent =
       `Saved ${name} for the record at operation ${snapshot.step}: ${stages[snapshot.step]}.`;
   } catch (error) {
-    el("save-status").textContent =
-      `Nothing was downloaded. ${error instanceof Error ? error.message : "Unable to prepare the complete file."}`;
+    el("save-status").textContent = request.signal.aborted
+      ? "Saving cancelled. Nothing was downloaded; your current experiment is kept."
+      : `Nothing was downloaded. ${error instanceof Error ? error.message : "Unable to prepare the complete file."}`;
   } finally {
+    if (saveRequest === request) {
+      saveRequest = undefined;
+      el("save-cancel").hidden = true;
+    }
     button.disabled = false;
   }
 }
@@ -275,114 +323,7 @@ window.addEventListener("popstate", () => {
   syncForm();
   render();
 });
-let offlineTicket = 0;
-let needsRepair = false;
-async function offline() {
-  const ticket = ++offlineTicket;
-  const status = el("offline-status"),
-    controller = navigator.serviceWorker?.controller;
-  if (!controller) {
-    status.textContent =
-      "The complete offline edition is not controlling this page yet. Keep this page open online, then check again.";
-    return;
-  }
-  status.textContent = "Checking the identity of every file in the offline edition…";
-  try {
-    const inventory = await new Promise<{
-      edition: string;
-      files: number;
-      missing: string[];
-      ready: boolean;
-    }>((resolve, reject) => {
-      const channel = new MessageChannel();
-      const timeout = setTimeout(() => {
-        channel.port1.close();
-        reject(new Error("Offline inventory timed out."));
-      }, 15000);
-      channel.port1.onmessage = (event) => {
-        clearTimeout(timeout);
-        channel.port1.close();
-        resolve(event.data);
-      };
-      controller.postMessage({ type: "inventory" }, [channel.port2]);
-    });
-    if (ticket !== offlineTicket) return;
-    if (controller !== navigator.serviceWorker.controller || inventory.edition !== edition) {
-      status.textContent =
-        "This page and its offline controller are different editions. Wait for the complete update, then reload and check again.";
-      return;
-    }
-    needsRepair = !inventory.ready;
-    el("offline-check").textContent = needsRepair
-      ? "Rebuild complete offline edition"
-      : "Check complete offline edition";
-    status.textContent = inventory.ready
-      ? `Complete offline edition ${inventory.edition}: all ${inventory.files} files checked, including all five source openings. Ready for an offline reload.`
-      : `Offline edition ${inventory.edition} is incomplete (${inventory.missing.length} missing or changed files). Keep an online connection and use Rebuild complete offline edition.`;
-  } catch (error) {
-    status.textContent =
-      error instanceof Error ? error.message : "Offline edition could not be checked.";
-  }
-}
-async function repair() {
-  const controller = navigator.serviceWorker.controller;
-  if (!controller) {
-    await offline();
-    return;
-  }
-  const button = el<HTMLButtonElement>("offline-check");
-  button.disabled = true;
-  el("offline-status").textContent =
-    "Fetching and checking every edition file before rebuilding the offline copy…";
-  try {
-    await new Promise<void>((resolve, reject) => {
-      const channel = new MessageChannel();
-      const timeout = setTimeout(() => {
-        channel.port1.close();
-        reject(
-          new Error(
-            "Rebuilding timed out; no readiness claim has been made. Check again after reconnecting.",
-          ),
-        );
-      }, 45000);
-      channel.port1.onmessage = (event) => {
-        clearTimeout(timeout);
-        channel.port1.close();
-        if (
-          event.data.repaired &&
-          event.data.edition === edition &&
-          controller === navigator.serviceWorker.controller
-        )
-          resolve();
-        else
-          reject(
-            new Error(
-              event.data.error ??
-                "The page and offline controller differ. Reload the current page before rebuilding.",
-            ),
-          );
-      };
-      controller.postMessage({ type: "repair" }, [channel.port2]);
-    });
-    await offline();
-  } catch (error) {
-    el("offline-status").textContent =
-      error instanceof Error ? error.message : "The offline copy could not be rebuilt.";
-  } finally {
-    button.disabled = false;
-  }
-}
-el("offline-check").addEventListener("click", () => void (needsRepair ? repair() : offline()));
-if ("serviceWorker" in navigator && import.meta.env.PROD) {
-  navigator.serviceWorker.addEventListener("controllerchange", () => void offline());
-  void navigator.serviceWorker
-    .register(assetUrl("sw.js"), { scope: import.meta.env.BASE_URL })
-    .then(() => offline())
-    .catch(() => {
-      el("offline-status").textContent =
-        "The complete offline edition could not be installed. The online lesson remains available; retry with a complete connection.";
-    });
-} else el("offline-status").textContent = "Offline installation is available in the built edition.";
+mountOffline(el("offline-status"), el<HTMLButtonElement>("offline-check"));
 syncForm();
 render();
 

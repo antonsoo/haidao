@@ -178,3 +178,9 @@ pre {
 .scroll-note {
   display: none;
 }
+
+@media print {
+  #error-diagram {
+    max-width: 350px;
+  }
+}

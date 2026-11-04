@@ -46,21 +46,27 @@ function edition(): Plugin {
     name: "complete-offline-edition",
     apply: "build",
     closeBundle() {
-      const files: Record<string, string> = {};
+      const files: Record<string, { bytes: number; sha256: string }> = {};
       function visit(folder: string, prefix = "") {
         for (const entry of readdirSync(folder, { withFileTypes: true })) {
           const name = prefix + entry.name;
           if (entry.isDirectory()) visit(resolve(folder, entry.name), `${name}/`);
-          else if (name !== "sw.js")
-            files[name] = createHash("sha256")
-              .update(readFileSync(resolve(folder, entry.name)))
-              .digest("hex");
+          else if (name !== "sw.js") {
+            const bytes = readFileSync(resolve(folder, entry.name));
+            files[name] = {
+              bytes: bytes.length,
+              sha256: createHash("sha256").update(bytes).digest("hex"),
+            };
+          }
         }
       }
       // Vite finalizes CSS after generateBundle; hash the actual written bytes.
       visit(resolve("dist"));
       const source = readFileSync("src/worker.js", "utf8")
         .replace("__FILES__", JSON.stringify(files))
+        .replace("__TRANSFER__", () =>
+          readFileSync("src/transfer.js", "utf8").replace(/^export /gm, ""),
+        )
         .replaceAll("__EDITION__", editionId());
       writeFileSync("dist/sw.js", source);
     },

@@ -136,26 +136,41 @@ A selected positive pair can still be inspected separately in that case.
 
 ### Follow a pair without replacing the observations
 
-The selected percentage `t`, from −100 to 100, produces `u=e*t/100`. In shared
-mode `v=u`; in independent mode the slider traces **only** `v=−u`, not every
-point in the square. The exact complete bounds still cover every permitted
-pair. The two adjusted point-defined sight lines determine the selected
-intersection separately from those bounds.
+The front percentage `t` and rear percentage `r`, each from −100 to 100,
+produce `u=e*t/100`, `v=e*r/100` in independent mode. Shared mode constrains
+`v=u` and remembers the independent rear setting for when it is restored.
+The controls sample in 1% increments; the complete exact bounds include values
+between those samples. The two adjusted point-defined sight lines determine
+one selected intersection separately from the bounds on the complete set.
 
-At `e=2`, `t=99`, opposing errors give `a=6249/50`, `b=6251/50`, and
+At `e=2`, `t=99`, `r=−99`, opposing errors give `a=6249/50`, `b=6251/50`, and
 `δ=1/25`. The resulting height is 125005 bu and distance is 3124500 bu.
-At `t=100` the rays become parallel; division by zero supplies no finite peak.
-Switching to equal errors at the same `t=100` gives `a=125`, `b=129`,
-`H=1255`, `D=31250`. Increasing the allowance to 3 at the opposing endpoint
-moves the intersection behind the poles. The app retains that case explicitly.
+At `t=100`, `r=−100` the rays become parallel; division by zero supplies no
+finite peak. Increase the allowance to 3 at that opposing endpoint and the
+intersection moves behind the poles. The app retains that case explicitly.
+
+With `t=r=100`, the selected pair has `a=125`, `b=129`, `H=1255`, `D=31250`.
+This equal pair belongs to both allowed sets. Choosing it inside independent
+mode does not narrow that model's complete bounds. Only changing the whole
+assumption to equal additive offsets removes the unequal pairs. The two
+**Make this pair's errors equal / Oppose the front error** actions illustrate
+this distinction without silently changing the assumption.
+
+An arbitrary independent pair, `t=37`, `r=−60`, has `a=6187/50`, `b=629/5`,
+`δ=103/50`, `H=250515/103`, `D=6187000/103`. It is on neither diagonal.
+The operated browser review checks these exact values, a rear-slider keyboard
+step, the plotted point, native CSV, shared constraint and restored rear setting.
 
 The diagram uses normalized error coordinates; it is not a terrain plan. A red
 ring marks a parallel locus touching a square corner; a dashed red line marks a
 crossing. This reference can be outside the permitted shared diagonal. The
-selected pair never modifies the four applied observations or the recipe.
+selected pair never modifies the four applied observations or recipe.
+
 Exact fractions, both models, the chosen pair, source identities and licenses
-travel in the CSV and script-free reading. Older URLs default to independent
-errors and a zero probe.
+travel in the CSV and script-free reading. Earlier URLs with `probe` and no
+`rearProbe` restore their opposing pair. New addresses retain the independent
+rear setting separately from the shared mode's actual linked value. A malformed
+or repeated field still rejects the entire address instead of applying a mixture.
 
 ## Reproducing the retained assets
 

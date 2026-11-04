@@ -108,13 +108,13 @@ test("old addresses retain independent errors; new assumptions round-trip and re
 });
 
 test("opposing errors approach parallel rays; the common-offset trace stays finite", () => {
-  const state = { ...INITIAL, error: 8, probe: 99 };
+  const state = { ...INITIAL, error: 8, probe: 99, rearProbe: -99 };
   const w = errorWitness(state);
   assert.equal(exact(w.frontError), "99/50");
   assert.equal(exact(w.rearError), "-99/50");
   assert.ok(w.solution?.difference);
   assert.equal(exact(w.solution.difference.height), "125005");
-  assert.equal(errorWitness({ ...state, probe: 100 }).solution?.kind, "parallel");
+  assert.equal(errorWitness({ ...state, probe: 100, rearProbe: -100 }).solution?.kind, "parallel");
   const shared = errorWitness({ ...state, probe: 100, errorMode: "shared" });
   assert.ok(shared.solution?.difference);
   assert.equal(exact(shared.solution.difference.height), "1255");
@@ -122,4 +122,35 @@ test("opposing errors approach parallel rays; the common-offset trace stays fini
     errorWitness({ ...state, front: 4, errorMode: "shared", probe: -100 }).solution,
     null,
   );
+});
+
+test("independent errors select a two-dimensional pair without changing its complete bounds", () => {
+  const s = { ...INITIAL, error: 8, probe: 100, rearProbe: 50 };
+  const w = errorWitness(s);
+  assert.equal(exact(w.frontError), "2");
+  assert.equal(exact(w.rearError), "1");
+  assert.ok(w.solution?.difference);
+  assert.equal(exact(w.solution.difference.height), "5015/3");
+  assert.equal(exact(w.solution.difference.distance), "125000/3");
+  assert.equal(bounds(record(s), q(2), "independent").kind, "unbounded");
+  const equal = errorWitness({ ...s, rearProbe: 100 });
+  assert.ok(equal.solution?.difference);
+  assert.equal(exact(equal.solution.difference.height), "1255");
+  const linked = errorWitness({ ...s, errorMode: "shared" });
+  assert.equal(exact(linked.rearError), "2");
+});
+test("old single-probe URLs preserve their opposing pair; explicit rear choices round-trip", () => {
+  const legacy = parse("error=2&probe=99");
+  assert.equal(legacy.warning, "");
+  assert.equal(legacy.state.rearProbe, -99);
+  assert.equal(exact(errorWitness(legacy.state).rearError), "-99/50");
+  const chosen = { ...INITIAL, error: 8, probe: 37, rearProbe: -61 };
+  assert.deepEqual(parse(serialize(chosen)).state, chosen);
+  for (const search of [
+    "rearProbe=101",
+    "rearProbe=-101",
+    "rearProbe=2.5",
+    "rearProbe=0&rearProbe=1",
+  ])
+    assert.ok(parse(search).warning);
 });
