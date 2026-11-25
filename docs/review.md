@@ -57,6 +57,9 @@ and keeps all 120 language fields. All 3,667 extracted words lay inside page
 bounds. Its five extracted source JPEGs are byte-identical to the retained
 photographs. The PDF is a Chromium print of the native downloaded HTML, not a
 manually typeset substitute. See [examples](../examples/).
+(On 2026-11-25 the retained files were regenerated for the author-name and
+license change; the reprint has 28 pages. See
+[examples-2026-11-25.json](evidence/examples-2026-11-25.json).)
 
 The [source reproduction](evidence/source-reproduction.json) rerendered all five
 whole openings from the identity-checked source PDF and regenerated the renamed

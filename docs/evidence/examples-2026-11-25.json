@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-11-25T20:59:35.591Z",
+  "sourceCommit": "355abcc85c84853d47f2807da08daec7d45c8183",
+  "browser": "Chromium 153.0.8010.12, 1440 x 1050",
+  "reason": "Author-name and license change: the October files named the former author and the MIT license.",
+  "method": "Opened each documented applied state in a local build of sourceCommit and used the native Save HTML, Save CSV and Save SVG buttons; printed the saved HTML with Chromium (A4 CSS page size, tagged, outline). The HTML is stored gzip -9 -n.",
+  "states": {
+    "haidao-reading.html.gz, haidao-record.csv, haidao-survey.svg, haidao-reading.pdf": "?pole=5&gap=1000&front=123&rear=127&error=2&choice=difference&step=6&read=6&page=11",
+    "wrong-divisor.csv": "?pole=5&gap=1000&front=123&rear=127&error=0&choice=gap&step=6&read=0&page=10"
+  },
+  "files": [
+    {
+      "file": "examples/haidao-reading.html.gz",
+      "bytes": 4911429,
+      "sha256": "0f276dc4ca8e59bf704dda608b11a11fd6f019b7b333639fb132c7d7de2fd824",
+      "decompressedSha256": "4fd19ecb18c9b878e1705be3d49f5f96e52c49f434f27e554f51d8ec87c90832"
+    },
+    {
+      "file": "examples/haidao-reading.pdf",
+      "bytes": 5071421,
+      "sha256": "552a52646663558390075d0fa2a752783736487be68cb4891e24c917a4e32280"
+    },
+    {
+      "file": "examples/haidao-survey.svg",
+      "bytes": 165266,
+      "sha256": "f50e18376cfd1227d5a2844dce4e061ea907b6d0add25b11a2524e2287334b01"
+    },
+    {
+      "file": "examples/haidao-record.csv",
+      "bytes": 5598,
+      "sha256": "b1fb7ceea94ba8ff06d7228b6d13b2adf2aebac7cc5aa094f054a6e2bee42105"
+    },
+    {
+      "file": "examples/wrong-divisor.csv",
+      "bytes": 5564,
+      "sha256": "f07fb41e0d90b661fc8746af7739fe39012dd7407d5b5db204d1cc6981506409"
+    }
+  ],
+  "pdf": {
+    "pages": 28,
+    "tagged": true,
+    "javaScript": false
+  },
+  "publicSiteMatch": "The same states on https://antonsoo.github.io/haidao/ downloaded byte-identical HTML, CSV and SVG files the same day.",
+  "changesSinceOctober": [
+    "Credit and license: Anthony Mercer, PolyForm Noncommercial 1.0.0 (was the former name, MIT).",
+    "The reading and CSV now include the independent/shared error-pair comparison added on 2026-11-03/04 (error model, probe fields and both complete allowed sets); the reopen address carries errorMode, probe and rearProbe.",
+    "The CSV gained license and required_notice rows.",
+    "The printed reading grew from 25 to 28 A4 pages."
+  ],
+  "earlierReceipts": "browser.json, hosted-browser.json, source-resolution-browser.json and source-resolution-hosted-browser.json record the 2026-10-25 downloads, whose hashes match the October files, not these."
+}
